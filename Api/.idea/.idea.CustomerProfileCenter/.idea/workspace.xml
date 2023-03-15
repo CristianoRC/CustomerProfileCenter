@@ -80,7 +80,7 @@
       <option name="presentableId" value="Default" />
       <updated>1678909881484</updated>
       <workItem from="1678909882969" duration="33000" />
-      <workItem from="1678909958669" duration="4054000" />
+      <workItem from="1678909958669" duration="5584000" />
     </task>
     <servers />
   </component>
@@ -96,7 +96,7 @@
       <expand>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 75% 21/85" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 59% 45/109" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
       </expand>
       <select />

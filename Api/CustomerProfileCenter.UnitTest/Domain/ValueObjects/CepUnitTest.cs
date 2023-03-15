@@ -38,10 +38,10 @@ public class CepUnitTest : BaseTest
     [InlineData("39086382")]
     [InlineData("1asd-f44")]
     [InlineData("asd-fg-hhjk")]
-    public void RemoveSpecialCharacters(string validCepNumber)
+    public void RemoveSpecialCharacters(string cepNumber)
     {
         //Arrange / Act
-        var cep = new Cep(validCepNumber);
+        var cep = new Cep(cepNumber);
 
         //Assert
         cep.Number.Should().NotContain("-");
