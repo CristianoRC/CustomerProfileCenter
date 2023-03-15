@@ -2,7 +2,7 @@ using NetDevPack.Brasil.Documentos.Validacao;
 
 namespace CustomerProfileCenter.Domain.ValueObjects.Documents;
 
-public record Cpf
+public record Cpf : IDocument
 {
     public Cpf(string number)
     {
