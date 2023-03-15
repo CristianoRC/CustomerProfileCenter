@@ -6,4 +6,13 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Folder Include="Entities" />
+      <Folder Include="Repositories" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="NetDevPack.Brasil" Version="1.2.0" />
+    </ItemGroup>
+
 </Project>

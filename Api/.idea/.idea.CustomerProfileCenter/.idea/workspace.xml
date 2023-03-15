@@ -11,6 +11,12 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6b12c4f3285e74d2837deca33ea65ebfe7e8241f6eae74c16f2a6833e08c/ExtensionsForBrazil.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2N44Au00wWjtjtvfhTcVisQ0Ijr" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -72,7 +78,7 @@
       <option name="presentableId" value="Default" />
       <updated>1678909881484</updated>
       <workItem from="1678909882969" duration="33000" />
-      <workItem from="1678909958669" duration="380000" />
+      <workItem from="1678909958669" duration="2510000" />
     </task>
     <servers />
   </component>
