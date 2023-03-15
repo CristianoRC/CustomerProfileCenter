@@ -17,4 +17,5 @@ public abstract class Customer
     public IDocument Document { get; }
     public Address? Address { get; protected set; }
     public EmailAddress? Email { get; protected set; }
+    public PhoneNumber? PhoneNumber { get; set; }
 }

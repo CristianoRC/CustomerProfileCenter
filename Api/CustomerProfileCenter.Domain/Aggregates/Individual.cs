@@ -4,8 +4,7 @@ namespace CustomerProfileCenter.Domain.Aggregates;
 
 public class Individual : Customer
 {
-    public Individual(string name, IDocument document, DateOnly birthDay) : base(
-        name, document)
+    public Individual(string name, IDocument document, DateOnly birthDay) : base(name, document)
     {
         BirthDay = birthDay;
     }
