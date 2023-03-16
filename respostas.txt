@@ -1,0 +1,15 @@
+1. A solução deve ser disponibilizada em Cloud ou On-premise?
+Depende de o que temos de infraestrutura On-premise e o quanto planejamos crescer. On-premise não significa obrigatoriamente não escalar, mas, se realmente não temos muita ideia se nossa infra vai aguentar, ou temos que garantir uma possível "explosão” de requests como Balck Friday, o ideal realmente ir para nuvem.
+
+2. Considerando a participação de 4 pessoas técnicas para o desenvolvimento dessa solução, responda qual ferramenta acreditas ser apropriada para o controle de tarefas da equipe, a ferramenta é ágil?
+Como é um time menor, eu iria inicialmente para uma ferramentas mais simples como o Trello.
+
+3. Você se sente capaz de liderar esta equipe? Por quê?
+Na parte técnica, sim. Na parte de gestão de pessoas, cuidar de carreira, e alguns outros pontos mais focados em gestão, não, são skills que ainda precisa desenvolver, e na realidade hoje não é tanto meu foco como carreira, mesmo que já tenha desempenhado está função anteriormente.
+
+4. Se pudesse sugerir uma melhoria, mudança ou oportunidade. O que seria?
+Sei que é algo mais trabalho de se montar, mas, eu criaria testes específicos para cada área, exemplo: esta vaga é para a parte financeira, eu traria algo neste mundo, até mesmo para saber o que a pessoa sabe sobre o assuntou, ou se ela se interessa sobre isso.
+Outro ponto é em relação ao escopo / escala, isso bem aberto! Não sei se essa era realmente a ideia, e o que é avaliado em cada teste. Pode ser que a pessoa saiba muito sobre arquitetura, mas faça o básico que faria no dia-a-dia para funcionar, e as vezes a gente deixa de ver o potencial dela.
+
+5. Acha válido esse desafio para o processo que está participando?
+Sim.
