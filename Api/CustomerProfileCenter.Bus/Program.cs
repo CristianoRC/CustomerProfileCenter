@@ -1,3 +1,4 @@
+using CustomerProfileCenter.Application;
 using CustomerProfileCenter.Domain;
 using CustomerProfileCenter.Infra.AntCorruptionLayer.ViaCep;
 using CustomerProfileCenter.Infra.Data;
@@ -10,6 +11,7 @@ var hostBuilder = new HostBuilder()
         services
             .AddViaCep(builderContext.Configuration)
             .AddMessageBus(builderContext.Configuration)
+            .AddApplication(builderContext.Configuration)
             .AddData(builderContext.Configuration, builderContext.HostingEnvironment.IsDevelopment())
             .AddDomain();
     })

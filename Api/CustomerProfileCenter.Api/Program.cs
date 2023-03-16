@@ -1,4 +1,5 @@
 using CustomerProfileCenter.Api;
+using CustomerProfileCenter.Application;
 using CustomerProfileCenter.Domain;
 using CustomerProfileCenter.Infra.AntCorruptionLayer.ViaCep;
 using CustomerProfileCenter.Infra.Data;
@@ -11,6 +12,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services
     .AddViaCep(builder.Configuration)
     .AddMessageBus(builder.Configuration)
+    .AddApplication(builder.Configuration)
     .AddData(builder.Configuration, builder.Environment.IsDevelopment())
     .AddDomain();
 
