@@ -2,8 +2,8 @@ using Refit;
 
 namespace CustomerProfileCenter.Infra.AntCorruptionLayer.ViaCep.ViaCep;
 
-internal interface IViaCepClient
+public interface IViaCepClient
 {
     [Get("/{cep}/json")]
-    Task<ViaCepResponse> GetCepInform(string cep);
+    Task<ViaCepResponse> GetCepInformation(string cep);
 }

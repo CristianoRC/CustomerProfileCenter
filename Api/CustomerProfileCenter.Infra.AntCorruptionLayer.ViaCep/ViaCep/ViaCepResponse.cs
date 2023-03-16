@@ -1,6 +1,6 @@
 namespace CustomerProfileCenter.Infra.AntCorruptionLayer.ViaCep.ViaCep;
 
-internal record ViaCepResponse
+public record ViaCepResponse
 {
     public string Cep { get; set; }
     public string Logradouro { get; set; }
