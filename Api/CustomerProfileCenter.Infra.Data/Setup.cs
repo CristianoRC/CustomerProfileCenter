@@ -32,12 +32,9 @@ public static class Setup
     private static void ConfigureDistributedCache(IServiceCollection services, IConfiguration config,
         bool isDevelopment)
     {
-        if (isDevelopment)
+        /*if (isDevelopment)
             services.AddMemoryCache();
-        else
-            services.AddStackExchangeRedisCache(options =>
-            {
-                options.Configuration = config["RedisConnectionString"];
-            });
+        else*/
+        services.AddStackExchangeRedisCache(options => { options.Configuration = config["RedisConnectionString"]; });
     }
 }

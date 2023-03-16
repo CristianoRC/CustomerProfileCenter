@@ -24,7 +24,6 @@ public class WeatherForecastController : ControllerBase
         _logger.LogInformation("Infomração {Message}", new {Message = "123"});
         _logger.LogError("Erro!");
         _logger.LogCritical("Crítico!");
-        await _cepRepository.GetAddress(new Cep("96085000"));
-        return Ok();
+        return Ok(await _cepRepository.GetAddress(new Cep("96085000")));
     }
 }

@@ -44,7 +44,12 @@ public class CepRepositoryCacheDecorator : ICepRepository
 
     private Task SaveOnCache(Address address, string cacheKey)
     {
-        return _distributedCache.SetStringAsync(cacheKey, JsonConvert.SerializeObject(address));
+        var cacheOptions = new DistributedCacheEntryOptions()
+        {
+            AbsoluteExpirationRelativeToNow = TimeSpan.FromHours(6)
+        };
+        
+        return _distributedCache.SetStringAsync(cacheKey, JsonConvert.SerializeObject(address), cacheOptions);
     }
 
     private static string GenerateCacheKey(Cep cep)
