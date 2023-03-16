@@ -21,7 +21,11 @@ public static class Setup
             .AddPolicyHandler(GetCircuitBreakerPolicy());
 
         services.AddTransient<CepRepository>();
-        services.AddTransient<ICepRepository>(provider => { throw new NotImplementedException(); });
+        services.AddTransient<ICepRepository>(provider =>
+        {
+            var repository = provider.GetService<CepRepository>();
+            return new CepRepositoryCacheDecorator(repository);
+        });
         return services;
     }
 
