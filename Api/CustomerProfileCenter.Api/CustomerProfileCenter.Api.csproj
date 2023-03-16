@@ -22,4 +22,10 @@
       </Content>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\CustomerProfileCenter.Domain\CustomerProfileCenter.Domain.csproj" />
+      <ProjectReference Include="..\CustomerProfileCenter.Infra.AntCorruptionLayer.ViaCep\CustomerProfileCenter.Infra.AntCorruptionLayer.ViaCep.csproj" />
+      <ProjectReference Include="..\CustomerProfileCenter.Infra.Data\CustomerProfileCenter.Infra.Data.csproj" />
+    </ItemGroup>
+
 </Project>

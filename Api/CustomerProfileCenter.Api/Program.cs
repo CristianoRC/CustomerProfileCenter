@@ -1,10 +1,17 @@
 using CustomerProfileCenter.Api;
+using CustomerProfileCenter.Domain;
+using CustomerProfileCenter.Infra.AntCorruptionLayer.ViaCep;
+using CustomerProfileCenter.Infra.Data;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddControllers()
-    .AddJsonOptions(options => options.JsonSerializerOptions.Converters.Add(new XssSanitizeJsonConvert()));
+builder.Services.AddControllers().AddJsonOptions(options => options.JsonSerializerOptions.Converters.Add(new XssSanitizeJsonConvert()));
 builder.Services.AddEndpointsApiExplorer();
+builder.Services
+    .AddViaCep(builder.Configuration)
+    .AddData(builder.Configuration)
+    .AddDomain();
+
 builder.Services.AddSwaggerGen();
 builder.Host.UseSerilog((builderContext, _, configuration) =>
 {
