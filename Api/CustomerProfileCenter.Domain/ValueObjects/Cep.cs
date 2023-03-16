@@ -19,4 +19,9 @@ public record Cep
 
     public string Number { get; }
     public bool IsValid { get; }
+
+    public override string ToString()
+    {
+        return Number;
+    }
 }

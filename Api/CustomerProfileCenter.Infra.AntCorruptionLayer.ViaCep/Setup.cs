@@ -1,6 +1,7 @@
 using CustomerProfileCenter.Domain.Repositories;
 using CustomerProfileCenter.Infra.AntCorruptionLayer.ViaCep.Repository;
 using CustomerProfileCenter.Infra.AntCorruptionLayer.ViaCep.ViaCep;
+using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Polly;
@@ -24,7 +25,8 @@ public static class Setup
         services.AddTransient<ICepRepository>(provider =>
         {
             var repository = provider.GetService<CepRepository>();
-            return new CepRepositoryCacheDecorator(repository);
+            var distributedCache = provider.GetService<IDistributedCache>();
+            return new CepRepositoryCacheDecorator(repository, distributedCache);
         });
         return services;
     }
