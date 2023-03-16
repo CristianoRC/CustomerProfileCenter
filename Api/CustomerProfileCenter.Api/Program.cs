@@ -7,7 +7,8 @@ using CustomerProfileCenter.Infra.MessageBus;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddControllers().AddJsonOptions(options => options.JsonSerializerOptions.Converters.Add(new XssSanitizeJsonConvert()));
+builder.Services.AddControllers()
+    .AddJsonOptions(options => options.JsonSerializerOptions.Converters.Add(new XssSanitizeJsonConvert()));
 builder.Services.AddEndpointsApiExplorer();
 builder.Services
     .AddViaCep(builder.Configuration)
@@ -29,7 +30,7 @@ builder.Host.UseSerilog((builderContext, _, configuration) =>
 var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
+    app.UseSwagger(options => { options.SerializeAsV2 = true; });
     app.UseSwaggerUI();
 }
 
