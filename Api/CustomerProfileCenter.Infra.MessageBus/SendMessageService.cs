@@ -13,7 +13,6 @@ public class SendMessageService : ISendMessageService
         _rabbitMqConnection = rabbitMqConnection;
     }
 
-
     public void SendMessage(object message, string exchange, string routingKey)
     {
         var jsonMessage = JsonSerializer.Serialize(message);
