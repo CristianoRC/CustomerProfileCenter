@@ -9,8 +9,6 @@ public static class Setup
     public static IServiceCollection AddData(this IServiceCollection services, IConfiguration config)
     {
         ConfigureRedis(services, config);
-
-
         return services;
     }
 
