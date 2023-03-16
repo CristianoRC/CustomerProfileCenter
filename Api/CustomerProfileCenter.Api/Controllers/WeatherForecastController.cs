@@ -7,12 +7,10 @@ namespace CustomerProfileCenter.Api.Controllers;
 [Route("[controller]")]
 public class WeatherForecastController : ControllerBase
 {
-    private readonly IViaCepClient _viaCep;
     private readonly ILogger<WeatherForecastController> _logger;
 
-    public WeatherForecastController(IViaCepClient viaCep, ILogger<WeatherForecastController> logger)
+    public WeatherForecastController(ILogger<WeatherForecastController> logger)
     {
-        _viaCep = viaCep;
         _logger = logger;
     }
 
@@ -22,6 +20,6 @@ public class WeatherForecastController : ControllerBase
         _logger.LogInformation("Infomração {Message}", new {Message = "123"});
         _logger.LogError("Erro!");
         _logger.LogCritical("Crítico!");
-        return Ok(await _viaCep.GetCepInformation("96085000"));
+        return Ok();
     }
 }
