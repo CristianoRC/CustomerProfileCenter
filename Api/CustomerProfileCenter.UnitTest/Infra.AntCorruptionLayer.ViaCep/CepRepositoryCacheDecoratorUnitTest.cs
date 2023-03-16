@@ -27,10 +27,10 @@ public class CepRepositoryCacheDecoratorUnitTest : BaseTest
             Logradouro = Faker.Address.StreetName(),
             Bairro = Faker.Address.OrdinalDirection(),
             Uf = Faker.Address.State()
-        };
+        }.ToDomainAddress();
 
-        var opts = Options.Create(new MemoryDistributedCacheOptions());
-        var cache = new MemoryDistributedCache(opts);
+        var options = Options.Create(new MemoryDistributedCacheOptions());
+        var cache = new MemoryDistributedCache(options);
         await cache.SetStringAsync($"CustomerProfile:{cep.Number}:Cep", JsonConvert.SerializeObject(addressCache));
 
         var repository = new Mock<ICepRepository>();
@@ -41,13 +41,39 @@ public class CepRepositoryCacheDecoratorUnitTest : BaseTest
 
         //Assert
         repository.Verify(x => x.GetAddress(It.IsAny<Cep>()), Times.Never);
-        var addressCacheConverted = addressCache.ToDomainAddress();
-        address.Should().BeEquivalentTo(addressCacheConverted);
+        address.Should().BeEquivalentTo(addressCache);
     }
 
     [Fact(DisplayName = "If Has No Cache Data, Should Set And Return The Value")]
     public async Task HasNoCache()
     {
-        throw new NotImplementedException();
+        //Arrange
+        var cep = new Cep("70070130");
+        var viaCepResponse = new ViaCepResponse
+        {
+            Cep = cep.ToString(),
+            Localidade = Faker.Address.City(),
+            Logradouro = Faker.Address.StreetName(),
+            Bairro = Faker.Address.OrdinalDirection(),
+            Uf = Faker.Address.State()
+        };
+
+        var options = Options.Create(new MemoryDistributedCacheOptions());
+        var cache = new MemoryDistributedCache(options);
+
+        var repository = new Mock<ICepRepository>();
+        repository.Setup(x => x.GetAddress(cep))
+            .ReturnsAsync(viaCepResponse.ToDomainAddress());
+        var repositoryWithCacheDecorator = new CepRepositoryCacheDecorator(repository.Object, cache);
+
+        //Act
+        var address = await repositoryWithCacheDecorator.GetAddress(cep);
+
+        //Assert
+        address.Should().BeEquivalentTo(viaCepResponse.ToDomainAddress());
+
+        var addressOnCacheJson = await cache.GetStringAsync($"CustomerProfile:{cep.Number}:Cep");
+        var addressOnCache = JsonConvert.DeserializeObject<Address>(addressOnCacheJson);
+        addressOnCache.Should().BeEquivalentTo(address);
     }
 }

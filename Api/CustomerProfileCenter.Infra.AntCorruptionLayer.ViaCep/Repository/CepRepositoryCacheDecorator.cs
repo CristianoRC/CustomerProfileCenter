@@ -23,10 +23,13 @@ public class CepRepositoryCacheDecorator : ICepRepository
     {
         var cacheKey = GenerateCacheKey(cep);
         var (address, hasCache) = await GetFromCache(cacheKey);
-        
+
         if (hasCache)
             return address;
-        throw new NotImplementedException();
+
+        address = await _repository.GetAddress(cep);
+        await SaveOnCache(address, cacheKey);
+        return address;
     }
 
     private async Task<(Address? address, bool hasCache)> GetFromCache(string cacheKey)
@@ -35,8 +38,13 @@ public class CepRepositoryCacheDecorator : ICepRepository
         if (string.IsNullOrEmpty(cacheJson))
             return (null, false);
 
-        var viaCepResponseCache = JsonConvert.DeserializeObject<ViaCepResponse>(cacheJson);
-        return (viaCepResponseCache?.ToDomainAddress(), true);
+        var viaCepResponseCache = JsonConvert.DeserializeObject<Address>(cacheJson);
+        return (viaCepResponseCache, true);
+    }
+
+    private Task SaveOnCache(Address address, string cacheKey)
+    {
+        return _distributedCache.SetStringAsync(cacheKey, JsonConvert.SerializeObject(address));
     }
 
     private static string GenerateCacheKey(Cep cep)
