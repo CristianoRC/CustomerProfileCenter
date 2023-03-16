@@ -2,6 +2,7 @@ using CustomerProfileCenter.Api;
 using CustomerProfileCenter.Domain;
 using CustomerProfileCenter.Infra.AntCorruptionLayer.ViaCep;
 using CustomerProfileCenter.Infra.Data;
+using CustomerProfileCenter.Infra.MessageBus;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +10,7 @@ builder.Services.AddControllers().AddJsonOptions(options => options.JsonSerializ
 builder.Services.AddEndpointsApiExplorer();
 builder.Services
     .AddViaCep(builder.Configuration)
+    .AddMessageBus(builder.Configuration)
     .AddData(builder.Configuration, builder.Environment.IsDevelopment())
     .AddDomain();
 

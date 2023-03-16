@@ -1,6 +1,4 @@
-using CustomerProfileCenter.Domain.Repositories;
-using CustomerProfileCenter.Domain.ValueObjects;
-using CustomerProfileCenter.Infra.AntCorruptionLayer.ViaCep.ViaCep;
+using CustomerProfileCenter.Infra.MessageBus;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CustomerProfileCenter.Api.Controllers;
@@ -9,21 +7,19 @@ namespace CustomerProfileCenter.Api.Controllers;
 [Route("[controller]")]
 public class WeatherForecastController : ControllerBase
 {
-    private readonly ICepRepository _cepRepository;
+    private readonly ISendMessageService _sendMessageService;
     private readonly ILogger<WeatherForecastController> _logger;
 
-    public WeatherForecastController(ICepRepository cepRepository, ILogger<WeatherForecastController> logger)
+    public WeatherForecastController(ISendMessageService sendMessageService, ILogger<WeatherForecastController> logger)
     {
-        _cepRepository = cepRepository;
+        _sendMessageService = sendMessageService;
         _logger = logger;
     }
 
     [HttpGet(Name = "GetWeatherForecast")]
     public async Task<IActionResult> Get()
     {
-        _logger.LogInformation("Infomração {Message}", new {Message = "123"});
-        _logger.LogError("Erro!");
-        _logger.LogCritical("Crítico!");
-        return Ok(await _cepRepository.GetAddress(new Cep("96085000")));
+        _sendMessageService.SendMessage(new {Name = "Example RabbitMQ - Sender"}, string.Empty, "example");
+        return Ok();
     }
 }
