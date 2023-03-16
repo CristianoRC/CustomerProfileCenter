@@ -6,11 +6,13 @@ builder.Services.AddControllers()
     .AddJsonOptions(options => options.JsonSerializerOptions.Converters.Add(new XssSanitizeJsonConvert()));
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Host.UseSerilog((_, _, configuration) =>
+builder.Host.UseSerilog((builderContext, _, configuration) =>
 {
+    if (builderContext.HostingEnvironment.IsDevelopment())
+        configuration.WriteTo.Console();
+    else
+        configuration.WriteTo.File("./logs.txt");
     //Aqui poderia ser qualquer outro tipo de sistema de log externo
-    //configuration.WriteTo.File("./logs.txt");
-    configuration.WriteTo.Console();
 });
 
 var app = builder.Build();
