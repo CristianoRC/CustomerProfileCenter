@@ -19,8 +19,11 @@ public class WeatherForecastController : ControllerBase
     }
 
     [HttpGet(Name = "GetWeatherForecast")]
-    public IEnumerable<object> Get()
+    public IActionResult Get()
     {
-        throw new NotImplementedException();
+        _logger.LogInformation("Infomração {Message}", new {Message = "123"});
+        _logger.LogError("Erro!");
+        _logger.LogCritical("Crítico!");
+        return Ok();
     }
 }
