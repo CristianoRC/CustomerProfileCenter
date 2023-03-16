@@ -2,7 +2,6 @@ using CustomerProfileCenter.Infra.AntCorruptionLayer.ViaCep.ViaCep;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Polly;
-using Polly.CircuitBreaker;
 using Polly.Contrib.WaitAndRetry;
 using Polly.Extensions.Http;
 using Polly.Retry;
