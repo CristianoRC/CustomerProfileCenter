@@ -1,3 +1,6 @@
+using CustomerProfileCenter.Domain.Entities;
+using CustomerProfileCenter.Domain.ValueObjects;
+
 namespace CustomerProfileCenter.Infra.AntCorruptionLayer.ViaCep.ViaCep;
 
 internal record ViaCepResponse
@@ -12,4 +15,9 @@ internal record ViaCepResponse
     public string Gia { get; set; }
     public string Ddd { get; set; }
     public string Siafi { get; set; }
+
+    public Address ToDomainAddress()
+    {
+        return new Address(new Cep(Cep), Logradouro, Bairro, Uf, string.Empty, string.Empty);
+    }
 }

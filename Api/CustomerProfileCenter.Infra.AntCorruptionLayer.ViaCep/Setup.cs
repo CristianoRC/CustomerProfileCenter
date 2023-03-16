@@ -1,3 +1,5 @@
+using CustomerProfileCenter.Domain.Repositories;
+using CustomerProfileCenter.Infra.AntCorruptionLayer.ViaCep.Repository;
 using CustomerProfileCenter.Infra.AntCorruptionLayer.ViaCep.ViaCep;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -17,6 +19,9 @@ public static class Setup
             .ConfigureHttpClient(c => c.BaseAddress = new Uri(config["ViaCep"]))
             .AddPolicyHandler(GetRetryPolicy())
             .AddPolicyHandler(GetCircuitBreakerPolicy());
+
+        services.AddTransient<CepRepository>();
+        services.AddTransient<ICepRepository>(provider => { throw new NotImplementedException(); });
         return services;
     }
 
