@@ -3,7 +3,7 @@ using CustomerProfileCenter.Infra.AntCorruptionLayer.ViaCep;
 using CustomerProfileCenter.Infra.Data;
 using Microsoft.Extensions.Hosting;
 
-var host = new HostBuilder()
+var hostBuilder = new HostBuilder()
     .ConfigureServices((builderContext, services) =>
     {
         services
@@ -11,7 +11,7 @@ var host = new HostBuilder()
             .AddData(builderContext.Configuration)
             .AddDomain();
     })
-    .ConfigureFunctionsWorkerDefaults()
-    .Build();
+    .ConfigureFunctionsWorkerDefaults();
 
+var host = hostBuilder.Build();
 host.Run();
