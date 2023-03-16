@@ -8,7 +8,7 @@ var hostBuilder = new HostBuilder()
     {
         services
             .AddViaCep(builderContext.Configuration)
-            .AddData(builderContext.Configuration)
+            .AddData(builderContext.Configuration, builderContext.HostingEnvironment.IsDevelopment())
             .AddDomain();
     })
     .ConfigureFunctionsWorkerDefaults();

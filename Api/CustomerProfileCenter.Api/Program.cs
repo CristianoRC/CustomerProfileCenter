@@ -9,7 +9,7 @@ builder.Services.AddControllers().AddJsonOptions(options => options.JsonSerializ
 builder.Services.AddEndpointsApiExplorer();
 builder.Services
     .AddViaCep(builder.Configuration)
-    .AddData(builder.Configuration)
+    .AddData(builder.Configuration, builder.Environment.IsDevelopment())
     .AddDomain();
 
 builder.Services.AddSwaggerGen();

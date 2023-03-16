@@ -1,20 +1,25 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using StackExchange.Redis;
 
 namespace CustomerProfileCenter.Infra.Data;
 
 public static class Setup
 {
-    public static IServiceCollection AddData(this IServiceCollection services, IConfiguration config)
+    public static IServiceCollection AddData(this IServiceCollection services, IConfiguration config,
+        bool isDevelopment)
     {
-        ConfigureRedis(services, config);
+        ConfigureDistributedCache(services, config, isDevelopment);
         return services;
     }
 
-    private static void ConfigureRedis(IServiceCollection services, IConfiguration config)
+    private static void ConfigureDistributedCache(IServiceCollection services, IConfiguration config, bool isDevelopment)
     {
-        var multiplexer = ConnectionMultiplexer.Connect(config["RedisConnectionString"]);
-        services.AddSingleton<IConnectionMultiplexer>(multiplexer);
+        if (isDevelopment)
+            services.AddMemoryCache();
+        else
+            services.AddStackExchangeRedisCache(options =>
+            {
+                options.Configuration = config["RedisConnectionString"];
+            });
     }
 }
