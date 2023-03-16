@@ -19,7 +19,7 @@ public class WeatherForecastController : ControllerBase
     [HttpGet(Name = "GetWeatherForecast")]
     public async Task<IActionResult> Get()
     {
-        _sendMessageService.SendMessage(new {Name = "Example RabbitMQ - Sender"}, string.Empty, "example");
+        _sendMessageService.SendMessage(new {Name = "Example RabbitMQ - Sender"}, "example");
         return Ok();
     }
 }
