@@ -9,7 +9,7 @@ internal class CepRepository : ICepRepository
 {
     private readonly IViaCepClient _viaCepClient;
 
-    internal CepRepository(IViaCepClient viaCepClient)
+    public CepRepository(IViaCepClient viaCepClient)
     {
         _viaCepClient = viaCepClient;
     }
