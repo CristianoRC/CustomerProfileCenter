@@ -5,7 +5,7 @@ using CustomerProfileCenter.Infra.AntCorruptionLayer.ViaCep.ViaCep;
 
 namespace CustomerProfileCenter.Infra.AntCorruptionLayer.ViaCep.Repository;
 
-public class CepRepository : ICepRepository
+internal class CepRepository : ICepRepository
 {
     private readonly IViaCepClient _viaCepClient;
 
