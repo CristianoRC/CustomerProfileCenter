@@ -20,6 +20,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerProfileCenter.UnitT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerProfileCenter.Bus", "CustomerProfileCenter.Bus\CustomerProfileCenter.Bus.csproj", "{2DB51735-CA8B-4A9B-A343-F0A3D4883DDA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerProfileCenter.Infra.Data", "CustomerProfileCenter.Infra.Data\CustomerProfileCenter.Infra.Data.csproj", "{6E0DAD2B-BABF-4208-A32D-16877106B5B0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -46,6 +48,10 @@ Global
 		{2DB51735-CA8B-4A9B-A343-F0A3D4883DDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2DB51735-CA8B-4A9B-A343-F0A3D4883DDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2DB51735-CA8B-4A9B-A343-F0A3D4883DDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E0DAD2B-BABF-4208-A32D-16877106B5B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E0DAD2B-BABF-4208-A32D-16877106B5B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E0DAD2B-BABF-4208-A32D-16877106B5B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E0DAD2B-BABF-4208-A32D-16877106B5B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{501B82E8-C14C-489A-A190-80B12C0F16A4} = {6CABE6F3-60EB-4C1F-98D9-758EE830174E}
@@ -53,5 +59,6 @@ Global
 		{72AAE798-02AC-4A5A-AECD-51BF4568F560} = {A8163CA3-F85E-48B3-AD01-66840DDE5934}
 		{E7C00B81-EDF3-4F35-A15B-6A0EB45B31E7} = {FD5E144A-0D5F-46F6-8ABE-E8A413A13441}
 		{2DB51735-CA8B-4A9B-A343-F0A3D4883DDA} = {6CABE6F3-60EB-4C1F-98D9-758EE830174E}
+		{6E0DAD2B-BABF-4208-A32D-16877106B5B0} = {E10739CF-CA88-49CD-A0F9-5CFE5F66DC8C}
 	EndGlobalSection
 EndGlobal
