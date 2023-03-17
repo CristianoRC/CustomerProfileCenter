@@ -3,8 +3,15 @@ using CustomerProfileCenter.Domain.ValueObjects.Documents;
 
 namespace CustomerProfileCenter.Application.Customer;
 
-public record CreateCustomerCommand
+public record CreateCustomerCommand : IIdempotentMessage
 {
+    public Guid IdempotencyKey { get; private set; }
+
+    public void SetIdempotencyKey()
+    {
+        IdempotencyKey = new Guid();
+    }
+
     public string Name { get; set; }
     public string DocumentNumber { get; set; }
     public EDocumentType DocumentType { get; set; }

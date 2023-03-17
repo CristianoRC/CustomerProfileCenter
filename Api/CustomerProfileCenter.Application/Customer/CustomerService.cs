@@ -30,6 +30,7 @@ public class CustomerService : ICustomerService
         if (userAlreadyRegistered)
             return new ResponseError("Cliente já cadastrado");
 
+        command.SetIdempotencyKey();
         _customerMessageBus.EnqueueCreateCustomerCommand(command);
         return new ResponseError();
     }
