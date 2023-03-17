@@ -1,0 +1,19 @@
+﻿FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
+WORKDIR /src
+COPY CustomerProfileCenter.Api/*.csproj CustomerProfileCenter.Api/
+COPY CustomerProfileCenter.Application/*.csproj CustomerProfileCenter.Application/
+COPY CustomerProfileCenter.CrossCutting/*.csproj CustomerProfileCenter.CrossCutting/
+COPY CustomerProfileCenter.Domain/*.csproj CustomerProfileCenter.Domain/
+COPY CustomerProfileCenter.Infra.AntCorruptionLayer.ViaCep/*.csproj CustomerProfileCenter.Infra.AntCorruptionLayer.ViaCep/
+COPY CustomerProfileCenter.Infra.Data/*.csproj CustomerProfileCenter.Infra.Data/
+COPY CustomerProfileCenter.Infra.MessageBus/*.csproj CustomerProfileCenter.Infra.MessageBus/
+RUN dotnet restore ./CustomerProfileCenter.Api/CustomerProfileCenter.Api.csproj
+COPY ./ ./
+RUN dotnet publish "./CustomerProfileCenter.Api/CustomerProfileCenter.Api.csproj" -c Release -o /app/
+
+FROM mcr.microsoft.com/dotnet/aspnet:7.0
+EXPOSE 80
+EXPOSE 443
+WORKDIR /app
+COPY --from=build /app .
+ENTRYPOINT ["dotnet", "CustomerProfileCenter.Api.dll"]
