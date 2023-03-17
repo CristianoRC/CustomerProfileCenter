@@ -21,7 +21,8 @@ public class CustomerService : ICustomerService
         var userAlreadyRegistered = await _customerRepository.CustomerAlreadyRegistered(command.GetDocument());
         if (userAlreadyRegistered)
             return new ResponseError("Cliente já cadastrado");
-        //TODO: Só precisa validar o documento também!
+
+        //TODO: Só precisa validar o documento e o nome, da para ser dentro do command esses dois!
         throw new NotImplementedException();
     }
 

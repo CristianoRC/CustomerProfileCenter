@@ -1,0 +1,44 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
+
+LAYOUT_LANDSCAPE()
+TITLE Customer Profile Center - System Context
+
+Person(customer, "Cliente", "Consumidor final que foi cadastrado no sistema")
+
+
+Boundary(internalProducersBoundary, "Sistemas internos") {
+    System(marketingPlatform, "Plataforma de Marketing", "Plataforma responsável por capanhas de marketing e landing pages")
+    System(pdvPlatforma, "PDV", "Plataforma de manipulação de vendas nas lojas físicas")
+    System(ecomerPlatform, "E-Comerce", "Plataforma de e-comerce")
+}
+
+Boundary(customerProfileCenterBoundary, "Customer Profile Center") {
+   System(customerProfileCenter, "Customer Profile Center", "Centraliza a jornada e os dados do consumidor")
+   System(reportSystem, "Report System", "Centraliza os dados dos clientes para relatórios")
+   System(notificationCenter, "Notification Center",  "Responsável por notificações dos clientes")
+   
+   System_Ext(emailService, "Sistema de Email", "Sitema de controle de template e envio de email")
+   System_Ext(phoneService, "Sistema de envio \n SMS / Whatsapp", "Sitema de envio de notificações para celulares")
+   System_Ext(viaCep, "ViaCEP", "Sistema para obter informações sobre CEP")
+}
+
+'Relacionamento dos clientes
+Rel(ecomerPlatform, customerProfileCenter, "Cadastra Cliente", "")
+Rel(pdvPlatforma, customerProfileCenter, "Cadastra Cliente", "")
+Rel(marketingPlatform, customerProfileCenter, "Cadastra Cliente", "")
+
+'Relacionamentos com o Customer Profile
+Rel(customerProfileCenter, reportSystem, "Fornece Dados para relatórios", "")
+Rel(customerProfileCenter, viaCep, "Busca Dados para preencher Endereço", "")
+
+'Relacionamentos com os sistemas de notificação
+Rel(customerProfileCenter, notificationCenter, "Envia Notificação", "")
+Rel(notificationCenter, emailService, "Envia Notificação usando", "")
+Rel(notificationCenter, phoneService, "Envia Notificação usando", "")
+Rel(emailService, customer, "Notifica Cliente", "")
+Rel(phoneService, customer, "Notifica Cliente", "")
+
+SHOW_LEGEND()
+@enduml
