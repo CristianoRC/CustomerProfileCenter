@@ -3,6 +3,7 @@ using CustomerProfileCenter.Domain;
 using CustomerProfileCenter.Infra.AntCorruptionLayer.ViaCep;
 using CustomerProfileCenter.Infra.Data;
 using CustomerProfileCenter.Infra.MessageBus;
+using CustomerProfileCenter.Infra.MessageBus.Configuration;
 using Microsoft.Extensions.Hosting;
 
 var hostBuilder = new HostBuilder()

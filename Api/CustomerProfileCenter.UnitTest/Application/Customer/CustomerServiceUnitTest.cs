@@ -23,7 +23,7 @@ public class CustomerServiceUnitTest : BaseTest
         customerRepository.Setup(x => x.CustomerAlreadyRegistered(It.IsAny<IDocument>()))
             .ReturnsAsync(true);
         var service = new CustomerService(customerRepository.Object, Enumerable.Empty<ICreateCustomerStrategy>(),
-            Mock.Of<ICustomerRegisterBus>());
+            Mock.Of<ICustomerMessageBus>());
 
         var command = new CreateCustomerCommand()
         {
@@ -50,7 +50,7 @@ public class CustomerServiceUnitTest : BaseTest
         customerRepository.Setup(x => x.CustomerAlreadyRegistered(It.IsAny<IDocument>()))
             .ReturnsAsync(false);
 
-        var messageBusMock = new Mock<ICustomerRegisterBus>();
+        var messageBusMock = new Mock<ICustomerMessageBus>();
         var service = new CustomerService(customerRepository.Object, Enumerable.Empty<ICreateCustomerStrategy>(),
             messageBusMock.Object);
 
@@ -79,7 +79,7 @@ public class CustomerServiceUnitTest : BaseTest
         customerRepository.Setup(x => x.CustomerAlreadyRegistered(It.IsAny<IDocument>()))
             .ReturnsAsync(true);
         var service = new CustomerService(customerRepository.Object, Enumerable.Empty<ICreateCustomerStrategy>(),
-            Mock.Of<ICustomerRegisterBus>());
+            Mock.Of<ICustomerMessageBus>());
 
         var command = new CreateCustomerCommand()
         {
@@ -113,7 +113,7 @@ public class CustomerServiceUnitTest : BaseTest
             .Returns(EDocumentType.Cnpj);
 
         var strategies = new[] {individualStrategy.Object, companyStrategy.Object};
-        var service = new CustomerService(customerRepository.Object, strategies, Mock.Of<ICustomerRegisterBus>());
+        var service = new CustomerService(customerRepository.Object, strategies, Mock.Of<ICustomerMessageBus>());
 
         var command = new CreateCustomerCommand()
         {
@@ -147,7 +147,7 @@ public class CustomerServiceUnitTest : BaseTest
             .Returns(EDocumentType.Cnpj);
 
         var strategies = new[] {individualStrategy.Object, companyStrategy.Object};
-        var service = new CustomerService(customerRepository.Object, strategies, Mock.Of<ICustomerRegisterBus>());
+        var service = new CustomerService(customerRepository.Object, strategies, Mock.Of<ICustomerMessageBus>());
 
         var command = new CreateCustomerCommand()
         {
@@ -172,7 +172,7 @@ public class CustomerServiceUnitTest : BaseTest
         customerRepository.Setup(x => x.CustomerAlreadyRegistered(It.IsAny<IDocument>()))
             .ReturnsAsync(false);
         var service = new CustomerService(customerRepository.Object, Enumerable.Empty<ICreateCustomerStrategy>(),
-            Mock.Of<ICustomerRegisterBus>());
+            Mock.Of<ICustomerMessageBus>());
 
         var command = new CreateCustomerCommand()
         {

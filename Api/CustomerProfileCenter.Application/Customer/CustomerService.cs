@@ -9,25 +9,27 @@ public class CustomerService : ICustomerService
 {
     private readonly ICustomerRepository _customerRepository;
     private readonly IEnumerable<ICreateCustomerStrategy> _createCustomerStrategies;
-    private readonly ICustomerRegisterBus _customerRegisterBus;
+    private readonly ICustomerMessageBus _customerMessageBus;
 
     public CustomerService(ICustomerRepository customerRepository,
         IEnumerable<ICreateCustomerStrategy> createCustomerStrategies,
-        ICustomerRegisterBus customerRegisterBus)
+        ICustomerMessageBus customerMessageBus)
     {
         _customerRepository = customerRepository;
         _createCustomerStrategies = createCustomerStrategies;
-        _customerRegisterBus = customerRegisterBus;
+        _customerMessageBus = customerMessageBus;
     }
 
     public async Task<ResponseError> EnqueueCreateCustomerCommand(CreateCustomerCommand command)
     {
+        if (string.IsNullOrEmpty(command.Name))
+            return new ResponseError("Nome Obrigatório");
+
         var userAlreadyRegistered = await _customerRepository.CustomerAlreadyRegistered(command.GetDocument());
         if (userAlreadyRegistered)
             return new ResponseError("Cliente já cadastrado");
 
-        //TODO: Validar outros campos?
-        await _customerRegisterBus.EnqueueCreateCustomerCommand(command);
+        _customerMessageBus.EnqueueCreateCustomerCommand(command);
         return new ResponseError();
     }
 
