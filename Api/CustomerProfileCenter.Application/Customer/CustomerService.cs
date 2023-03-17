@@ -37,6 +37,10 @@ public class CustomerService : ICustomerService
 
     public async Task<ResponseError> CreateCustomer(CreateCustomerCommand command)
     {
+        var commandAlreadyProcessed = await _customerRepository.MessageAlreadyProcessed(command);
+        if (commandAlreadyProcessed)
+            return new ResponseError("Mensagem já processada");
+
         var userAlreadyRegistered = await _customerRepository.CustomerAlreadyRegistered(command.GetDocument());
         if (userAlreadyRegistered)
             return new ResponseError("Cliente já cadastrado");

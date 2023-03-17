@@ -2,6 +2,7 @@ using Bogus.Extensions.Brazil;
 using CustomerProfileCenter.Application.Customer;
 using CustomerProfileCenter.Application.Customer.Strategies;
 using CustomerProfileCenter.Application.MessageBus;
+using CustomerProfileCenter.CrossCutting;
 using CustomerProfileCenter.Domain.Repositories;
 using CustomerProfileCenter.Domain.ValueObjects.Documents;
 using FluentAssertions;
@@ -28,7 +29,8 @@ public class CustomerServiceUnitTest : BaseTest
         var command = new CreateCustomerCommand()
         {
             DocumentType = documentType,
-            DocumentNumber = documentNumber
+            DocumentNumber = documentNumber,
+            Name = Faker.Person.FullName
         };
 
         //Act
@@ -57,7 +59,8 @@ public class CustomerServiceUnitTest : BaseTest
         var command = new CreateCustomerCommand()
         {
             DocumentType = documentType,
-            DocumentNumber = documentNumber
+            DocumentNumber = documentNumber,
+            Name = Faker.Person.FullName
         };
 
         //Act
@@ -66,6 +69,35 @@ public class CustomerServiceUnitTest : BaseTest
         //Assert
         messageBusMock.Verify(x => x.EnqueueCreateCustomerCommand(command), Times.Once);
         response.HasError.Should().BeFalse();
+    }
+
+    [Fact(DisplayName = "On Create, Should Not Process If Message Has Already Processed")]
+    public async Task MessageAlreadyProcessed()
+    {
+        //Arrange
+        var documentType = Faker.PickRandom(EDocumentType.Cnpj, EDocumentType.Cpf);
+        var documentNumber = documentType == EDocumentType.Cnpj ? Faker.Company.Cnpj() : Faker.Person.Cpf();
+
+        var customerRepository = new Mock<ICustomerRepository>();
+        customerRepository.Setup(x => x.MessageAlreadyProcessed(It.IsAny<IIdempotentMessage>())).ReturnsAsync(true);
+        customerRepository.Setup(x => x.CustomerAlreadyRegistered(It.IsAny<IDocument>()))
+            .ReturnsAsync(true);
+        var service = new CustomerService(customerRepository.Object, Enumerable.Empty<ICreateCustomerStrategy>(),
+            Mock.Of<ICustomerMessageBus>());
+
+        var command = new CreateCustomerCommand()
+        {
+            DocumentType = documentType,
+            DocumentNumber = documentNumber,
+            Name = Faker.Person.FullName
+        };
+
+        //Act
+        var response = await service.CreateCustomer(command);
+
+        //Assert
+        response.HasError.Should().BeTrue();
+        response.ErrorMessage.Should().Be("Mensagem já processada");
     }
 
     [Fact(DisplayName = "On Create, Should Not Process If Document Has Already Registered")]
@@ -84,7 +116,8 @@ public class CustomerServiceUnitTest : BaseTest
         var command = new CreateCustomerCommand()
         {
             DocumentType = documentType,
-            DocumentNumber = documentNumber
+            DocumentNumber = documentNumber,
+            Name = Faker.Person.FullName
         };
 
         //Act
@@ -118,7 +151,8 @@ public class CustomerServiceUnitTest : BaseTest
         var command = new CreateCustomerCommand()
         {
             DocumentType = EDocumentType.Cnpj,
-            DocumentNumber = documentNumber
+            DocumentNumber = documentNumber,
+            Name = Faker.Person.FullName
         };
 
         //Act
@@ -152,7 +186,8 @@ public class CustomerServiceUnitTest : BaseTest
         var command = new CreateCustomerCommand()
         {
             DocumentType = EDocumentType.Cpf,
-            DocumentNumber = documentNumber
+            DocumentNumber = documentNumber,
+            Name = Faker.Person.FullName
         };
 
         //Act
@@ -177,7 +212,8 @@ public class CustomerServiceUnitTest : BaseTest
         var command = new CreateCustomerCommand()
         {
             DocumentType = Faker.PickRandom(EDocumentType.Cpf, EDocumentType.Cnpj),
-            DocumentNumber = documentNumber
+            DocumentNumber = documentNumber,
+            Name = Faker.Person.FullName
         };
 
         //Act
