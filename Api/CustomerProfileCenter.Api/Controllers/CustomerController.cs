@@ -1,3 +1,4 @@
+using CustomerProfileCenter.Application.Customer;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 
@@ -11,8 +12,9 @@ public class CustomerController : Controller
     [SwaggerResponse(StatusCodes.Status202Accepted)]
     [SwaggerResponse(StatusCodes.Status409Conflict)]
     [SwaggerResponse(StatusCodes.Status400BadRequest)]
-    public IActionResult CreateCustomer()
+    public IActionResult CreateCustomer([FromBody] CreateCustomerCommand createCustomerCommand)
     {
+        //TODO: Validar mensagem de erro "Cliente já cadastrado"  para o 409, o Resto é 400
         return Accepted();
     }
 }

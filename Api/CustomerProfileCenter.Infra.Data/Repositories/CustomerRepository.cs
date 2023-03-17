@@ -1,4 +1,5 @@
 using CustomerProfileCenter.Domain.Repositories;
+using CustomerProfileCenter.Domain.ValueObjects.Documents;
 using MongoDB.Driver;
 
 namespace CustomerProfileCenter.Infra.Data.Repositories;
@@ -11,16 +12,10 @@ public class CustomerRepository : ICustomerRepository
     {
         _databaseConnection = databaseConnection;
     }
-
-    public async Task Example()
+    
+    public Task<bool> CustomerAlreadyRegistered(IDocument document)
     {
-        for (int i = 0; i < 100000; i++)
-        {
-            await _databaseConnection
-                .GetCollection<DocumentExample>("Customer")
-                .InsertOneAsync(new DocumentExample("Cristiano", DateTime.Now.ToLongTimeString()));
-        }
+        //TODO: Fazer logica de Hash para verificação se existe!
+        throw new NotImplementedException();
     }
 }
-
-public record DocumentExample(string Name, string Date);
