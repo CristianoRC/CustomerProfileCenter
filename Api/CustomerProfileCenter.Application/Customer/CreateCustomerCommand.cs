@@ -1,4 +1,5 @@
 using System.Text;
+using CustomerProfileCenter.CrossCutting;
 using CustomerProfileCenter.Domain.ValueObjects.Documents;
 
 namespace CustomerProfileCenter.Application.Customer;

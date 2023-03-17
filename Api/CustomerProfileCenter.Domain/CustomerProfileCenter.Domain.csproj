@@ -16,4 +16,8 @@
       </Reference>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\CustomerProfileCenter.CrossCutting\CustomerProfileCenter.CrossCutting.csproj" />
+    </ItemGroup>
+
 </Project>

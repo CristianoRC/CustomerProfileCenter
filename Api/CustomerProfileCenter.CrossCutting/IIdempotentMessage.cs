@@ -1,4 +1,4 @@
-namespace CustomerProfileCenter.Application;
+namespace CustomerProfileCenter.CrossCutting;
 
 public interface IIdempotentMessage
 {
