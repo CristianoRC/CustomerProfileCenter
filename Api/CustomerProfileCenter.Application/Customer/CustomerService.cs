@@ -1,4 +1,5 @@
 using CustomerProfileCenter.Application.Customer.Strategies;
+using CustomerProfileCenter.Application.MessageBus;
 using CustomerProfileCenter.Application.Response;
 using CustomerProfileCenter.Domain.Repositories;
 
@@ -8,12 +9,15 @@ public class CustomerService : ICustomerService
 {
     private readonly ICustomerRepository _customerRepository;
     private readonly IEnumerable<ICreateCustomerStrategy> _createCustomerStrategies;
+    private readonly ICustomerRegisterBus _customerRegisterBus;
 
     public CustomerService(ICustomerRepository customerRepository,
-        IEnumerable<ICreateCustomerStrategy> createCustomerStrategies)
+        IEnumerable<ICreateCustomerStrategy> createCustomerStrategies,
+        ICustomerRegisterBus customerRegisterBus)
     {
         _customerRepository = customerRepository;
         _createCustomerStrategies = createCustomerStrategies;
+        _customerRegisterBus = customerRegisterBus;
     }
 
     public async Task<ResponseError> EnqueueCreateCustomerCommand(CreateCustomerCommand command)
@@ -22,8 +26,9 @@ public class CustomerService : ICustomerService
         if (userAlreadyRegistered)
             return new ResponseError("Cliente já cadastrado");
 
-        //TODO: Só precisa validar o documento e o nome, da para ser dentro do command esses dois!
-        throw new NotImplementedException();
+        //TODO: Validar outros campos?
+        await _customerRegisterBus.EnqueueCreateCustomerCommand(command);
+        return new ResponseError();
     }
 
     public async Task<ResponseError> CreateCustomer(CreateCustomerCommand command)

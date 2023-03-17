@@ -1,6 +1,7 @@
 using Bogus.Extensions.Brazil;
 using CustomerProfileCenter.Application.Customer;
 using CustomerProfileCenter.Application.Customer.Strategies;
+using CustomerProfileCenter.Application.MessageBus;
 using CustomerProfileCenter.Domain.Repositories;
 using CustomerProfileCenter.Domain.ValueObjects.Documents;
 using FluentAssertions;
@@ -11,7 +12,63 @@ namespace CustomerProfileCenter.UnitTest.Application.Customer;
 
 public class CustomerServiceUnitTest : BaseTest
 {
-    [Fact(DisplayName = "Should Not Process If Document Has Already Registered")]
+    [Fact(DisplayName = "On Enqueue Create Command, Should Not Process If Document Has Already Registered")]
+    public async Task EnqueueCreateCommand()
+    {
+        //Arrange
+        var documentType = Faker.PickRandom(EDocumentType.Cnpj, EDocumentType.Cpf);
+        var documentNumber = documentType == EDocumentType.Cnpj ? Faker.Company.Cnpj() : Faker.Person.Cpf();
+
+        var customerRepository = new Mock<ICustomerRepository>();
+        customerRepository.Setup(x => x.CustomerAlreadyRegistered(It.IsAny<IDocument>()))
+            .ReturnsAsync(true);
+        var service = new CustomerService(customerRepository.Object, Enumerable.Empty<ICreateCustomerStrategy>(),
+            Mock.Of<ICustomerRegisterBus>());
+
+        var command = new CreateCustomerCommand()
+        {
+            DocumentType = documentType,
+            DocumentNumber = documentNumber
+        };
+
+        //Act
+        var response = await service.EnqueueCreateCustomerCommand(command);
+
+        //Assert
+        response.HasError.Should().BeTrue();
+        response.ErrorMessage.Should().Be("Cliente já cadastrado");
+    }
+
+    [Fact(DisplayName = "On Enqueue Create Command, Should Send To Bus If Document Is Valid")]
+    public async Task SendMessageToBus()
+    {
+        //Arrange
+        var documentType = Faker.PickRandom(EDocumentType.Cnpj, EDocumentType.Cpf);
+        var documentNumber = documentType == EDocumentType.Cnpj ? Faker.Company.Cnpj() : Faker.Person.Cpf();
+
+        var customerRepository = new Mock<ICustomerRepository>();
+        customerRepository.Setup(x => x.CustomerAlreadyRegistered(It.IsAny<IDocument>()))
+            .ReturnsAsync(false);
+
+        var messageBusMock = new Mock<ICustomerRegisterBus>();
+        var service = new CustomerService(customerRepository.Object, Enumerable.Empty<ICreateCustomerStrategy>(),
+            messageBusMock.Object);
+
+        var command = new CreateCustomerCommand()
+        {
+            DocumentType = documentType,
+            DocumentNumber = documentNumber
+        };
+
+        //Act
+        var response = await service.EnqueueCreateCustomerCommand(command);
+
+        //Assert
+        messageBusMock.Verify(x => x.EnqueueCreateCustomerCommand(command), Times.Once);
+        response.HasError.Should().BeFalse();
+    }
+
+    [Fact(DisplayName = "On Create, Should Not Process If Document Has Already Registered")]
     public async Task DocumentAlreadyProcess()
     {
         //Arrange
@@ -21,7 +78,8 @@ public class CustomerServiceUnitTest : BaseTest
         var customerRepository = new Mock<ICustomerRepository>();
         customerRepository.Setup(x => x.CustomerAlreadyRegistered(It.IsAny<IDocument>()))
             .ReturnsAsync(true);
-        var service = new CustomerService(customerRepository.Object, Enumerable.Empty<ICreateCustomerStrategy>());
+        var service = new CustomerService(customerRepository.Object, Enumerable.Empty<ICreateCustomerStrategy>(),
+            Mock.Of<ICustomerRegisterBus>());
 
         var command = new CreateCustomerCommand()
         {
@@ -37,7 +95,7 @@ public class CustomerServiceUnitTest : BaseTest
         response.ErrorMessage.Should().Be("Cliente já cadastrado");
     }
 
-    [Fact(DisplayName = "If User Is A Company Should Call The Company Strategy")]
+    [Fact(DisplayName = "On Create, If User Is A Company Should Call The Company Strategy")]
     public async Task CompanyStrategy()
     {
         //Arrange
@@ -55,7 +113,7 @@ public class CustomerServiceUnitTest : BaseTest
             .Returns(EDocumentType.Cnpj);
 
         var strategies = new[] {individualStrategy.Object, companyStrategy.Object};
-        var service = new CustomerService(customerRepository.Object, strategies);
+        var service = new CustomerService(customerRepository.Object, strategies, Mock.Of<ICustomerRegisterBus>());
 
         var command = new CreateCustomerCommand()
         {
@@ -71,7 +129,7 @@ public class CustomerServiceUnitTest : BaseTest
         individualStrategy.Verify(x => x.CreateCustomer(It.IsAny<CreateCustomerCommand>()), Times.Never);
     }
 
-    [Fact(DisplayName = "If User Is A Person Should Call The Individual Strategy")]
+    [Fact(DisplayName = "On Create, If User Is A Person Should Call The Individual Strategy")]
     public async Task IndividualStrategy()
     {
         //Arrange
@@ -89,7 +147,7 @@ public class CustomerServiceUnitTest : BaseTest
             .Returns(EDocumentType.Cnpj);
 
         var strategies = new[] {individualStrategy.Object, companyStrategy.Object};
-        var service = new CustomerService(customerRepository.Object, strategies);
+        var service = new CustomerService(customerRepository.Object, strategies, Mock.Of<ICustomerRegisterBus>());
 
         var command = new CreateCustomerCommand()
         {
@@ -105,7 +163,7 @@ public class CustomerServiceUnitTest : BaseTest
         companyStrategy.Verify(x => x.CreateCustomer(It.IsAny<CreateCustomerCommand>()), Times.Never);
     }
 
-    [Fact(DisplayName = "Should Throw Argument Out Of Range Exception If Has Not Strategy For This One")]
+    [Fact(DisplayName = "On Create, Should Throw Argument Out Of Range Exception If Has Not Strategy For This One")]
     public async Task StrategyNotFound()
     {
         //Arrange
@@ -113,7 +171,8 @@ public class CustomerServiceUnitTest : BaseTest
         var customerRepository = new Mock<ICustomerRepository>();
         customerRepository.Setup(x => x.CustomerAlreadyRegistered(It.IsAny<IDocument>()))
             .ReturnsAsync(false);
-        var service = new CustomerService(customerRepository.Object, Enumerable.Empty<ICreateCustomerStrategy>());
+        var service = new CustomerService(customerRepository.Object, Enumerable.Empty<ICreateCustomerStrategy>(),
+            Mock.Of<ICustomerRegisterBus>());
 
         var command = new CreateCustomerCommand()
         {
