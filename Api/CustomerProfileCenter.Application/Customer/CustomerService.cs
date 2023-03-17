@@ -9,10 +9,20 @@ public class CustomerService : ICustomerService
     private readonly ICustomerRepository _customerRepository;
     private readonly IEnumerable<ICreateCustomerStrategy> _createCustomerStrategies;
 
-    public CustomerService(ICustomerRepository customerRepository, IEnumerable<ICreateCustomerStrategy> createCustomerStrategies)
+    public CustomerService(ICustomerRepository customerRepository,
+        IEnumerable<ICreateCustomerStrategy> createCustomerStrategies)
     {
         _customerRepository = customerRepository;
         _createCustomerStrategies = createCustomerStrategies;
+    }
+
+    public async Task<ResponseError> EnqueueCreateCustomerCommand(CreateCustomerCommand command)
+    {
+        var userAlreadyRegistered = await _customerRepository.CustomerAlreadyRegistered(command.GetDocument());
+        if (userAlreadyRegistered)
+            return new ResponseError("Cliente já cadastrado");
+        //TODO: Só precisa validar o documento também!
+        throw new NotImplementedException();
     }
 
     public async Task<ResponseError> CreateCustomer(CreateCustomerCommand command)
@@ -23,8 +33,9 @@ public class CustomerService : ICustomerService
 
         var strategy = _createCustomerStrategies.FirstOrDefault(x => x.CustomerDocumentType == command.DocumentType);
         if (strategy is null)
-            throw new ArgumentOutOfRangeException(nameof(command.DocumentType), "Strategy não encontrada para este tipo de document");
-        
+            throw new ArgumentOutOfRangeException(nameof(command.DocumentType),
+                "Strategy não encontrada para este tipo de document");
+
         return await strategy.CreateCustomer(command);
     }
 }

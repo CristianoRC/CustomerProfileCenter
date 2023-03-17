@@ -1,6 +1,6 @@
 using CustomerProfileCenter.Application.Address;
 using CustomerProfileCenter.Application.Response;
-using CustomerProfileCenter.Domain.Entities;
+using CustomerProfileCenter.Domain.ValueObjects;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 

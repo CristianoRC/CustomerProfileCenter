@@ -1,6 +1,4 @@
-using CustomerProfileCenter.Domain.ValueObjects;
-
-namespace CustomerProfileCenter.Domain.Entities;
+namespace CustomerProfileCenter.Domain.ValueObjects;
 
 public class Address
 {

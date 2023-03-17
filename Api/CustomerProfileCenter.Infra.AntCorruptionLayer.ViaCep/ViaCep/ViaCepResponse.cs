@@ -1,4 +1,3 @@
-using CustomerProfileCenter.Domain.Entities;
 using CustomerProfileCenter.Domain.ValueObjects;
 
 namespace CustomerProfileCenter.Infra.AntCorruptionLayer.ViaCep.ViaCep;

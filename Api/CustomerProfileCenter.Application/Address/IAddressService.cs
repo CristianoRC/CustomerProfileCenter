@@ -4,5 +4,5 @@ namespace CustomerProfileCenter.Application.Address;
 
 public interface IAddressService
 {
-    Task<Response<Domain.Entities.Address>> GetAddress(string cep);
+    Task<Response<Domain.ValueObjects.Address>> GetAddress(string cep);
 }

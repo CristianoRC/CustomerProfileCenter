@@ -21,6 +21,14 @@ public class CustomerController : Controller
     [SwaggerResponse(StatusCodes.Status400BadRequest)]
     public async Task<IActionResult> CreateCustomer([FromBody] CreateCustomerCommand createCustomerCommand)
     {
+        //TODO: Implementar as duas strategies
+        //TODO: Lembrar dos casos de erro ao buscar CEP
+        //TODO: Adicionar na fila
+        //TODO: Controlar a chave de idenpotencia
+        //TODO: Como podemos chamar o segundo passo? Já que esse se chama Create?
+        //TODO: Na mensageria ter um específico para cada?
+        
+        //TODO: Ter outro metodo, de enqueue command
         var createCustomerResponse = await _customerService.CreateCustomer(createCustomerCommand);
 
         if (createCustomerResponse.HasError is false)

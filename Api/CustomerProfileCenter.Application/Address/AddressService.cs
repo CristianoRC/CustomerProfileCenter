@@ -13,13 +13,13 @@ public class AddressService : IAddressService
         _cepRepository = cepRepository;
     }
 
-    public async Task<Response<Domain.Entities.Address>> GetAddress(string cepNumber)
+    public async Task<Response<Domain.ValueObjects.Address>> GetAddress(string cepNumber)
     {
         var cep = new Cep(cepNumber);
         if (cep.IsValid is false)
-            return new Response<Domain.Entities.Address>("CEP Inválido");
+            return new Response<Domain.ValueObjects.Address>("CEP Inválido");
 
         var address = await _cepRepository.GetAddress(cep);
-        return new Response<Domain.Entities.Address>(address);
+        return new Response<Domain.ValueObjects.Address>(address);
     }
 }

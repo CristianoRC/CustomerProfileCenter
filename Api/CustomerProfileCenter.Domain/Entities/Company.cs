@@ -1,6 +1,6 @@
 using CustomerProfileCenter.Domain.ValueObjects.Documents;
 
-namespace CustomerProfileCenter.Domain.Aggregates;
+namespace CustomerProfileCenter.Domain.Entities;
 
 public class Company : Customer
 {

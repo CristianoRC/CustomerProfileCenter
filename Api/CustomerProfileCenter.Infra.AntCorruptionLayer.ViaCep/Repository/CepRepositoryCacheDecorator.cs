@@ -1,5 +1,4 @@
 using System.Net.Http.Json;
-using CustomerProfileCenter.Domain.Entities;
 using CustomerProfileCenter.Domain.Repositories;
 using CustomerProfileCenter.Domain.ValueObjects;
 using CustomerProfileCenter.Infra.AntCorruptionLayer.ViaCep.ViaCep;
