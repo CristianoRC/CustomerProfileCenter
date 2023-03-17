@@ -22,8 +22,9 @@ public class CustomerService : ICustomerService
 
     public async Task<ResponseError> EnqueueCreateCustomerCommand(CreateCustomerCommand command)
     {
-        if (string.IsNullOrEmpty(command.Name))
-            return new ResponseError("Nome Obrigatório");
+        var (commandHasError, commandErrors) = command.GetValidationErrors();
+        if (commandHasError)
+            return new ResponseError(commandErrors);
 
         var userAlreadyRegistered = await _customerRepository.CustomerAlreadyRegistered(command.GetDocument());
         if (userAlreadyRegistered)

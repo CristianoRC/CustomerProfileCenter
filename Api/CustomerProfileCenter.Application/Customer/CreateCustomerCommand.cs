@@ -1,3 +1,4 @@
+using System.Text;
 using CustomerProfileCenter.Domain.ValueObjects.Documents;
 
 namespace CustomerProfileCenter.Application.Customer;
@@ -10,6 +11,20 @@ public record CreateCustomerCommand
     public CustomerAddress? Address { get; set; }
     public DateTime? Birthday { get; set; }
     public string CorporateName { get; set; }
+
+    public (bool hasError, string errorMessage) GetValidationErrors()
+    {
+        var errorsBuilder = new StringBuilder();
+
+        if (string.IsNullOrEmpty(Name))
+            errorsBuilder.AppendLine("Nome Obrigatório.");
+        if (string.IsNullOrEmpty(DocumentNumber))
+            errorsBuilder.AppendLine("documento Obrigatório.");
+
+        var errors = errorsBuilder.ToString();
+
+        return (string.IsNullOrEmpty(errors) is false, errors);
+    }
 
     public IDocument GetDocument()
     {
