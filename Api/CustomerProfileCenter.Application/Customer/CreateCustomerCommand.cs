@@ -26,7 +26,7 @@ public record CreateCustomerCommand : IIdempotentMessage
         if (string.IsNullOrEmpty(Name))
             errorsBuilder.AppendLine("Nome Obrigatório.");
         if (string.IsNullOrEmpty(DocumentNumber))
-            errorsBuilder.AppendLine("documento Obrigatório.");
+            errorsBuilder.AppendLine("Documento Obrigatório.");
 
         var errors = errorsBuilder.ToString();
 
