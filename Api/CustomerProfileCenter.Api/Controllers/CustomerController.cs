@@ -8,13 +8,32 @@ namespace CustomerProfileCenter.Api.Controllers;
 [Route("[controller]")]
 public class CustomerController : Controller
 {
+    private readonly ICustomerService _customerService;
+
+    public CustomerController(ICustomerService customerService)
+    {
+        _customerService = customerService;
+    }
+
     [HttpPost]
     [SwaggerResponse(StatusCodes.Status202Accepted)]
     [SwaggerResponse(StatusCodes.Status409Conflict)]
     [SwaggerResponse(StatusCodes.Status400BadRequest)]
-    public IActionResult CreateCustomer([FromBody] CreateCustomerCommand createCustomerCommand)
+    public async Task<IActionResult> CreateCustomer([FromBody] CreateCustomerCommand createCustomerCommand)
     {
-        //TODO: Validar mensagem de erro "Cliente já cadastrado"  para o 409, o Resto é 400
-        return Accepted();
+        var createCustomerResponse = await _customerService.CreateCustomer(createCustomerCommand);
+
+        if (createCustomerResponse.HasError is false)
+            return new AcceptedResult();
+
+        if (ShouldReturnConflictResponse(createCustomerResponse.ErrorMessage))
+            return Conflict();
+
+        return BadRequest(createCustomerResponse);
+    }
+
+    private static bool ShouldReturnConflictResponse(string errorMessage)
+    {
+        return errorMessage.Equals("Cliente já cadastrado", StringComparison.InvariantCultureIgnoreCase);
     }
 }
