@@ -1,7 +1,7 @@
 {
     "queues": [
         {
-            "name": "",
+            "name": "CreateCustomerTopicTrigger",
             "vhost": "/",
             "durable": true,
             "auto_delete": false,
@@ -12,7 +12,7 @@
     ],
     "exchanges": [
         {
-            "name": "",
+            "name": "CreateCustomer",
             "vhost": "/",
             "type": "direct",
             "durable": true,
@@ -23,9 +23,9 @@
     ],
     "bindings": [
         {
-            "source": "",
+            "source": "CreateCustomer",
             "vhost": "/",
-            "destination": "",
+            "destination": "CreateCustomerTopicTrigger",
             "destination_type": "queue",
             "routing_key": "",
             "arguments": {}
