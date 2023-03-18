@@ -1,5 +1,4 @@
 using CustomerProfileCenter.Application.Customer;
-using CustomerProfileCenter.Domain.Entities;
 using MongoDB.Bson;
 
 namespace CustomerProfileCenter.Infra.Data.DatabaseObjects;
@@ -11,7 +10,7 @@ public class Customer
         Id = new ObjectId();
     }
 
-    public ObjectId Id { get; }
+    public ObjectId Id { get; set; }
     public string Name { get; set; }
     public string DocumentNumber { get; set; }
     public string DocumentHash { get; set; }
