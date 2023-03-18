@@ -37,7 +37,10 @@ public static class Setup
         bool isDevelopment)
     {
         if (isDevelopment)
+        {
             services.AddMemoryCache();
+            services.AddDistributedMemoryCache();
+        }
         else
             services.AddStackExchangeRedisCache(options =>
             {
