@@ -6,7 +6,7 @@ namespace CustomerProfileCenter.Application.Customer;
 
 public record CreateCustomerCommand : IIdempotentMessage
 {
-    public Guid IdempotencyKey { get; private set; }
+    public Guid IdempotencyKey { get; set; }
 
     public void SetIdempotencyKey()
     {
@@ -20,7 +20,7 @@ public record CreateCustomerCommand : IIdempotentMessage
     public string CorporateName { get; set; }
     public string PhoneNumber { get; set; }
     public string EmailAddress { get; set; }
-    
+
 
     public (bool hasError, string errorMessage) GetValidationErrors()
     {
