@@ -44,7 +44,7 @@ public record CustomerAddress
 {
     public string Cep { get; set; }
     public string Number { get; set; }
-    public string? Complement { get; set; }
+    public string Complement { get; set; }
 }
 
 public record CustomerDocument(string Number, EDocumentType DocumentType);

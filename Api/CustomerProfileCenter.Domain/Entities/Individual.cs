@@ -1,3 +1,4 @@
+using CustomerProfileCenter.Domain.ValueObjects;
 using CustomerProfileCenter.Domain.ValueObjects.Documents;
 
 namespace CustomerProfileCenter.Domain.Entities;

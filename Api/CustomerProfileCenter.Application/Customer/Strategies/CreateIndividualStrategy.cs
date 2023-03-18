@@ -29,11 +29,20 @@ public class CreateIndividualStrategy : ICreateCustomerStrategy
         if (individual.NameIsValid is false)
             return new ResponseError("Nome Obrigatório.");
 
-        //TODO: Preencher o endereço
+        if (command.Address?.Cep is not null)
+            individual.AddAddress(await GetAddress(command));
         //TODO: Preencer email
         //TODO: Prencher Telefone!
 
         await _customerRepository.CreateIndividual(individual, command);
         return new ResponseError();
+    }
+
+    private async Task<Domain.ValueObjects.Address> GetAddress(CreateCustomerCommand command)
+    {
+        var addressResponse = await _addressService.GetAddress(command.Address.Cep);
+        if (addressResponse.Error.HasError)
+            return null;
+        return addressResponse.Content with {Number = command.Address.Number, Complement = command.Address.Complement};
     }
 }

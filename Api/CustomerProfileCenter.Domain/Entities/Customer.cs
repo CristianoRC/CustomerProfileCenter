@@ -14,9 +14,14 @@ public abstract class Customer
 
     public string Name { get; }
     public IDocument Document { get; }
-    public Address? Address { get; protected set; }
+    public Address? Address { get; private set; }
     public EmailAddress? Email { get; protected set; }
     public PhoneNumber? PhoneNumber { get; set; }
+
+    public void AddAddress(Address address)
+    {
+        Address = address;
+    }
 
     public bool NameIsValid => string.IsNullOrEmpty(Name) is false;
 }
