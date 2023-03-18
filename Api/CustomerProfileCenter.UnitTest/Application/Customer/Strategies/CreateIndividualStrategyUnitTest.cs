@@ -2,6 +2,8 @@ using Bogus.Extensions.Brazil;
 using CustomerProfileCenter.Application.Address;
 using CustomerProfileCenter.Application.Customer;
 using CustomerProfileCenter.Application.Customer.Strategies;
+using CustomerProfileCenter.CrossCutting;
+using CustomerProfileCenter.Domain.Entities;
 using CustomerProfileCenter.Domain.Repositories;
 using FluentAssertions;
 using Moq;
@@ -52,5 +54,27 @@ public class CreateIndividualStrategyUnitTest : BaseTest
         //Assert
         createIndividualResponse.HasError.Should().BeTrue();
         createIndividualResponse.ErrorMessage.Should().Be("Nome Obrigatório.");
+    }
+
+    [Fact(DisplayName = "Should Save If Individual Has Name And Document")]
+    public async Task CreateIndividualWithSuccess()
+    {
+        //Arrange
+        var customerRepository = new Mock<ICustomerRepository>();
+        var addressService = Mock.Of<IAddressService>();
+        var createIndividualStrategy = new CreateIndividualStrategy(customerRepository.Object, addressService);
+        var createCustomerCommand = new CreateCustomerCommand()
+        {
+            Name = Faker.Person.FullName,
+            Document = new CustomerDocument(Faker.Person.Cpf(), EDocumentType.Cpf),
+            Birthday = Faker.Person.DateOfBirth
+        };
+        //Act
+        var createIndividualResponse = await createIndividualStrategy.CreateCustomer(createCustomerCommand);
+
+        //Assert
+        createIndividualResponse.HasError.Should().BeFalse();
+        customerRepository.Verify(x => x.CreateIndividual(It.IsAny<Individual>(), It.IsAny<IIdempotentMessage>()),
+            Times.Once);
     }
 }

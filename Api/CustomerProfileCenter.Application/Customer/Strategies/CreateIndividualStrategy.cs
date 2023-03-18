@@ -33,6 +33,7 @@ public class CreateIndividualStrategy : ICreateCustomerStrategy
         //TODO: Preencer email
         //TODO: Prencher Telefone!
 
-        throw new NotImplementedException();
+        await _customerRepository.CreateIndividual(individual, command);
+        return new ResponseError();
     }
 }
