@@ -23,11 +23,12 @@ public class CustomerRepository : ICustomerRepository
         throw new NotImplementedException();
     }
 
-    public Task<bool> MessageAlreadyProcessed(IIdempotentMessage message)
+    public async Task<bool> MessageAlreadyProcessed(IIdempotentMessage message)
     {
-        //TODO: Ter uma collection separada só de controle de idempotency
-        //TODO: Lembrar de marcar como processada de pois de finalizar, talvez seja melhor fazer tudo junto em uma transação.
-
-        throw new NotImplementedException();
+        var processedMessageCollection = _databaseConnection.GetCollection<IIdempotentMessage>("ProcessedMessages");
+        var processedMessage = await processedMessageCollection.Find(x => x.IdempotencyKey == message.IdempotencyKey)
+            .FirstOrDefaultAsync();
+        
+        return processedMessage is not null;
     }
 }
