@@ -10,7 +10,7 @@ public record CreateCustomerCommand : IIdempotentMessage
 
     public void SetIdempotencyKey()
     {
-        IdempotencyKey = new Guid();
+        IdempotencyKey = Guid.NewGuid();
     }
 
     public string Name { get; set; }

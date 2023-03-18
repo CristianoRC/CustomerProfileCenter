@@ -1,6 +1,7 @@
 using CustomerProfileCenter.CrossCutting;
 using CustomerProfileCenter.Domain.Repositories;
 using CustomerProfileCenter.Domain.ValueObjects.Documents;
+using CustomerProfileCenter.Infra.Data.DatabaseObjects;
 using CustomerProfileCenter.Infra.Data.HashAndCryptography;
 using MongoDB.Driver;
 
@@ -25,10 +26,13 @@ public class CustomerRepository : ICustomerRepository
 
     public async Task<bool> MessageAlreadyProcessed(IIdempotentMessage message)
     {
-        var processedMessageCollection = _databaseConnection.GetCollection<IIdempotentMessage>("ProcessedMessages");
+        var processedMessageCollection = _databaseConnection.GetCollection<IdempotentMessage>("ProcessedMessages");
+
+        _databaseConnection.GetCollection<IdempotentMessage>("ProcessedMessages");
+        await processedMessageCollection.InsertOneAsync(new IdempotentMessage(message));
+
         var processedMessage = await processedMessageCollection.Find(x => x.IdempotencyKey == message.IdempotencyKey)
             .FirstOrDefaultAsync();
-        
         return processedMessage is not null;
     }
 }
