@@ -30,8 +30,8 @@ http://localhost.cristianoprogramador.com/
   "name": "Cristiano Cunha",
   "document": {
     "number" : "902.522.750-39",
-    "documentType": 0, 
-  }
+    "documentType": 0
+  },
   "address": {
     "cep": "96085000",
     "number": "2886",
