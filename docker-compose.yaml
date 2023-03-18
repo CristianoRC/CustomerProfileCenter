@@ -16,9 +16,6 @@ services:
       interval: 5s
       timeout: 10s
       retries: 5
-    volumes:
-      - ./Configuration/rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf:ro
-      - ./Configuration/definitions.json:/etc/rabbitmq/definitions.json:ro
 
   mongodb:
     image: mongo
