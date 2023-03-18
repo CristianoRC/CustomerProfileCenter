@@ -1,0 +1,18 @@
+FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
+WORKDIR /src
+COPY CustomerProfileCenter.Bus/*.csproj CustomerProfileCenter.Bus/
+COPY CustomerProfileCenter.Application/*.csproj CustomerProfileCenter.Application/
+COPY CustomerProfileCenter.CrossCutting/*.csproj CustomerProfileCenter.CrossCutting/
+COPY CustomerProfileCenter.Domain/*.csproj CustomerProfileCenter.Domain/
+COPY CustomerProfileCenter.Infra.AntCorruptionLayer.ViaCep/*.csproj CustomerProfileCenter.Infra.AntCorruptionLayer.ViaCep/
+COPY CustomerProfileCenter.Infra.Data/*.csproj CustomerProfileCenter.Infra.Data/
+COPY CustomerProfileCenter.Infra.MessageBus/*.csproj CustomerProfileCenter.Infra.MessageBus/
+RUN dotnet restore ./CustomerProfileCenter.Bus/CustomerProfileCenter.Bus.csproj
+COPY ./ ./
+RUN dotnet publish "./CustomerProfileCenter.Bus/CustomerProfileCenter.Bus.csproj" -c Release -o /app/
+
+FROM mcr.microsoft.com/azure-functions/dotnet-isolated:4-dotnet-isolated7.0
+WORKDIR /home/site/wwwroot
+ENV AzureWebJobsScriptRoot=/home/site/wwwroot \
+    AzureFunctionsJobHost__Logging__Console__IsEnabled=true
+COPY --from=build /app .
