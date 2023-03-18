@@ -39,6 +39,9 @@ services:
         condition: service_started
       redis:
         condition: service_started
+    volumes:
+      - ./Configuration/rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf:ro
+      - ./Configuration/definitions.json:/etc/rabbitmq/definitions.json:ro
     environment:
       RabbitMQConnectionString: "amqp://guest:guest@rabbitmq:5672"
       RedisConnectionString: "redis"
