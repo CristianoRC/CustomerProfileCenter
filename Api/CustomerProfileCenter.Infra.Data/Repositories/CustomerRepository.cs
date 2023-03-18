@@ -18,19 +18,17 @@ public class CustomerRepository : ICustomerRepository
         _documentSecurityService = documentSecurityService;
     }
 
-    public Task<bool> CustomerAlreadyRegistered(IDocument document)
+    public async Task<bool> CustomerAlreadyRegistered(IDocument document)
     {
-        //TODO: Fazer logica de Hash para verificação se existe!
-        throw new NotImplementedException();
+        var documentHash = _documentSecurityService.GetDocumentHash(document);
+        var customerCollection = _databaseConnection.GetCollection<Customer>("Customer");
+        var customer = await customerCollection.Find(x => x.DocumentHash == documentHash).FirstOrDefaultAsync();
+        return customer is not null;
     }
 
     public async Task<bool> MessageAlreadyProcessed(IIdempotentMessage message)
     {
         var processedMessageCollection = _databaseConnection.GetCollection<IdempotentMessage>("ProcessedMessages");
-
-        _databaseConnection.GetCollection<IdempotentMessage>("ProcessedMessages");
-        await processedMessageCollection.InsertOneAsync(new IdempotentMessage(message));
-
         var processedMessage = await processedMessageCollection.Find(x => x.IdempotencyKey == message.IdempotencyKey)
             .FirstOrDefaultAsync();
         return processedMessage is not null;
