@@ -30,7 +30,7 @@ public class CreateIndividualStrategy : ICreateCustomerStrategy
             return new ResponseError("Nome Obrigatório.");
 
         individual.AddEmailAddress(command.EmailAddress);
-        individual.AddPhoneNumber(command.EmailAddress);
+        individual.AddPhoneNumber(command.PhoneNumber);
 
         if (command.Address?.Cep is not null)
             individual.AddAddress(await GetAddress(command));
