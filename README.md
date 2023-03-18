@@ -16,11 +16,13 @@ Se quiseres acessar o projeto diretamente na Web, na landing page que foi criada
 
 Para executr o projeto basta rodar na raiz do projeto o command: `docker-compose up --build`
 
-**Acessar a aplicação WEB do container localmente**
+Temos apenas um ponto de atenção, se você usa processadores ``arm64`` pode ter problemas por causa da imagem Docker de Azure Functions, usada em uma parte do projeto. Para mais detalhes você pode encontrar aqui [Mac M1 Function Not Implemented Error](https://github.com/docker/for-mac/issues/5328).
+
+#### **Acessar a aplicação WEB do container localmente**
 
 http://localhost.cristianoprogramador.com/
 
-**Requisições que podem ser feritas**
+#### **Requisições que podem ser feritas**
 
 - Obter informações do CEP: HTTP GET - http://localhost:5021/Address/{cep}
 - Cadastro de Cliente: HTTP POST - http://localhost:5021/Customer
