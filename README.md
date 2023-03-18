@@ -25,12 +25,12 @@ http://localhost.cristianoprogramador.com/
 - Obter informações do CEP: HTTP GET - http://localhost:5021/Address/{cep}
 - Cadastro de Cliente: HTTP POST - http://localhost:5021/Customer
 
-```
+```json
 {
   "name": "Cristiano Cunha",
-  "document: {
-    "number" : "902.522.750-39", //Apenas um exmelplo, esse é fake.
-    "documentType": 0, //0 CPF, 1 CNPJ
+  "document": {
+    "number" : "902.522.750-39",
+    "documentType": 0, 
   }
   "address": {
     "cep": "96085000",
@@ -41,3 +41,10 @@ http://localhost.cristianoprogramador.com/
   "corporateName": ""
 }
 ```
+
+Obs.:
+
+``"documentType": 0, //0 CPF, 1 CNPJ``
+
+``CEP é apenas de exmeplo gerado aleatoriamente, não usar valores reais``
+
