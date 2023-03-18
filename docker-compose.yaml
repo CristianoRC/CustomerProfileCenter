@@ -48,7 +48,17 @@ services:
       ViaCep: "https://viacep.com.br/ws"
       MongoDbConnectionString: "mongodb://root:dWsU2J83S7!X@mongodb:27017"
       DatabaseName : "CustomerProfile"
-      
+
+  configure-rabbit:
+    build:
+      context: ./Configuration
+      dockerfile: Dockerfile
+    container_name: configure-rabbitmq
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+    environment:
+      RabbitMQConnectionString: "amqp://root:s&$0yY52y4M%@rabbitmq:5672"
   azure-functions:
     build: 
       context: ./Api
