@@ -15,13 +15,26 @@ public abstract class Customer
     public string Name { get; }
     public IDocument Document { get; }
     public Address? Address { get; private set; }
-    public EmailAddress? Email { get; protected set; }
-    public PhoneNumber? PhoneNumber { get; set; }
+    public EmailAddress? Email { get; private set; }
+    public PhoneNumber? PhoneNumber { get; private set; }
 
     public void AddAddress(Address address)
     {
         Address = address;
     }
+
+    public void AddPhoneNumber(string phoneNumber)
+    {
+        if (string.IsNullOrEmpty(phoneNumber) is false)
+            PhoneNumber = new PhoneNumber(phoneNumber);
+    }
+
+    public void AddEmailAddress(string emailAddress)
+    {
+        if (string.IsNullOrEmpty(emailAddress) is false)
+            Email = new EmailAddress(emailAddress);
+    }
+
 
     public bool NameIsValid => string.IsNullOrEmpty(Name) is false;
 }

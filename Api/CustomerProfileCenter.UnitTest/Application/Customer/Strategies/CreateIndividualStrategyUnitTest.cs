@@ -80,8 +80,8 @@ public class CreateIndividualStrategyUnitTest : BaseTest
             Times.Once);
     }
 
-    [Fact(DisplayName = "Should Feel Address If Command Has A Valid Cep")]
-    public async Task FeelAddress()
+    [Fact(DisplayName = "Should Fill Address If Command Has A Valid Cep")]
+    public async Task FillAddress()
     {
         //Arrange
         var address = new Address(new Cep("96085000"), Faker.Address.City(), Faker.Address.StreetName(),
@@ -145,6 +145,56 @@ public class CreateIndividualStrategyUnitTest : BaseTest
         //Assert
         createIndividualResponse.HasError.Should().BeFalse();
         customerRepository.Verify(x => x.CreateIndividual(It.Is<Individual>(i => i.Address == null),
+            It.IsAny<IIdempotentMessage>()), Times.Once);
+    }
+    
+    [Fact(DisplayName = "Should Fill Individual E-mail Address If Command has e-mail Address")]
+    public async Task FillEmailAddress()
+    {
+        //Arrange
+        var customerRepository = new Mock<ICustomerRepository>();
+        var addressService = new Mock<IAddressService>();
+
+        var createIndividualStrategy = new CreateIndividualStrategy(customerRepository.Object, addressService.Object);
+        var createCustomerCommand = new CreateCustomerCommand()
+        {
+            Name = Faker.Person.FullName,
+            Document = new CustomerDocument(Faker.Person.Cpf(), EDocumentType.Cpf),
+            Birthday = Faker.Person.DateOfBirth,
+            EmailAddress = "contato@cristianoprogramador.com"
+        };
+        
+        //Act
+        var createIndividualResponse = await createIndividualStrategy.CreateCustomer(createCustomerCommand);
+
+        //Assert
+        createIndividualResponse.HasError.Should().BeFalse();
+        customerRepository.Verify(x => x.CreateIndividual(It.Is<Individual>(i => i.Email.Address == "contato@cristianoprogramador.com"),
+            It.IsAny<IIdempotentMessage>()), Times.Once);
+    }
+    
+    [Fact(DisplayName = "Should Fill Individual Phone Number If Has In The Command")]
+    public async Task FillPhoneNumber()
+    {
+        //Arrange
+        var customerRepository = new Mock<ICustomerRepository>();
+        var addressService = new Mock<IAddressService>();
+
+        var createIndividualStrategy = new CreateIndividualStrategy(customerRepository.Object, addressService.Object);
+        var createCustomerCommand = new CreateCustomerCommand()
+        {
+            Name = Faker.Person.FullName,
+            Document = new CustomerDocument(Faker.Person.Cpf(), EDocumentType.Cpf),
+            Birthday = Faker.Person.DateOfBirth,
+            EmailAddress = "contato@cristianoprogramador.com"
+        };
+        
+        //Act
+        var createIndividualResponse = await createIndividualStrategy.CreateCustomer(createCustomerCommand);
+
+        //Assert
+        createIndividualResponse.HasError.Should().BeFalse();
+        customerRepository.Verify(x => x.CreateIndividual(It.Is<Individual>(i => i.Email.Address == "contato@cristianoprogramador.com"),
             It.IsAny<IIdempotentMessage>()), Times.Once);
     }
 }

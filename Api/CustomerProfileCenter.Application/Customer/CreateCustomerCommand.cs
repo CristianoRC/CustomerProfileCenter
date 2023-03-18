@@ -15,10 +15,12 @@ public record CreateCustomerCommand : IIdempotentMessage
 
     public string Name { get; set; }
     public CustomerDocument Document { get; set; }
-
     public CustomerAddress? Address { get; set; }
     public DateTime? Birthday { get; set; }
     public string CorporateName { get; set; }
+    public string PhoneNumber { get; set; }
+    public string EmailAddress { get; set; }
+    
 
     public (bool hasError, string errorMessage) GetValidationErrors()
     {

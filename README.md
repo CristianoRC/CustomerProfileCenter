@@ -38,7 +38,9 @@ http://localhost.cristianoprogramador.com/
     "complement": "AP 501"
   },
   "birthday": "1998-07-28T13:07:56.816Z",
-  "corporateName": ""
+  "corporateName": "",
+  "emailAddress": "contato@cristianoprogramador.com",
+  "phoneNumber": "53984319169"
 }
 ```
 
