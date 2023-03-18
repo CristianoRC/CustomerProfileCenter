@@ -1,4 +1,5 @@
 using CustomerProfileCenter.Domain.Repositories;
+using CustomerProfileCenter.Infra.Data.HashAndCryptography;
 using CustomerProfileCenter.Infra.Data.Repositories;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -13,13 +14,16 @@ public static class Setup
     {
         ConfigureDistributedCache(services, config, isDevelopment);
         ConfigureMongoDb(services, config);
+        services.AddTransient<IDocumentSecurityService, DocumentSecurityService>();
 
-        var databaseName = config["DatabaseName"];
         services.AddTransient<ICustomerRepository>(provider =>
         {
+            var databaseName = config["DatabaseName"];
             var databaseConnection = provider.GetService<IMongoClient>().GetDatabase(databaseName);
-            return new CustomerRepository(databaseConnection);
+            var documentSecurityService = provider.GetService<IDocumentSecurityService>();
+            return new CustomerRepository(databaseConnection, documentSecurityService!);
         });
+
         return services;
     }
 

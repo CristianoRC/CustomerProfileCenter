@@ -1,6 +1,7 @@
 using CustomerProfileCenter.CrossCutting;
 using CustomerProfileCenter.Domain.Repositories;
 using CustomerProfileCenter.Domain.ValueObjects.Documents;
+using CustomerProfileCenter.Infra.Data.HashAndCryptography;
 using MongoDB.Driver;
 
 namespace CustomerProfileCenter.Infra.Data.Repositories;
@@ -8,10 +9,12 @@ namespace CustomerProfileCenter.Infra.Data.Repositories;
 public class CustomerRepository : ICustomerRepository
 {
     private readonly IMongoDatabase _databaseConnection;
+    private readonly IDocumentSecurityService _documentSecurityService;
 
-    public CustomerRepository(IMongoDatabase databaseConnection)
+    public CustomerRepository(IMongoDatabase databaseConnection, IDocumentSecurityService documentSecurityService)
     {
         _databaseConnection = databaseConnection;
+        _documentSecurityService = documentSecurityService;
     }
 
     public Task<bool> CustomerAlreadyRegistered(IDocument document)
