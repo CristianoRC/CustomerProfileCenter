@@ -58,7 +58,11 @@ services:
       rabbitmq:
         condition: service_healthy
     environment:
-      RabbitMQConnectionString: "amqp://root:s&$0yY52y4M%@rabbitmq:5672"
+      user: "root"
+      password: "s&$0yY52y4M%"
+      host: rabbitmq
+      port: 5672
+      
   azure-functions:
     build: 
       context: ./Api
