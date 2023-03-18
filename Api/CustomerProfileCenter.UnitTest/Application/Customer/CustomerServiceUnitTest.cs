@@ -28,7 +28,7 @@ public class CustomerServiceUnitTest : BaseTest
 
         var command = new CreateCustomerCommand()
         {
-            Document =  new CustomerDocument(documentNumber, documentType),
+            Document = new CustomerDocument(documentNumber, documentType),
             Name = Faker.Person.FullName
         };
 
@@ -38,6 +38,35 @@ public class CustomerServiceUnitTest : BaseTest
         //Assert
         response.HasError.Should().BeTrue();
         response.ErrorMessage.Should().Be("Cliente já cadastrado");
+    }
+
+    [Fact(DisplayName = "On Enqueue Create Command, Should Return Error If Document Is Invalid")]
+    public async Task InvalidDocument()
+    {
+        //Arrange
+        var documentType = Faker.PickRandom(EDocumentType.Cnpj, EDocumentType.Cpf);
+        var documentNumber = Faker.Random.AlphaNumeric(12);
+
+        var customerRepository = new Mock<ICustomerRepository>();
+        customerRepository.Setup(x => x.CustomerAlreadyRegistered(It.IsAny<IDocument>()))
+            .ReturnsAsync(false);
+
+        var messageBusMock = new Mock<ICustomerMessageBus>();
+        var service = new CustomerService(customerRepository.Object, Enumerable.Empty<ICreateCustomerStrategy>(),
+            messageBusMock.Object);
+
+        var command = new CreateCustomerCommand()
+        {
+            Document = new CustomerDocument(documentNumber, documentType),
+            Name = Faker.Person.FullName
+        };
+
+        //Act
+        var response = await service.EnqueueCreateCustomerCommand(command);
+
+        //Assert
+        response.HasError.Should().BeTrue();
+        response.ErrorMessage.Should().Be("Documento Inválido");
     }
 
     [Fact(DisplayName = "On Enqueue Create Command, Should Send To Bus If Document Is Valid")]
@@ -57,7 +86,7 @@ public class CustomerServiceUnitTest : BaseTest
 
         var command = new CreateCustomerCommand()
         {
-            Document =  new CustomerDocument(documentNumber, documentType),
+            Document = new CustomerDocument(documentNumber, documentType),
             Name = Faker.Person.FullName
         };
 
@@ -85,7 +114,7 @@ public class CustomerServiceUnitTest : BaseTest
 
         var command = new CreateCustomerCommand()
         {
-            Document =  new CustomerDocument(documentNumber, documentType),
+            Document = new CustomerDocument(documentNumber, documentType),
             Name = Faker.Person.FullName
         };
 
@@ -112,7 +141,7 @@ public class CustomerServiceUnitTest : BaseTest
 
         var command = new CreateCustomerCommand()
         {
-            Document =  new CustomerDocument(documentNumber, documentType),
+            Document = new CustomerDocument(documentNumber, documentType),
             Name = Faker.Person.FullName
         };
 
@@ -146,7 +175,7 @@ public class CustomerServiceUnitTest : BaseTest
 
         var command = new CreateCustomerCommand()
         {
-            Document =  new CustomerDocument(documentNumber, EDocumentType.Cnpj),
+            Document = new CustomerDocument(documentNumber, EDocumentType.Cnpj),
             Name = Faker.Person.FullName
         };
 
@@ -180,7 +209,7 @@ public class CustomerServiceUnitTest : BaseTest
 
         var command = new CreateCustomerCommand()
         {
-            Document =  new CustomerDocument(documentNumber, EDocumentType.Cpf),
+            Document = new CustomerDocument(documentNumber, EDocumentType.Cpf),
             Name = Faker.Person.FullName
         };
 
@@ -206,7 +235,7 @@ public class CustomerServiceUnitTest : BaseTest
         var documentType = Faker.PickRandom(EDocumentType.Cpf, EDocumentType.Cnpj);
         var command = new CreateCustomerCommand()
         {
-            Document =  new CustomerDocument(documentNumber, documentType),
+            Document = new CustomerDocument(documentNumber, documentType),
             Name = Faker.Person.FullName
         };
 

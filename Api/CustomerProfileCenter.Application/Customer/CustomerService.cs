@@ -26,6 +26,9 @@ public class CustomerService : ICustomerService
         if (commandHasError)
             return new ResponseError(commandErrors);
 
+        if (command.DocumentIsValid() is false)
+            return new ResponseError("Documento Inválido");
+
         var userAlreadyRegistered = await _customerRepository.CustomerAlreadyRegistered(command.GetDocument());
         if (userAlreadyRegistered)
             return new ResponseError("Cliente já cadastrado");
@@ -45,7 +48,8 @@ public class CustomerService : ICustomerService
         if (userAlreadyRegistered)
             return new ResponseError("Cliente já cadastrado");
 
-        var strategy = _createCustomerStrategies.FirstOrDefault(x => x.CustomerDocumentType == command.Document.DocumentType);
+        var strategy =
+            _createCustomerStrategies.FirstOrDefault(x => x.CustomerDocumentType == command.Document.DocumentType);
         if (strategy is null)
             throw new ArgumentOutOfRangeException(nameof(command.Document),
                 "Strategy não encontrada para este tipo de document");

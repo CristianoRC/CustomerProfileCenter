@@ -40,6 +40,11 @@ public record CreateCustomerCommand : IIdempotentMessage
     {
         return Document.DocumentType == EDocumentType.Cnpj ? new Cnpj(Document.Number) : new Cpf(Document.Number);
     }
+
+    public bool DocumentIsValid()
+    {
+        return GetDocument().IsValid;
+    }
 }
 
 public record CustomerAddress
