@@ -8,7 +8,7 @@ services:
     container_name: rabbitmq
     environment:
       RABBITMQ_DEFAULT_USER: root
-      RABBITMQ_DEFAULT_PASS: s&$0yY52y4M%
+      RABBITMQ_DEFAULT_PASS: Gyrte689uiw
     ports:
       - "8080:15672"
     healthcheck:
@@ -43,7 +43,7 @@ services:
       redis:
         condition: service_started
     environment:
-      RabbitMQConnectionString: "amqp://root:s&$0yY52y4M%@rabbitmq:5672"
+      RabbitMQConnectionString: "amqp://root:Gyrte689uiw@rabbitmq:5672"
       RedisConnectionString: "redis"
       ViaCep: "https://viacep.com.br/ws"
       MongoDbConnectionString: "mongodb://root:dWsU2J83S7!X@mongodb:27017"
@@ -69,7 +69,7 @@ services:
       configure-rabbit:
         condition: service_completed_successfully
     environment:
-      RabbitMQConnectionString: "amqp://root:s&$0yY52y4M%@rabbitmq:5672"
+      RabbitMQConnectionString: "amqp://root:Gyrte689uiw@rabbitmq:5672"
       RedisConnectionString: "redis"
       ViaCep: "https://viacep.com.br/ws"
       MongoDbConnectionString: "mongodb://root:dWsU2J83S7!X@mongodb:27017"
@@ -96,6 +96,6 @@ services:
         condition: service_healthy
     environment:
       user: "root"
-      password: "s&$0yY52y4M%"
+      password: "Gyrte689uiw"
       host: rabbitmq
       port: 5672           

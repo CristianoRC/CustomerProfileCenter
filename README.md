@@ -17,6 +17,7 @@ Se quiseres acessar o projeto diretamente na Web, na landing page que foi criada
 Para executr o projeto basta rodar na raiz do projeto o command: `docker-compose up --build`
 
 Temos apenas um ponto de atenção, se você usa processadores ``arm64`` pode ter problemas por causa da imagem Docker de Azure Functions, usada em uma parte do projeto. Para mais detalhes você pode encontrar aqui [Mac M1 Function Not Implemented Error](https://github.com/docker/for-mac/issues/5328).
+Se necessário o uso com Docker em processadores arm64, pode entrar em contato que podemos criar uma imagem base compatível.
 
 #### **Acessar a aplicação WEB do container localmente**
 
