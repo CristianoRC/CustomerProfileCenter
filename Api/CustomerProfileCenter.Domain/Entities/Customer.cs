@@ -17,4 +17,6 @@ public abstract class Customer
     public Address? Address { get; protected set; }
     public EmailAddress? Email { get; protected set; }
     public PhoneNumber? PhoneNumber { get; set; }
+
+    public bool NameIsValid => string.IsNullOrEmpty(Name) is false;
 }
