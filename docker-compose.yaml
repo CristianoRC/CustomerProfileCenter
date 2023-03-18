@@ -41,7 +41,7 @@ services:
         condition: service_started
     environment:
       RabbitMQConnectionString: "amqp://guest:guest@rabbitmq:5672"
-      RedisConnectionString: "redis://redis:6379"
+      RedisConnectionString: "redis"
       ViaCep: "https://viacep.com.br/ws"
       MongoDbConnectionString: "mongodb://root:dWsU2J83S7!X@mongodb:27017"
       DatabaseName : "CustomerProfile"
@@ -60,7 +60,7 @@ services:
         condition: service_started
     environment:
       RabbitMQConnectionString: "amqp://guest:guest@rabbitmq:5672"
-      RedisConnectionString: "redis://redis:6379"
+      RedisConnectionString: "redis"
       ViaCep: "https://viacep.com.br/ws"
       MongoDbConnectionString: "mongodb://root:dWsU2J83S7!X@mongodb:27017"
       DatabaseName : "CustomerProfile"
