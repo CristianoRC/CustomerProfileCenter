@@ -8,11 +8,6 @@ services:
     container_name: rabbitmq
     ports:
       - "8080:15672"
-    environment:
-      RABBITMQ_DEFAULT_USER: rabit-user
-      RABBITMQ_DEFAULT_PASS: p^UnY8T5ow0#
-    networks:
-      - "rabbit_network"
     healthcheck:
       test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
       interval: 5s
@@ -26,13 +21,9 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: dWsU2J83S7!X
     ports:
       - "27017:27017"
-    networks:
-      - "mongo_network"
 
   redis:
     image: redis
-    networks:
-      - "redis_network"
     
   api:
     build:
@@ -41,7 +32,6 @@ services:
     container_name: customer-profile-api
     ports:
       - "80:80"
-      - "443:443"
     depends_on:
       rabbitmq:
         condition: service_healthy
@@ -49,16 +39,13 @@ services:
         condition: service_started
       redis:
         condition: service_started
-    networks:
-      - "rabbit_network"
-      - "mongo_network"
     environment:
-      RabbitMQConnectionString: "amqp://cristiano:123456789@rabbitmq:5672"
-      RedisConnectionString: ""
+      RabbitMQConnectionString: "amqp://guest:guest@rabbitmq:5672"
+      RedisConnectionString: "redis://redis:6379"
       ViaCep: "https://viacep.com.br/ws"
-      MongoDbConnectionString: "mongodb://root:dWsU2J83S7!X@localhost:27017"
+      MongoDbConnectionString: "mongodb://root:dWsU2J83S7!X@mongodb:27017"
       DatabaseName : "CustomerProfile"
-
+      
   azure-functions:
     build: 
       context: ./Api
@@ -71,20 +58,9 @@ services:
         condition: service_started
       redis:
         condition: service_started
-    networks:
-      - "rabbit_network"
-      - "mongo_network"
     environment:
-      RabbitMQConnectionString: "amqp://cristiano:123456789@rabbitmq:5672"
-      RedisConnectionString: ""
+      RabbitMQConnectionString: "amqp://guest:guest@rabbitmq:5672"
+      RedisConnectionString: "redis://redis:6379"
       ViaCep: "https://viacep.com.br/ws"
-      MongoDbConnectionString: "mongodb://root:dWsU2J83S7!X@localhost:27017"
+      MongoDbConnectionString: "mongodb://root:dWsU2J83S7!X@mongodb:27017"
       DatabaseName : "CustomerProfile"
-
-networks:
-  rabbit_network:
-    driver: bridge
-  mongo_network:
-    driver: bridge
-  redis_network:
-    driver: bridge
