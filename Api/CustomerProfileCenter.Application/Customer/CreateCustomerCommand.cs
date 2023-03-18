@@ -14,8 +14,8 @@ public record CreateCustomerCommand : IIdempotentMessage
     }
 
     public string Name { get; set; }
-    public string DocumentNumber { get; set; }
-    public EDocumentType DocumentType { get; set; }
+    public CustomerDocument Document { get; set; }
+
     public CustomerAddress? Address { get; set; }
     public DateTime? Birthday { get; set; }
     public string CorporateName { get; set; }
@@ -26,7 +26,7 @@ public record CreateCustomerCommand : IIdempotentMessage
 
         if (string.IsNullOrEmpty(Name))
             errorsBuilder.AppendLine("Nome Obrigatório.");
-        if (string.IsNullOrEmpty(DocumentNumber))
+        if (string.IsNullOrEmpty(Document.Number))
             errorsBuilder.AppendLine("Documento Obrigatório.");
 
         var errors = errorsBuilder.ToString();
@@ -36,7 +36,7 @@ public record CreateCustomerCommand : IIdempotentMessage
 
     public IDocument GetDocument()
     {
-        return DocumentType == EDocumentType.Cnpj ? new Cnpj(DocumentNumber) : new Cpf(DocumentNumber);
+        return Document.DocumentType == EDocumentType.Cnpj ? new Cnpj(Document.Number) : new Cpf(Document.Number);
     }
 }
 
@@ -46,3 +46,5 @@ public record CustomerAddress
     public string Number { get; set; }
     public string? Complement { get; set; }
 }
+
+public record CustomerDocument(string Number, EDocumentType DocumentType);

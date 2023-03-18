@@ -2,7 +2,6 @@
 
 <img src="https://i.imgur.com/YCKVzCE.png" width="50%">
 
-
 ## Documentação
 
 ### Diagramas
@@ -29,8 +28,10 @@ http://localhost.cristianoprogramador.com/
 ```
 {
   "name": "Cristiano Cunha",
-  "documentNumber": "902.522.750-39", //Apenas um exmelplo, esse é fake.;
-  "documentType": 0, //0 CPF, 1 CNPJ
+  "document: {
+    "number" : "902.522.750-39", //Apenas um exmelplo, esse é fake.
+    "documentType": 0, //0 CPF, 1 CNPJ
+  }
   "address": {
     "cep": "96085000",
     "number": "2886",

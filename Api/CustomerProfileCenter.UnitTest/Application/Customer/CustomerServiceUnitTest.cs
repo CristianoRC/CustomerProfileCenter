@@ -28,8 +28,7 @@ public class CustomerServiceUnitTest : BaseTest
 
         var command = new CreateCustomerCommand()
         {
-            DocumentType = documentType,
-            DocumentNumber = documentNumber,
+            Document =  new CustomerDocument(documentNumber, documentType),
             Name = Faker.Person.FullName
         };
 
@@ -58,8 +57,7 @@ public class CustomerServiceUnitTest : BaseTest
 
         var command = new CreateCustomerCommand()
         {
-            DocumentType = documentType,
-            DocumentNumber = documentNumber,
+            Document =  new CustomerDocument(documentNumber, documentType),
             Name = Faker.Person.FullName
         };
 
@@ -87,8 +85,7 @@ public class CustomerServiceUnitTest : BaseTest
 
         var command = new CreateCustomerCommand()
         {
-            DocumentType = documentType,
-            DocumentNumber = documentNumber,
+            Document =  new CustomerDocument(documentNumber, documentType),
             Name = Faker.Person.FullName
         };
 
@@ -115,8 +112,7 @@ public class CustomerServiceUnitTest : BaseTest
 
         var command = new CreateCustomerCommand()
         {
-            DocumentType = documentType,
-            DocumentNumber = documentNumber,
+            Document =  new CustomerDocument(documentNumber, documentType),
             Name = Faker.Person.FullName
         };
 
@@ -150,8 +146,7 @@ public class CustomerServiceUnitTest : BaseTest
 
         var command = new CreateCustomerCommand()
         {
-            DocumentType = EDocumentType.Cnpj,
-            DocumentNumber = documentNumber,
+            Document =  new CustomerDocument(documentNumber, EDocumentType.Cnpj),
             Name = Faker.Person.FullName
         };
 
@@ -185,8 +180,7 @@ public class CustomerServiceUnitTest : BaseTest
 
         var command = new CreateCustomerCommand()
         {
-            DocumentType = EDocumentType.Cpf,
-            DocumentNumber = documentNumber,
+            Document =  new CustomerDocument(documentNumber, EDocumentType.Cpf),
             Name = Faker.Person.FullName
         };
 
@@ -209,10 +203,10 @@ public class CustomerServiceUnitTest : BaseTest
         var service = new CustomerService(customerRepository.Object, Enumerable.Empty<ICreateCustomerStrategy>(),
             Mock.Of<ICustomerMessageBus>());
 
+        var documentType = Faker.PickRandom(EDocumentType.Cpf, EDocumentType.Cnpj);
         var command = new CreateCustomerCommand()
         {
-            DocumentType = Faker.PickRandom(EDocumentType.Cpf, EDocumentType.Cnpj),
-            DocumentNumber = documentNumber,
+            Document =  new CustomerDocument(documentNumber, documentType),
             Name = Faker.Person.FullName
         };
 
