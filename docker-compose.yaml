@@ -77,6 +77,8 @@ services:
         condition: service_started
       azure-storage:
         condition: service_started
+      configure-rabbit:
+        condition: service_completed_successfully
     environment:
       RabbitMQConnectionString: "amqp://root:s&$0yY52y4M%@rabbitmq:5672"
       RedisConnectionString: "redis"
