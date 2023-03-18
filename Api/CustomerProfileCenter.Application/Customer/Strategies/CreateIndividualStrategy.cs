@@ -6,8 +6,9 @@ public class CreateIndividualStrategy : ICreateCustomerStrategy
 {
     public EDocumentType CustomerDocumentType => EDocumentType.Cpf;
 
-    public Task<ResponseError> CreateCustomer(CreateCustomerCommand command)
+    public async Task<ResponseError> CreateCustomer(CreateCustomerCommand command)
     {
+        //TODO: implementar
         throw new NotImplementedException();
     }
 }

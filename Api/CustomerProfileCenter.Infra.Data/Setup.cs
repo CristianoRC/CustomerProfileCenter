@@ -3,6 +3,9 @@ using CustomerProfileCenter.Infra.Data.HashAndCryptography;
 using CustomerProfileCenter.Infra.Data.Repositories;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization;
+using MongoDB.Bson.Serialization.Serializers;
 using MongoDB.Driver;
 
 namespace CustomerProfileCenter.Infra.Data;
@@ -31,6 +34,7 @@ public static class Setup
     {
         var client = new MongoClient(configuration["MongoDbConnectionString"]);
         services.AddSingleton<IMongoClient>(client);
+        BsonSerializer.RegisterSerializer(new GuidSerializer(GuidRepresentation.Standard));
     }
 
     private static void ConfigureDistributedCache(IServiceCollection services, IConfiguration config,
