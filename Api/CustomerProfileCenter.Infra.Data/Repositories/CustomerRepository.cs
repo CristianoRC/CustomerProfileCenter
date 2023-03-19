@@ -77,7 +77,7 @@ public class CustomerRepository : ICustomerRepository
         {
             DocumentHash = documentHash,
             DocumentNumber = encryptedDocument,
-            DocumentType = EDocumentType.Cpf,
+            DocumentType = EDocumentType.Cnpj,
             Name = company.Name,
             EmailAddress = company.Email?.Address,
             PhoneNumber = company.PhoneNumber?.Number,
