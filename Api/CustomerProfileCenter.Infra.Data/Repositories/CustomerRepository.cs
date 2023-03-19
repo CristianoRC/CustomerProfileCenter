@@ -67,10 +67,26 @@ public class CustomerRepository : ICustomerRepository
         await MarkMessageAsProcessed(idempotencyKey);
     }
 
-    public Task CreateCompany(Company company, IIdempotentMessage idempotencyKey)
+    public async Task CreateCompany(Company company, IIdempotentMessage idempotencyKey)
     {
-        //TODO: Não salvar os campos inválidos.
-        //TODO: Salvar mensagem como processada
-        throw new NotImplementedException();
+        var documentHash = _documentSecurityService.GetDocumentHash(company.Document);
+        var encryptedDocument = _documentSecurityService.EncryptDocument(company.Document);
+
+        var address = company.Address is null ? null : new Address(company.Address);
+        var customer = new Customer
+        {
+            DocumentHash = documentHash,
+            DocumentNumber = encryptedDocument,
+            DocumentType = EDocumentType.Cpf,
+            Name = company.Name,
+            EmailAddress = company.Email?.Address,
+            PhoneNumber = company.PhoneNumber?.Number,
+            CorporateName = company.CorporateName,
+            Address = address
+        };
+
+        var customerCollection = _databaseConnection.GetCollection<Customer>("Customer");
+        await customerCollection.InsertOneAsync(customer);
+        await MarkMessageAsProcessed(idempotencyKey);
     }
 }
