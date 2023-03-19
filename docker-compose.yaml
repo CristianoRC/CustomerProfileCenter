@@ -34,7 +34,8 @@ services:
       dockerfile: Dockerfile.Api
     container_name: customer-profile-api
     ports:
-      - "5021:80"
+      - "80:80"
+      - "443:443"
     depends_on:
       rabbitmq:
         condition: service_healthy
