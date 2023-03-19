@@ -38,7 +38,6 @@ builder.Services.AddCors(options =>
                 .AllowAnyOrigin()
                 //.WithOrigins("https://www.cristianoprogramador.com")
                 .AllowAnyHeader()
-                .AllowCredentials()
                 .AllowAnyMethod();
         });
 });
