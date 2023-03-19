@@ -54,6 +54,19 @@ services:
       Key: "S07R6/cLJct0Oq0OK3aXcA=="
       Iv: "sTZAYMb9P9TCCfLAAMCcvQ=="
 
+  app:
+    build:
+      context: ./App
+      dockerfile: Dockerfile
+      args:
+        - ENV=dev
+    container_name: customer-profile-app
+    ports:
+      - "80:80"
+    depends_on:
+      api:
+        condition: service_started
+
   azure-functions:
     build: 
       context: ./Api
