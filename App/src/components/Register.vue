@@ -22,7 +22,7 @@
               <v-window-item :key="1" :value="1">
                 <v-container>
                   <v-row justify="center">
-                    <v-col cols="6">
+                    <v-col cols="7">
                       <Individual></Individual>
                     </v-col>
                   </v-row>

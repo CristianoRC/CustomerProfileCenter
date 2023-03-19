@@ -18,6 +18,11 @@ builder.Services
     .AddData(builder.Configuration, builder.Environment.IsDevelopment())
     .AddDomain();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("policy", policy => { policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader(); });
+});
+
 builder.Services.AddSwaggerGen();
 builder.Host.UseSerilog((builderContext, _, configuration) =>
 {

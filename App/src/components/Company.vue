@@ -1,5 +1,5 @@
 <template>
-    <v-card :loading="true" text="Pessoa Juridica" variant="tonal">
+    <v-card :loading="loading" text="Pessoa Juridica" variant="tonal">
         <v-card-actions>
             <v-container>
                 <v-row justify="end">
@@ -9,3 +9,15 @@
         </v-card-actions>
     </v-card>
 </template>
+
+<script lang='ts'>
+import { defineComponent } from 'vue'
+export default defineComponent({
+    name: 'Company',
+    components: {
+    },
+    data: () => ({
+        loading: false,
+    }),
+})
+</script>
