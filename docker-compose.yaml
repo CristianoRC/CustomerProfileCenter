@@ -43,6 +43,8 @@ services:
         condition: service_started
       redis:
         condition: service_started
+      configure-rabbit:
+        condition: service_completed_successfully
     environment:
       RabbitMQConnectionString: "amqp://root:Gyrte689uiw@rabbitmq:5672"
       RedisConnectionString: "redis"
