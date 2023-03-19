@@ -103,7 +103,7 @@ services:
 
   configure-rabbit:
     build:
-      context: ./Configuration
+      context: ./Configuration/RabbitMq/
       dockerfile: Dockerfile
     container_name: configure-rabbitmq
     depends_on:
