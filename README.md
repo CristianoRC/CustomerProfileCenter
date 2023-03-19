@@ -2,6 +2,8 @@
 
 <img src="https://i.imgur.com/YCKVzCE.png" width="50%">
 
+![App workflow](https://github.com/CristianoRC/CustomerProfileCenter/actions/workflows/azure-staticwebapp.yml/badge.svg)
+
 ## Documentação
 
 ### Diagramas
