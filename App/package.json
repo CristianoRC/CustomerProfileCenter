@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve --port 1024",
-    "build": "vue-cli-service build"
+    "build-dev": "vue-cli-service build --mode development",
+    "build-production": "vue-cli-service build --mode production"
   },
   "dependencies": {
     "@mdi/font": "5.9.55",

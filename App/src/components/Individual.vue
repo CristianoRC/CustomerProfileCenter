@@ -53,7 +53,7 @@ export default defineComponent({
         getCep: function () {
             this.$data.loading = true;
             const cep = this.$data.fields.address.cep;
-            const url = `http://customerprofile-api.cristianoprogramador.com/Address/${cep}`;
+            const url = `${process.env.VUE_APP_API}/Address/${cep}`;
 
             axios.get(url).then(response => {
                 this.$data.cep.city = response.data.content.city
@@ -71,7 +71,7 @@ export default defineComponent({
         },
         createCustomer: function () {
             this.$data.loading = true;
-            const url = `http://customerprofile-api.cristianoprogramador.com/Customer`;
+            const url = `${process.env.VUE_APP_API}/Customer`;
 
             axios.post(url, this.$.data.fields).then(response => {
                 this.$data.showSuccess = true;
