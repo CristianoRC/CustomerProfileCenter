@@ -35,7 +35,7 @@ builder.Services.AddCors(options =>
         policy =>
         {
             policy
-                .WithOrigins("https://cristianoprogramador.com")
+                .WithOrigins("http://localhost.cristianoprogramador.com", "http://customerprofile.cristianoprogramador.com")
                 .AllowAnyHeader()
                 .AllowAnyMethod();
         });
