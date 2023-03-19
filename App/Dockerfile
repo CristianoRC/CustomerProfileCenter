@@ -1,10 +1,10 @@
 FROM node:lts-alpine as build
-ARG [environment]
+ARG ENV=dev
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY . .
-RUN npm run build-production
+RUN npm run build-$ENV
 
 FROM nginx:stable-alpine
 COPY --from=build /app/dist /usr/share/nginx/html
