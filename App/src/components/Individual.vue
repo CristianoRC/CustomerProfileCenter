@@ -39,7 +39,7 @@ export default defineComponent({
         getCep: function () {
             this.$data.loading = true;
             const cep = this.$data.fields.address.cep;
-            const url = `http://localhost-api.cristianoprogramador.com:5021/Address/${cep}`;
+            const url = `http://customerprofile-api.cristianoprogramador.com/Address/${cep}`;
             axios.get(url).then(response => {
                 console.log(response);
                 this.$data.cep.city = ""
