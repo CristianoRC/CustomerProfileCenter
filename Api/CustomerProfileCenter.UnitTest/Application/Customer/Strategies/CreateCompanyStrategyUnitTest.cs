@@ -67,6 +67,7 @@ public class CreateCompanyStrategyUnitTest : BaseTest
         {
             Name = Faker.Person.FullName,
             Document = new CustomerDocument(Faker.Company.Cnpj(), EDocumentType.Cnpj),
+            CorporateName = Faker.Company.CompanyName()
         };
         //Act
         var createCompanyResponse = await createCompanyStrategy.CreateCustomer(createCustomerCommand);

@@ -28,12 +28,26 @@ builder.Host.UseSerilog((builderContext, _, configuration) =>
     //Aqui poderia ser qualquer outro tipo de sistema de log externo
 });
 
+const string corsConfig = "_personalDomainCors";
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: corsConfig,
+        policy =>
+        {
+            policy.WithOrigins("https://*.cristianoprogramador.com")
+                .AllowAnyHeader()
+                .AllowAnyMethod();
+        });
+});
+
 var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger(options => { options.SerializeAsV2 = true; });
     app.UseSwaggerUI();
 }
+else
+    app.UseCors(corsConfig);
 
 app.UseHttpsRedirection();
 app.UseAuthorization();
