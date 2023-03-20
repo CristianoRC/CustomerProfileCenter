@@ -10,7 +10,7 @@
 
 - [System Context](./Docs/1%20-%20System%20Context/)
 - [Container](./Docs/2%20-%20Container/)
-- [Component - Azure Functio](./Docs/3%20-%20Componente/)
+- [Component](./Docs/3%20-%20Componente/)
 - [Infra](./Docs/Infra/)
 
 ### Como acessar o projeto
