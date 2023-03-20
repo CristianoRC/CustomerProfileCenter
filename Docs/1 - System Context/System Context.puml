@@ -3,6 +3,8 @@
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
 
 LAYOUT_LANDSCAPE()
+SHOW_LEGEND()
+
 TITLE Customer Profile Center - System Context
 
 Person(customer, "Cliente", "Consumidor final que foi cadastrado no sistema")
@@ -40,5 +42,4 @@ Rel(notificationCenter, phoneService, "Envia Notificação usando", "")
 Rel(emailService, customer, "Notifica Cliente", "")
 Rel(phoneService, customer, "Notifica Cliente", "")
 
-SHOW_LEGEND()
 @enduml
