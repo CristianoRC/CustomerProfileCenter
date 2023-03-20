@@ -1,2 +1,3 @@
 # 1 - System Context
-![-](./System-Context.svg)
+
+![-](./System%20Context.png)
