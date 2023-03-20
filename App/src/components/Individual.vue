@@ -14,6 +14,7 @@
                 <v-text-field v-model="cep.state" disabled label="Estado"></v-text-field>
                 <v-text-field v-model="cep.city" disabled label="Cidade"></v-text-field>
                 <v-text-field v-model="cep.neighborhood" disabled label="Bairro"></v-text-field>
+                <v-text-field v-model="cep.street" disabled label="Logradouro"></v-text-field>
             </form>
         </v-container>
         <v-card-actions>
@@ -59,6 +60,7 @@ export default defineComponent({
                 this.$data.cep.city = response.data.content.city
                 this.$data.cep.neighborhood = response.data.content.neighborhood
                 this.$data.cep.state = response.data.content.uf
+                this.$data.cep.street = response.data.content.street
             }).catch(error => {
                 this.$data.showError = true;
                 if (error.response.status === 400)
@@ -104,7 +106,7 @@ export default defineComponent({
             address: {
                 cep: "",
                 number: "",
-                complement: ""
+                complement: "",
             },
             birthday: null,
             phonenumber: "",
@@ -114,7 +116,8 @@ export default defineComponent({
         cep: {
             city: "",
             neighborhood: "",
-            state: ""
+            state: "",
+            street: ""
         }
     }),
 })
