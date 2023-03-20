@@ -15,7 +15,7 @@ public class DocumentSecurityService : IDocumentSecurityService
     {
         _key = Convert.FromBase64String(configuration["Key"]);
         _initializationVector = Convert.FromBase64String(configuration["Iv"]);
-        _saltKey = configuration["SlatKey"];
+        _saltKey = configuration["SaltKey"];
     }
 
     public string GetDocumentHash(IDocument document)

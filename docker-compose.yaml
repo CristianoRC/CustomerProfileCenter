@@ -50,7 +50,7 @@ services:
       ViaCep: "https://viacep.com.br/ws"
       MongoDbConnectionString: "mongodb://root:dWsU2J83S7!X@mongodb:27017"
       DatabaseName : "CustomerProfile"
-      SlatKey: "D*Ezu1hl612."
+      SaltKey: "D*Ezu1hl612."
       Key: "S07R6/cLJct0Oq0OK3aXcA=="
       Iv: "sTZAYMb9P9TCCfLAAMCcvQ=="
 
@@ -90,7 +90,7 @@ services:
       MongoDbConnectionString: "mongodb://root:dWsU2J83S7!X@mongodb:27017"
       DatabaseName : "CustomerProfile"
       AzureWebJobsStorage: "DefaultEndpointsProtocol=https;AccountName=devstoreaccount1;AccountKey=Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==;BlobEndpoint=http://local.storage.emulator:10000/devstoreaccount1;QueueEndpoint=http://local.storage.emulator:10001/devstoreaccount1;"
-      SlatKey: "D*Ezu1hl612."
+      SaltKey: "D*Ezu1hl612."
       Key: "S07R6/cLJct0Oq0OK3aXcA=="
       Iv: "sTZAYMb9P9TCCfLAAMCcvQ=="
 

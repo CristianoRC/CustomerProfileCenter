@@ -30,7 +30,7 @@ public class DocumentSecurityServiceUnitTest : BaseTest
 
         var myConfiguration = new Dictionary<string, string>
         {
-            {"SlatKey", "D*Ezu1hl612."},
+            {"SaltKey", "D*Ezu1hl612."},
             {"EncryptKey", "..."},
             {"Iv", Convert.ToBase64String(iv)},
             {"Key", Convert.ToBase64String(key)}
