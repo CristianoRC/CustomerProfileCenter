@@ -17,9 +17,9 @@ public static class Setup
     {
         ConfigureDistributedCache(services, config, isDevelopment);
         ConfigureMongoDb(services, config);
-        services.AddTransient<IDocumentSecurityService, DocumentSecurityService>();
+        services.AddScoped<IDocumentSecurityService, DocumentSecurityService>();
 
-        services.AddTransient<ICustomerRepository>(provider =>
+        services.AddScoped<ICustomerRepository>(provider =>
         {
             var databaseName = config["DatabaseName"];
             var databaseConnection = provider.GetService<IMongoClient>().GetDatabase(databaseName);

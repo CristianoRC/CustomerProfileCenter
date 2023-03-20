@@ -10,17 +10,17 @@ public static class Setup
 {
     public static IServiceCollection AddApplication(this IServiceCollection services, IConfiguration configuration)
     {
-        services.AddTransient<CreateIndividualStrategy>();
-        services.AddTransient<CreateCompanyStrategy>();
-        services.AddTransient<IAddressService, AddressService>();
-        services.AddTransient<ICustomerService, CustomerService>();
+        services.AddScoped<CreateIndividualStrategy>();
+        services.AddScoped<CreateCompanyStrategy>();
+        services.AddScoped<IAddressService, AddressService>();
+        services.AddScoped<ICustomerService, CustomerService>();
         ConfigureCreateCustomerStrategyFactory(services);
         return services;
     }
 
     private static void ConfigureCreateCustomerStrategyFactory(IServiceCollection services)
     {
-        services.AddTransient<IEnumerable<ICreateCustomerStrategy>>(provider =>
+        services.AddScoped<IEnumerable<ICreateCustomerStrategy>>(provider =>
         {
             return new ICreateCustomerStrategy[]
             {

@@ -11,8 +11,8 @@ public static class Setup
     {
         var rabbitMqConnection = ConfigureConnection(configuration);
         services.AddSingleton(rabbitMqConnection);
-        services.AddTransient<ISendMessageService, SendMessageService>();
-        services.AddTransient<ICustomerMessageBus, CustomerMessageBus>();
+        services.AddScoped<ISendMessageService, SendMessageService>();
+        services.AddScoped<ICustomerMessageBus, CustomerMessageBus>();
         return services;
     }
 

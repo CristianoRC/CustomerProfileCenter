@@ -21,8 +21,8 @@ public static class Setup
             .AddPolicyHandler(GetRetryPolicy())
             .AddPolicyHandler(GetCircuitBreakerPolicy());
 
-        services.AddTransient<CepRepository>();
-        services.AddTransient<ICepRepository>(provider =>
+        services.AddScoped<CepRepository>();
+        services.AddScoped<ICepRepository>(provider =>
         {
             var repository = provider.GetService<CepRepository>();
             var distributedCache = provider.GetService<IDistributedCache>();
