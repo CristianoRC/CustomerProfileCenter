@@ -1,4 +1,4 @@
-@startuml
+@startuml container
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
 
@@ -11,6 +11,7 @@ Person(customer, "Cliente", "Consumidor final que foi cadastrado no sistema")
 
 Boundary(internalProducersBoundary, "Sistemas internos") {
     Container(marketingPlatform, "Plataforma de Marketing", "Vue.js", "Plataforma responsável por capanhas de marketing e landing pages")
+    Container(marketingPlatformBff, "BFF Plataforma De Marketing", "Node Js", "Responsável por centralizar as chamadas para as APIs")
     Container(pdvPlatforma, "PDV", "Windows Forms C#", "Plataforma de manipulação de vendas nas lojas físicas")
     Container(ecomerPlatform, "E-Comerce", "Vue.js", "Plataforma de e-comerce")
 }
@@ -36,7 +37,10 @@ Boundary(customerProfileCenterBoundary, "Customer Profile Center") {
 }
 
 'Relacionamento dos clientes
-Rel(marketingPlatform, customerProfileCenter, "Cadastra Cliente", "")
+Rel(marketingPlatform, marketingPlatformBff, "Envia Cadastro De Cliente", "HTTP/JSON")
+Rel(marketingPlatformBff, customerProfileCenter, "Envia Pedido de Cadastro De Cliente", "HTTP/JSON")
+Rel(marketingPlatformBff, cepService, "Busca dados de CEP para preencher na tela", "HTTP/JSON")
+
 Rel(pdvPlatforma, rabbitCustomerReport, "Envia Pedido de Cadastro De Cliente", "AMQP", $tags = "async")
 Rel(ecomerPlatform, rabbitCustomerReport, "Envia Pedido de Cadastro De Cliente", "AMQP", $tags = "async")
 Rel(rabbitCustomerReport, customerProfileCenter, "Envia Pedido de Cadastro De Cliente", "AMQP", $tags = "async")
@@ -49,7 +53,6 @@ Rel(customerProfileCenter, rabbitMqReport, "Adiciona dados do Cliente criado no 
 'Relacionamentos do reportSystem
 Rel(reportSystem, reportingDb, "Armazena os dados no", "")
 Rel(rabbitMqReport, reportSystem, "Envia dados do cliente para", "AMQP", $tags = "async")
-
 
 'Relacionamentos do sistema de Cep
 Rel(cepService, viaCep, "Busca dados no", "HTTP/JOSN")
