@@ -5,7 +5,6 @@ namespace CustomerProfileCenter.Domain.Entities;
 
 public abstract class Customer
 {
-    //TODO: Criar métodos para atualizar Email, Endereço e Telefone
     protected Customer(string name, IDocument document)
     {
         Name = name;
@@ -34,7 +33,6 @@ public abstract class Customer
         if (string.IsNullOrEmpty(emailAddress) is false)
             Email = new EmailAddress(emailAddress);
     }
-
 
     public bool NameIsValid => string.IsNullOrEmpty(Name) is false;
 }
