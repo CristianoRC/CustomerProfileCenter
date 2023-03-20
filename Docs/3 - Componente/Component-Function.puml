@@ -18,10 +18,10 @@ Boundary(customerProfileCenterBoundary, "") {
     Component(customerRepository, "Customer Repository", "", "Responsável manipular dados dos clientes na base de dados")
     Component(documentSecurity, "Document Security Component", "HMAC-256 / AES", "Responsável por anonimizar os documentos dos clientes")
     ComponentDb(mongoDb, "MongoDB", "", "Armazena os dados de todos os clientes")
-    Component(cepService, "Cep Service", ".NET", "Sistema para obter informações sobre CEP")
-    ComponentDb(redis, "Redis", "In-memory data store", "Armazena dados temporários sobre endereços")
-
 }
+
+Component(cepService, "Cep Service", ".NET", "Sistema para obter informações sobre CEP")
+ComponentDb(redis, "Redis", "In-memory data store", "Armazena dados temporários sobre endereços")
 
 Component(notificationCenter, "Notification Center", "ASP NET 7",  "Responsável por notificações dos clientes")
 Component_Ext(emailService, "Sistema de Email", "HTTP API", "Sitema de controle de template e envio de email")
