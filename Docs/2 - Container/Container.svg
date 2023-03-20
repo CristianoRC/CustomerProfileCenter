@@ -1,0 +1,1883 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="979px" preserveAspectRatio="none" style="width:2653px;height:979px;background:#FFFFFF;" version="1.1" viewBox="0 0 2653 979" width="2653px" zoomAndPan="magnify"><defs/><g><rect fill="none" height="26.4883" id="_title" style="stroke:none;stroke-width:1.0;" width="274" x="1182.5" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="264" x="1187.5" y="23.5352">Customer Profile Center - Container</text><!--MD5=[9b94c7b53ed2dad6411f50e2c0dd0781]
+cluster internalProducersBoundary--><g id="cluster_internalProducersBoundary"><rect fill="none" height="449" rx="2.5" ry="2.5" style="stroke:#444444;stroke-width:1.0;stroke-dasharray:7.0,7.0;" width="645" x="7" y="44.4883"/><text fill="#444444" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="145" x="257" y="61.957">Sistemas internos</text></g><!--MD5=[daff32214eac2e77c8a6efadf8e1d7dc]
+cluster customerProfileCenterBoundary--><g id="cluster_customerProfileCenterBoundary"><rect fill="none" height="578" rx="2.5" ry="2.5" style="stroke:#444444;stroke-width:1.0;stroke-dasharray:7.0,7.0;" width="1497" x="811" y="274.4883"/><text fill="#444444" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="195" x="1462" y="291.957">Customer Profile Center</text></g><!--MD5=[a773be2640fafa656b2bab53790ef018]
+entity marketingPlatform--><g id="elem_marketingPlatform"><rect fill="#438DD5" height="137.7734" rx="2.5" ry="2.5" style="stroke:#3C7FC0;stroke-width:0.5;" width="212" x="23" y="81.4883"/><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="113" x="70" y="106.957">Plataforma de</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="83" x="87.5" y="125.8008">Marketing</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="44" x="107" y="140.7773">[Vue.js]</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="127" y="156.8438"> </text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="188" x="33" y="173.332">Plataforma responsável por</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="172" x="41" y="189.8203">capanhas de marketing e</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="97" x="80.5" y="206.3086">landing pages</text></g><!--MD5=[a1d3d7066c8974ae31fab0b6e0bdb579]
+entity marketingPlatformBff--><g id="elem_marketingPlatformBff"><rect fill="#438DD5" height="121.2852" rx="2.5" ry="2.5" style="stroke:#3C7FC0;stroke-width:0.5;" width="214" x="422" y="329.9883"/><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="148" x="452.5" y="355.457">BFF Plataforma De</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="83" x="487.5" y="374.3008">Marketing</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="53" x="502.5" y="389.2773">[Node Js]</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="527" y="405.3438"> </text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="190" x="432" y="421.832">Responsável por centralizar</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="175" x="441.5" y="438.3203">as chamadas para as APIs</text></g><!--MD5=[ce9541ad3e7a49cc649ce2d651a9e308]
+entity pdvPlatforma--><g id="elem_pdvPlatforma"><rect fill="#438DD5" height="102.4414" rx="2.5" ry="2.5" style="stroke:#3C7FC0;stroke-width:0.5;" width="211" x="23.5" y="254.4883"/><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="34" x="112" y="279.957">PDV</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="117" x="70.5" y="294.9336">[Windows Forms C#]</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="127" y="311"> </text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="187" x="33.5" y="327.4883">Plataforma de manipulação</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="179" x="39.5" y="343.9766">de vendas nas lojas físicas</text></g><!--MD5=[be5ab967035fcd6f37e5d4400d0b2a91]
+entity ecomerPlatform--><g id="elem_ecomerPlatform"><rect fill="#438DD5" height="85.9531" rx="2.5" ry="2.5" style="stroke:#3C7FC0;stroke-width:0.5;" width="193" x="32.5" y="391.4883"/><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="91" x="83.5" y="416.957">E-Comerce</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="44" x="107" y="431.9336">[Vue.js]</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="127" y="448"> </text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="173" x="42.5" y="464.4883">Plataforma de e-comerce</text></g><!--MD5=[ef94a7dc433d42a5b38cecfca416d574]
+entity customerProfileCenter--><g id="elem_customerProfileCenter"><rect fill="#438DD5" height="102.4414" rx="2.5" ry="2.5" style="stroke:#3C7FC0;stroke-width:0.5;" width="215" x="827" y="483.4883"/><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="195" x="837" y="508.957">Customer Profile Center</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="69" x="900" y="523.9336">[ASP NET 7]</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="932.5" y="540"> </text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="171" x="847" y="556.4883">Centraliza a jornada e os</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="150" x="859.5" y="572.9766">dados do consumidor</text></g><!--MD5=[e400f0ccd11d2d23c7bd9652fa076c79]
+entity customerProfileDb--><g id="elem_customerProfileDb"><path d="M1259.5,716.4883 C1259.5,706.4883 1354,706.4883 1354,706.4883 C1354,706.4883 1448.5,706.4883 1448.5,716.4883 L1448.5,826.7734 C1448.5,836.7734 1354,836.7734 1354,836.7734 C1354,836.7734 1259.5,836.7734 1259.5,826.7734 L1259.5,716.4883 " fill="#438DD5" style="stroke:#3C7FC0;stroke-width:0.5;"/><path d="M1259.5,716.4883 C1259.5,726.4883 1354,726.4883 1354,726.4883 C1354,726.4883 1448.5,726.4883 1448.5,716.4883 " fill="none" style="stroke:#3C7FC0;stroke-width:0.5;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="137" x="1283" y="745.957">Customer Profile</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="75" x="1316.5" y="764.8008">Database</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="62" x="1323" y="779.7773">[MongoDB]</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="1352" y="795.8438"> </text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="165" x="1269.5" y="812.332">Armazena os dados dos</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="97" x="1305.5" y="828.8203">consumidores</text></g><!--MD5=[15cbce8a6bc9f097a556bec3bb1bce91]
+entity reportSystem--><g id="elem_reportSystem"><rect fill="#438DD5" height="102.4414" rx="2.5" ry="2.5" style="stroke:#3C7FC0;stroke-width:0.5;" width="189" x="1681" y="734.4883"/><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="117" x="1717" y="759.957">Report System</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="69" x="1741" y="774.9336">[ASP NET 7]</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="1773.5" y="791"> </text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="165" x="1691" y="807.4883">Centraliza os dados dos</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="157" x="1697" y="823.9766">clientes para relatórios</text></g><!--MD5=[a0b7b52df3b251f8852b905d13db824c]
+entity reportingDb--><g id="elem_reportingDb"><path d="M2100.5,718.4883 C2100.5,708.4883 2191,708.4883 2191,708.4883 C2191,708.4883 2281.5,708.4883 2281.5,718.4883 L2281.5,826.418 C2281.5,836.418 2191,836.418 2191,836.418 C2191,836.418 2100.5,836.418 2100.5,826.418 L2100.5,718.4883 " fill="#438DD5" style="stroke:#3C7FC0;stroke-width:0.5;"/><path d="M2100.5,718.4883 C2100.5,728.4883 2191,728.4883 2191,728.4883 C2191,728.4883 2281.5,728.4883 2281.5,718.4883 " fill="none" style="stroke:#3C7FC0;stroke-width:0.5;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="161" x="2110.5" y="747.957">Reporting Database</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="69" x="2156.5" y="762.9336">[SQL Server]</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="2189" y="779"> </text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="151" x="2113.5" y="795.4883">Armazena dados para</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="146" x="2116" y="811.9766">geração de relatórios</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="72" x="2155" y="828.4648">avançados</text></g><!--MD5=[8ee149ae6dc663cf7839bc6f04f928a9]
+entity rabbitMqReport--><g id="elem_rabbitMqReport"><path d="M1258,579.4883 L1450,579.4883 C1455,579.4883 1455,625.709 1455,625.709 C1455,625.709 1455,671.9297 1450,671.9297 L1258,671.9297 C1253,671.9297 1253,625.709 1253,625.709 C1253,625.709 1253,579.4883 1258,579.4883 " fill="#438DD5" style="stroke:#3C7FC0;stroke-width:0.5;"/><path d="M1450,579.4883 C1445,579.4883 1445,625.709 1445,625.709 C1445,671.9297 1450,671.9297 1450,671.9297 " fill="none" style="stroke:#3C7FC0;stroke-width:0.5;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="182" x="1258" y="599.957">Serviço de Mensageria</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="65" x="1316.5" y="614.9336">[RabbitMQ]</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="1347" y="631"> </text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="164" x="1265" y="647.4883">Dados de criação de um</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="45" x="1326.5" y="663.9766">cliente</text></g><!--MD5=[ee1e8d9d9af09bc8cb3ac412225e1515]
+entity notificationCenter--><g id="elem_notificationCenter"><rect fill="#438DD5" height="102.4414" rx="2.5" ry="2.5" style="stroke:#3C7FC0;stroke-width:0.5;" width="219" x="1666" y="597.4883"/><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="153" x="1699" y="622.957">Notification Center</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="69" x="1741" y="637.9336">[ASP NET 7]</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="1773.5" y="654"> </text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="199" x="1676" y="670.4883">Responsável por notificações</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="81" x="1735" y="686.9766">dos clientes</text></g><!--MD5=[81eb9d84e155c03a45e03251bf32b9cb]
+entity rabbitMqNotification--><g id="elem_rabbitMqNotification"><path d="M1258,468.4883 L1450,468.4883 C1455,468.4883 1455,506.4648 1455,506.4648 C1455,506.4648 1455,544.4414 1450,544.4414 L1258,544.4414 C1253,544.4414 1253,506.4648 1253,506.4648 C1253,506.4648 1253,468.4883 1258,468.4883 " fill="#438DD5" style="stroke:#3C7FC0;stroke-width:0.5;"/><path d="M1450,468.4883 C1445,468.4883 1445,506.4648 1445,506.4648 C1445,544.4414 1450,544.4414 1450,544.4414 " fill="none" style="stroke:#3C7FC0;stroke-width:0.5;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="182" x="1258" y="488.957">Serviço de Mensageria</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="65" x="1316.5" y="503.9336">[RabbitMQ]</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="1347" y="520"> </text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="144" x="1277" y="536.4883">Dados de Notificação</text></g><!--MD5=[8fd45d8c5122ba83c420191f61baa867]
+entity emailService--><g id="elem_emailService"><rect fill="#999999" height="88.3086" rx="2.5" ry="2.5" style="stroke:#8A8A8A;stroke-width:0.5;" width="195" x="2093.5" y="426.4883"/><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="138" x="2122" y="451.957">Sistema de Email</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="2189" y="468.8672"> </text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="149" x="2114.5" y="485.3555">Sitema de controle de</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="175" x="2103.5" y="501.8438">template e envio de email</text></g><!--MD5=[5ca2be4facc72d2afebba47a8c265ce5]
+entity phoneService--><g id="elem_phoneService"><rect fill="#999999" height="123.6406" rx="2.5" ry="2.5" style="stroke:#8A8A8A;stroke-width:0.5;" width="202" x="2090" y="549.4883"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="2189" y="573.0234"> </text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="137" x="2122.5" y="591.4453">Sistema de envio</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="132" x="2125" y="610.2891">SMS / Whatsapp</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="2189" y="627.1992"> </text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="129" x="2124.5" y="643.6875">Sitema de envio de</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="182" x="2100" y="660.1758">notificações para celulares</text></g><!--MD5=[8cc6f6b16860b0a6b2f1b4ff46c1e8eb]
+entity viaCep--><g id="elem_viaCep"><rect fill="#999999" height="88.3086" rx="2.5" ry="2.5" style="stroke:#8A8A8A;stroke-width:0.5;" width="211" x="1670" y="474.4883"/><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="56" x="1747.5" y="499.957">ViaCEP</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="1773.5" y="516.8672"> </text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="187" x="1680" y="533.3555">Sistema Externo para obter</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="158" x="1696.5" y="549.8438">informações sobre CEP</text></g><!--MD5=[13cba307eeade6186ea62f3683cecb88]
+entity cepService--><g id="elem_cepService"><rect fill="#438DD5" height="67.1094" rx="2.5" ry="2.5" style="stroke:#3C7FC0;stroke-width:0.5;" width="212" x="1248" y="360.9883"/><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="93" x="1307.5" y="386.457">Cep Service</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="188" x="1258" y="401.4336">[Sistema para obter informações</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="63" x="1322.5" y="415.5664">sobre CEP]</text></g><!--MD5=[d72e9e7bc0945af03bebdd741cf498aa]
+entity platformCache--><g id="elem_platformCache"><path d="M1667.5,321.4883 C1667.5,311.4883 1775.5,311.4883 1775.5,311.4883 C1775.5,311.4883 1883.5,311.4883 1883.5,321.4883 L1883.5,429.418 C1883.5,439.418 1775.5,439.418 1775.5,439.418 C1775.5,439.418 1667.5,439.418 1667.5,429.418 L1667.5,321.4883 " fill="#438DD5" style="stroke:#3C7FC0;stroke-width:0.5;"/><path d="M1667.5,321.4883 C1667.5,331.4883 1775.5,331.4883 1775.5,331.4883 C1775.5,331.4883 1883.5,331.4883 1883.5,321.4883 " fill="none" style="stroke:#3C7FC0;stroke-width:0.5;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="179" x="1686" y="350.957">In-memory data store</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="40" x="1755.5" y="365.9336">[Redis]</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="1773.5" y="382"> </text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="176" x="1685.5" y="398.4883">Usado para armazenar os</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="192" x="1677.5" y="414.9766">dados de forma temporária.</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="46" x="1752.5" y="431.4648">Cache.</text></g><!--MD5=[92848cbaf65985a669855153c5362c37]
+entity customer--><g id="elem_customer"><rect fill="#08427B" height="136.3086" rx="2.5" ry="2.5" style="stroke:#073B6F;stroke-width:0.5;" width="195" x="2452" y="463.4883"/><image height="48" width="48" x="2525.5" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAIAAADYYG7QAAACD0lEQVR4Xu2YoU4EMRCGT+4j8Ai8AhaH4QHgAUjQuFMECUgMIUgwJAgMhgQsAYUiJCiQIBBY+EITsjfTdme6V24v4c8vyGbb+ZjOtN0bNcvjQXmkH83WvYBWto6PLm6v7p7uH1/w2fXD+PBycX1Pv2l3IdDm/vn7x+dXQiAubRzoURa7gRZWd0iGRIiJbOnhnfYBQZNJjNbuyY2eJG8fkDE3bbG4ep6MHUAsgYxmE3nVs6VsBWJSGccsOlFPmLIViMzLOB7pCVO2AtHJMohH7Fh6zqitQK7m0rJvAVYgGcEpe//PLdDz65sM4pF9N7ICcXDKIB5Nv6j7tD0NoSdM2QrU9Gg0ewE1LqBhHR3BBdvj2vapnidjHxD/q6vd7Pvhr31AwcY8eXMTXAKECZZJFXuEq27aLgQK5uLMohCenGGuGewOxSjBvYBqeG6B+Nqiblggdjnc+ZXDy+FNFpFzw76O3UBAROuXh6FoiAcf5g9eTvUgzy0nWg6I8cXHRUpg5bOVBCo+KDpFajOf23GgPme7RSQ+lacIENUgJ6gg1k6HjgOlqnLqip4tEuhv0hNEMXUD0clyXE3p6pZA0S2nnvTlXwLJEZWlb7cTQH1+USgTN4VhAenm/wea1OCAOmqo6fE1WCb9WSKBah+rbUWPWAmE2Rvk0ApiB45eOyNAzU8xcTvj8KvkKEoOaIYeHNA3ZuygAvFMUO0AAAAASUVORK5CYII=" y="473.4883"/><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="56" x="2521.5" y="536.957">Cliente</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="2547.5" y="553.8672"> </text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="171" x="2462" y="570.3555">Consumidor final que foi</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="154" x="2472.5" y="586.8438">cadastrado no sistema</text></g><!--MD5=[6daa3fbd7986944b79b3a393443f1e4c]
+entity rabbitCustomerReport--><g id="elem_rabbitCustomerReport"><path d="M433,509.4883 L625,509.4883 C630,509.4883 630,555.709 630,555.709 C630,555.709 630,601.9297 625,601.9297 L433,601.9297 C428,601.9297 428,555.709 428,555.709 C428,555.709 428,509.4883 433,509.4883 " fill="#438DD5" style="stroke:#3C7FC0;stroke-width:0.5;"/><path d="M625,509.4883 C620,509.4883 620,555.709 620,555.709 C620,601.9297 625,601.9297 625,601.9297 " fill="none" style="stroke:#3C7FC0;stroke-width:0.5;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="182" x="433" y="529.957">Serviço de Mensageria</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="65" x="491.5" y="544.9336">[RabbitMQ]</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="522" y="561"> </text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="168" x="438" y="577.4883">Pedido de criação de um</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="45" x="501.5" y="593.9766">cliente</text></g><!--MD5=[6a1083564bbd06673bf77557dca5b41e]
+link marketingPlatform to marketingPlatformBff--><g id="link_marketingPlatform_marketingPlatformBff"><path d="M235.41,212.7183 C283.3,241.1383 340.62,275.3283 392,306.4883 C401.64,312.3383 411.65,318.4483 421.67,324.5783 " fill="none" id="marketingPlatform-to-marketingPlatformBff" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="428.4,328.7183,423.1535,321.9748,420.0131,327.0873,428.4,328.7183" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="114" x="269.5" y="202.0898">Envia Cadastro De</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="44" x="306.5" y="216.2227">Cliente</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="74" x="291.5" y="230.3555">[HTTP/JSON]</text></g><!--MD5=[73575789e8da317010a058a297c1cef3]
+link marketingPlatformBff to customerProfileCenter--><g id="link_marketingPlatformBff_customerProfileCenter"><path d="M636.41,447.0583 C646.96,451.8783 657.61,456.4483 668,460.4883 C682.75,466.2183 753.14,485.7883 817.74,503.3583 " fill="none" id="marketingPlatformBff-to-customerProfileCenter" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="825.35,505.4283,818.4189,500.4323,816.8429,506.2216,825.35,505.4283" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="98" x="680.5" y="429.0898">Envia Pedido de</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="125" x="669" y="443.2227">Cadastro De Cliente</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="74" x="694.5" y="457.3555">[HTTP/JSON]</text></g><!--MD5=[35be2fdc5f3f47fc17e6354127542fbf]
+link marketingPlatformBff to cepService--><g id="link_marketingPlatformBff_cepService"><path d="M636.33,391.0083 C791.41,391.7583 1078.51,393.1583 1238.23,393.9283 " fill="none" id="marketingPlatformBff-to-cepService" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="1246.11,393.9683,1238.1262,390.9255,1238.094,396.9254,1246.11,393.9683" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="124" x="870.5" y="361.0898">Busca dados de CEP</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="138" x="865.5" y="375.2227">para preencher na tela</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="74" x="897.5" y="389.3555">[HTTP/JSON]</text></g><!--MD5=[a5ba8e176ae9c679c635d688625c40b6]
+link pdvPlatforma to rabbitCustomerReport--><g id="link_pdvPlatforma_rabbitCustomerReport"><path d="M234.7,349.2383 C302.22,378.1783 379.68,412.9983 392,425.4883 C415.19,449.0083 400.01,468.8383 422,493.4883 C424.95,496.7983 428.12,499.9683 431.45,503.0183 " fill="none" id="pdvPlatforma-to-rabbitCustomerReport" style="stroke:#666666;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#666666" points="437.36,508.1083,433.2644,500.6099,429.3438,505.1518,437.36,508.1083" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="98" x="277.5" y="333.0898">Envia Pedido de</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="125" x="266" y="347.2227">Cadastro De Cliente</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="42" x="307.5" y="361.3555">[AMQP]</text></g><!--MD5=[926c3a988d36e757f7b040255ac0a1f9]
+link ecomerPlatform to rabbitCustomerReport--><g id="link_ecomerPlatform_rabbitCustomerReport"><path d="M225.84,463.6283 C284.04,481.3183 358.53,503.9683 418.98,522.3383 " fill="none" id="ecomerPlatform-to-rabbitCustomerReport" style="stroke:#666666;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#666666" points="426.34,524.5783,419.5589,519.3805,417.8132,525.1209,426.34,524.5783" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="98" x="277.5" y="446.0898">Envia Pedido de</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="125" x="266" y="460.2227">Cadastro De Cliente</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="42" x="307.5" y="474.3555">[AMQP]</text></g><!--MD5=[c9017a958ded0e920bef1e152fd1ae93]
+link rabbitCustomerReport to customerProfileCenter--><g id="link_rabbitCustomerReport_customerProfileCenter"><path d="M630.41,553.3183 C679.98,551.9283 740.66,549.7583 795,546.4883 C802.2,546.0583 809.6,545.5583 817.07,545.0183 " fill="none" id="rabbitCustomerReport-to-customerProfileCenter" style="stroke:#666666;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#666666" points="825.04,544.4283,816.8377,542.0361,817.2873,548.0192,825.04,544.4283" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="98" x="680.5" y="515.0898">Envia Pedido de</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="125" x="669" y="529.2227">Cadastro De Cliente</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="42" x="710.5" y="543.3555">[AMQP]</text></g><!--MD5=[78319f4cab84bc2b4d018478bad462f6]
+link customerProfileCenter to customerProfileDb--><g id="link_customerProfileCenter_customerProfileDb"><path d="M989.13,585.9383 C1013.22,607.3383 1042.76,631.3683 1072,649.4883 C1128,684.1983 1195.6,713.8783 1250.46,735.2783 " fill="none" id="customerProfileCenter-to-customerProfileDb" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="1257.74,738.0883,1251.3618,732.4033,1249.1965,737.999,1257.74,738.0883" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="143" x="1073.5" y="646.0898">Armazena os dados no</text></g><!--MD5=[acd0eaba5a17d600239177ac02f485e8]
+link customerProfileCenter to cepService--><g id="link_customerProfileCenter_cepService"><path d="M1042.35,504.4183 C1052.36,501.6983 1062.36,499.0183 1072,496.4883 C1136.64,479.5283 1155.18,483.2983 1218,460.4883 C1239.45,452.6983 1261.99,442.5383 1282.39,432.5183 " fill="none" id="customerProfileCenter-to-cepService" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="1289.33,429.0683,1280.8301,429.9356,1283.4963,435.3107,1289.33,429.0683" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="111" x="1087.5" y="429.0898">Busca Dados para</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="121" x="1084.5" y="443.2227">preencher Endereço</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="74" x="1108" y="457.3555">[HTTP/JSON]</text></g><!--MD5=[012e0d7c7eb5eecee88490ffa734b343]
+link customerProfileCenter to rabbitMqReport--><g id="link_customerProfileCenter_rabbitMqReport"><path d="M1024.92,585.8283 C1040.23,592.8183 1056.27,599.0883 1072,603.4883 C1127.12,618.9283 1190.54,624.8483 1243.16,626.7283 " fill="none" id="customerProfileCenter-to-rabbitMqReport" style="stroke:#666666;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#666666" points="1251.01,626.9783,1243.1107,623.7224,1242.9176,629.7193,1251.01,626.9783" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="116" x="1085" y="558.0898">Adiciona dados do</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="106" x="1090" y="572.2227">Cliente criado no</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="42" x="1124" y="586.3555">Topico</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="42" x="1124" y="600.4883">[AMQP]</text></g><!--MD5=[ec2fafac10af9b117df95ebf5224bf0f]
+link reportSystem to reportingDb--><g id="link_reportSystem_reportingDb"><path d="M1870.33,782.5383 C1936.1,780.4683 2023.86,777.7083 2090.79,775.6083 " fill="none" id="reportSystem-to-reportingDb" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="2098.58,775.3583,2090.4876,772.6173,2090.6807,778.6142,2098.58,775.3583" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="143" x="1916" y="773.0898">Armazena os dados no</text></g><!--MD5=[c39ed48db80f22ab7aa01ac3a83da41d]
+link rabbitMqReport to reportSystem--><g id="link_rabbitMqReport_reportSystem"><path d="M1455.48,663.8083 C1520.9,688.7583 1605.99,721.2183 1671.84,746.3283 " fill="none" id="rabbitMqReport-to-reportSystem" style="stroke:#666666;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#666666" points="1679.17,749.1283,1672.7693,743.4687,1670.6262,749.0729,1679.17,749.1283" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="140" x="1491" y="645.0898">Envia dados do cliente</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="27" x="1549.5" y="659.2227">para</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="42" x="1542" y="673.3555">[AMQP]</text></g><!--MD5=[fb9f34d754ed25ba960f34ff26e147e3]
+link cepService to viaCep--><g id="link_cepService_viaCep"><path d="M1460.32,425.6183 C1521.27,443.6383 1598.02,466.3283 1660.41,484.7683 " fill="none" id="cepService-to-viaCep" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="1668.05,487.0283,1661.2221,481.8922,1659.5285,487.6482,1668.05,487.0283" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="98" x="1514" y="418.0898">Busca dados no</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="74" x="1526" y="432.2227">[HTTP/JOSN]</text></g><!--MD5=[5be80f80fac9a2657251ea286dcb12b6]
+link cepService to platformCache--><g id="link_cepService_platformCache"><path d="M1460.32,389.7183 C1520.45,386.9983 1595.97,383.5783 1657.89,380.7683 " fill="none" id="cepService-to-platformCache" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="1665.8,380.4083,1657.6693,377.7832,1657.948,383.7767,1665.8,380.4083" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="140" x="1491" y="365.0898">Armazena e faz leitura</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="77" x="1524.5" y="379.2227">de Cache No</text></g><!--MD5=[0772381da55138eba9ce415fe69c8f4b]
+link customerProfileCenter to rabbitMqNotification--><g id="link_customerProfileCenter_rabbitMqNotification"><path d="M1042.37,537.0383 C1095.31,537.2683 1160.14,536.0083 1218,530.4883 C1226.27,529.6983 1234.79,528.6783 1243.34,527.5083 " fill="none" id="customerProfileCenter-to-rabbitMqNotification" style="stroke:#666666;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#666666" points="1251.12,526.3983,1242.7734,524.5725,1243.6309,530.5109,1251.12,526.3983" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="144" x="1073" y="513.0898">Enfileira Notificação no</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="42" x="1124" y="527.2227">[AMQP]</text></g><!--MD5=[521d9b9ca533efc5c7d6ab1c4f426372]
+link rabbitMqNotification to notificationCenter--><g id="link_rabbitMqNotification_notificationCenter"><path d="M1455.48,540.4983 C1516.02,560.9883 1593.41,587.1883 1656.8,608.6483 " fill="none" id="rabbitMqNotification-to-notificationCenter" style="stroke:#666666;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#666666" points="1664.21,611.1583,1657.5966,605.7488,1655.6704,611.4312,1664.21,611.1583" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="135" x="1495.5" y="535.0898">Envia Mensagem para</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="42" x="1542" y="549.2227">[AMQP]</text></g><!--MD5=[051fec7a1f589fddcf1f6ecd44bdf4fb]
+link notificationCenter to emailService--><g id="link_notificationCenter_emailService"><path d="M1864.1,597.1083 C1880.77,588.0983 1898.24,579.1683 1915,571.4883 C1969.64,546.4483 2032.42,523.0083 2084.2,505.0183 " fill="none" id="notificationCenter-to-emailService" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="2091.64,502.4483,2083.0988,502.2285,2085.0604,507.8988,2091.64,502.4483" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="106" x="1932.5" y="484.0898">Envia Notificação</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="46" x="1964.5" y="498.2227">usando</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="74" x="1950.5" y="512.3555">[HTTP/JSON]</text></g><!--MD5=[ae7d4857cc140fd9b6aaccc7e07e01ea]
+link notificationCenter to phoneService--><g id="link_notificationCenter_phoneService"><path d="M1885.41,638.7383 C1945.61,633.3583 2020.19,626.6783 2080.49,621.2883 " fill="none" id="notificationCenter-to-phoneService" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="2088.15,620.5983,2079.9142,618.3242,2080.4497,624.3003,2088.15,620.5983" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="106" x="1932.5" y="592.0898">Envia Notificação</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="46" x="1964.5" y="606.2227">usando</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="74" x="1950.5" y="620.3555">[HTTP/JSON]</text></g><!--MD5=[9d705f070f20ec1be223f29d7947681c]
+link emailService to customer--><g id="link_emailService_customer"><path d="M2288.94,487.0783 C2336.4,495.1983 2393.64,504.9883 2442.28,513.3183 " fill="none" id="emailService-to-customer" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="2450.08,514.6483,2442.6972,510.3479,2441.6899,516.2627,2450.08,514.6483" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="96" x="2325" y="491.0898">Notifica Cliente</text></g><!--MD5=[b9911579fefdfc38e31f9e8df364971d]
+link phoneService to customer--><g id="link_phoneService_customer"><path d="M2292.25,588.9883 C2339.17,578.4583 2395.07,565.9183 2442.67,555.2383 " fill="none" id="phoneService-to-customer" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="2450.29,553.5283,2441.8283,552.345,2443.1367,558.2006,2450.29,553.5283" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="96" x="2325" y="559.0898">Notifica Cliente</text></g><rect fill="none" height="98.4414" id="_legend" rx="7.5" ry="7.5" style="stroke:none;stroke-width:1.0;" width="271" x="2360" y="865.4883"/><rect height="16.4883" style="stroke:none;stroke-width:1.0;fill:none;" width="259" x="2366" y="873.4883"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="51" x="2366" y="887.0234">Legend</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="2417" y="887.0234"> </text><rect fill="#08427B" height="16.4883" style="stroke:none;stroke-width:1.0;" width="259" x="2366" y="889.9766"/><text fill="#073B6F" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8" x="2370" y="903.5117">▯</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="2378" y="903.5117"> </text><image height="12" width="12" x="2382" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAIAAADZF8uwAAAAjUlEQVR4XmPgcKpGRtGNy/0qFqIJMiBz/iMB7IpOXXuErGjK2mNYFH3/+RtZ0d6zd7Aoim9ZiaxIN64fiyIg6liyH6IivnUlsjhCkWpkt1nqZAjbLnuGbFAbuiJki+AA6EqEoq3HbqDLw0DLwr1QRegySODW49dQRb///EWXhIFT1x4j3GSYNBErgsgCADsg9+PJKhUuAAAAAElFTkSuQmCC" y="894.4648"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48" x="2402" y="903.5117">person</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="2454" y="903.5117"> </text><rect fill="#999999" height="16.4883" style="stroke:none;stroke-width:1.0;" width="259" x="2366" y="906.4648"/><text fill="#8A8A8A" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8" x="2370" y="920">▯</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="2378" y="920"> </text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="111" x="2386" y="920">external_system</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="2501" y="920"> </text><rect height="16.4883" style="stroke:none;stroke-width:1.0;fill:none;" width="259" x="2366" y="922.9531"/><text fill="#444444" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8" x="2370" y="936.4883">▯</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="2378" y="936.4883"> </text><text fill="#444444" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="66" x="2386" y="936.4883">boundary</text><text fill="#444444" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="41" x="2456" y="937.332">(dashed)</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="2497" y="936.4883"> </text><text fill="#66622E" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="14" x="2370" y="952.9766">─</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="2384" y="952.9766"> </text><text fill="#66622E" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="38" x="2392" y="952.9766">async</text><text fill="#66622E" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="187" x="2434" y="953.8203">(last text color, last line color, dashed)</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="2621" y="952.9766"> </text><line style="stroke:#00000000;stroke-width:1.0;" x1="2366" x2="2625" y1="873.4883" y2="873.4883"/><line style="stroke:#00000000;stroke-width:1.0;" x1="2366" x2="2625" y1="889.9766" y2="889.9766"/><line style="stroke:#00000000;stroke-width:1.0;" x1="2366" x2="2625" y1="906.4648" y2="906.4648"/><line style="stroke:#00000000;stroke-width:1.0;" x1="2366" x2="2625" y1="922.9531" y2="922.9531"/><line style="stroke:#00000000;stroke-width:1.0;" x1="2366" x2="2625" y1="939.4414" y2="939.4414"/><line style="stroke:#00000000;stroke-width:1.0;" x1="2366" x2="2625" y1="955.9297" y2="955.9297"/><line style="stroke:#00000000;stroke-width:1.0;" x1="2366" x2="2366" y1="873.4883" y2="955.9297"/><line style="stroke:#00000000;stroke-width:1.0;" x1="2625" x2="2625" y1="873.4883" y2="955.9297"/><!--MD5=[66947bda5c50198d712da275a7c196e4]
+@startuml container
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
+
+LAYOUT_LANDSCAPE()
+TITLE Customer Profile Center - Container
+
+AddRelTag("async", $lineStyle= DashedLine())
+
+Person(customer, "Cliente", "Consumidor final que foi cadastrado no sistema")
+
+Boundary(internalProducersBoundary, "Sistemas internos") {
+    Container(marketingPlatform, "Plataforma de Marketing", "Vue.js", "Plataforma responsável por capanhas de marketing e landing pages")
+    Container(marketingPlatformBff, "BFF Plataforma De Marketing", "Node Js", "Responsável por centralizar as chamadas para as APIs")
+    Container(pdvPlatforma, "PDV", "Windows Forms C#", "Plataforma de manipulação de vendas nas lojas físicas")
+    Container(ecomerPlatform, "E-Comerce", "Vue.js", "Plataforma de e-comerce")
+}
+
+ContainerQueue(rabbitCustomerReport, "Serviço de Mensageria", "RabbitMQ", "Pedido de criação de um cliente")
+
+Boundary(customerProfileCenterBoundary, "Customer Profile Center") {
+    Container(customerProfileCenter, "Customer Profile Center","ASP NET 7", "Centraliza a jornada e os dados do consumidor")
+    ContainerDb(customerProfileDb, "Customer Profile Database", "MongoDB", "Armazena os dados dos consumidores")
+
+    Container(reportSystem, "Report System","ASP NET 7", "Centraliza os dados dos clientes para relatórios")
+    ContainerDb(reportingDb, "Reporting Database", "SQL Server", "Armazena dados para geração de relatórios avançados")
+    ContainerQueue(rabbitMqReport, "Serviço de Mensageria", "RabbitMQ", "Dados de criação de um cliente")
+
+    Container(notificationCenter, "Notification Center", "ASP NET 7",  "Responsável por notificações dos clientes")
+    ContainerQueue(rabbitMqNotification, "Serviço de Mensageria", "RabbitMQ", "Dados de Notificação")
+    System_Ext(emailService, "Sistema de Email", "Sitema de controle de template e envio de email")
+    System_Ext(phoneService, "Sistema de envio \n SMS / Whatsapp", "Sitema de envio de notificações para celulares", "HTTP/JSON")
+
+    System_Ext(viaCep, "ViaCEP", "Sistema Externo para obter informações sobre CEP")
+    Container(cepService, "Cep Service", "Sistema para obter informações sobre CEP")
+    ContainerDb(platformCache, "In-memory data store", "Redis", "Usado para armazenar os dados de forma temporária. Cache.")
+}
+
+'Relacionamento dos clientes
+Rel(marketingPlatform, marketingPlatformBff, "Envia Cadastro De Cliente", "HTTP/JSON")
+Rel(marketingPlatformBff, customerProfileCenter, "Envia Pedido de Cadastro De Cliente", "HTTP/JSON")
+Rel(marketingPlatformBff, cepService, "Busca dados de CEP para preencher na tela", "HTTP/JSON")
+
+Rel(pdvPlatforma, rabbitCustomerReport, "Envia Pedido de Cadastro De Cliente", "AMQP", $tags = "async")
+Rel(ecomerPlatform, rabbitCustomerReport, "Envia Pedido de Cadastro De Cliente", "AMQP", $tags = "async")
+Rel(rabbitCustomerReport, customerProfileCenter, "Envia Pedido de Cadastro De Cliente", "AMQP", $tags = "async")
+
+'Relacionamentos com o Customer Profile
+Rel(customerProfileCenter, customerProfileDb, "Armazena os dados no", "")
+Rel(customerProfileCenter, cepService, "Busca Dados para preencher Endereço", "HTTP/JSON")
+Rel(customerProfileCenter, rabbitMqReport, "Adiciona dados do Cliente criado no Topico", "AMQP", $tags = "async")
+
+'Relacionamentos do reportSystem
+Rel(reportSystem, reportingDb, "Armazena os dados no", "")
+Rel(rabbitMqReport, reportSystem, "Envia dados do cliente para", "AMQP", $tags = "async")
+
+'Relacionamentos do sistema de Cep
+Rel(cepService, viaCep, "Busca dados no", "HTTP/JOSN")
+Rel(cepService, platformCache, "Armazena e faz leitura de Cache No")
+
+'Relacionamentos com os sistemas de notificação
+Rel(customerProfileCenter, rabbitMqNotification, "Enfileira Notificação no", "AMQP", $tags = "async")
+Rel(rabbitMqNotification, notificationCenter, "Envia Mensagem para", "AMQP", $tags = "async")
+Rel(notificationCenter, emailService, "Envia Notificação usando", "HTTP/JSON")
+Rel(notificationCenter, phoneService, "Envia Notificação usando", "HTTP/JSON")
+Rel(emailService, customer, "Notifica Cliente", "")
+Rel(phoneService, customer, "Notifica Cliente", "")
+
+SHOW_LEGEND()
+@enduml
+
+@startuml container
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam defaultTextAlignment center
+
+skinparam wrapWidth 200
+skinparam maxMessageSize 150
+
+skinparam LegendBorderColor transparent
+skinparam LegendBackgroundColor transparent
+skinparam LegendFontColor #FFFFFF
+
+skinparam shadowing<<legendArea>> false
+skinparam rectangle<<legendArea>> {
+    backgroundcolor #00000000
+    bordercolor #00000000
+}
+
+skinparam rectangle {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam database {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam queue {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam arrow {
+    Color #666666
+    FontColor #666666
+    FontSize 12
+}
+
+skinparam person {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam actor {
+    StereotypeFontSize 12
+    shadowing false
+    style awesome
+}
+
+skinparam rectangle<<boundary>> {
+    Shadowing false
+    StereotypeFontSize 6
+    StereotypeFontColor transparent
+    BorderStyle dashed
+}
+
+skinparam package {
+    StereotypeFontSize 6
+    StereotypeFontColor transparent
+    FontStyle plain
+    BackgroundColor transparent
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam rectangle<<boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam database<<boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam queue<<boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam person<<boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam actor<<boundary>> {
+    FontColor transparent
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam package<<boundary>>StereotypeFontColor transparent
+skinparam rectangle<<boundary>>StereotypeFontColor transparent
+
+skinparam rectangle<<enterprise_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam database<<enterprise_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam queue<<enterprise_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam person<<enterprise_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam actor<<enterprise_boundary>> {
+    FontColor transparent
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam package<<enterprise_boundary>>StereotypeFontColor transparent
+skinparam rectangle<<enterprise_boundary>>StereotypeFontColor transparent
+
+
+skinparam rectangle<<system_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam database<<system_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam queue<<system_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam person<<system_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam actor<<system_boundary>> {
+    FontColor transparent
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam package<<system_boundary>>StereotypeFontColor transparent
+skinparam rectangle<<system_boundary>>StereotypeFontColor transparent
+
+
+skinparam rectangle<<container_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam database<<container_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam queue<<container_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam person<<container_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam actor<<container_boundary>> {
+    FontColor transparent
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam package<<container_boundary>>StereotypeFontColor transparent
+skinparam rectangle<<container_boundary>>StereotypeFontColor transparent
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam rectangle<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+skinparam database<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+skinparam queue<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+skinparam person<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+skinparam actor<<person>> {
+    StereotypeFontColor #08427B
+    FontColor #08427B
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+
+skinparam rectangle<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam database<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam queue<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam person<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam actor<<external_person>> {
+    StereotypeFontColor #686868
+    FontColor #686868
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+
+skinparam rectangle<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+skinparam database<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+skinparam queue<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+skinparam person<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+skinparam actor<<system>> {
+    StereotypeFontColor #1168BD
+    FontColor #1168BD
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+
+skinparam rectangle<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+skinparam database<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+skinparam queue<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+skinparam person<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+skinparam actor<<external_system>> {
+    StereotypeFontColor #999999
+    FontColor #999999
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+
+
+skinparam rectangle<<enterprise_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam database<<enterprise_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam queue<<enterprise_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam person<<enterprise_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam actor<<enterprise_boundary>> {
+    FontColor transparent
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam package<<enterprise_boundary>>StereotypeFontColor transparent
+skinparam rectangle<<enterprise_boundary>>StereotypeFontColor transparent
+
+
+skinparam rectangle<<system_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam database<<system_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam queue<<system_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam person<<system_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam actor<<system_boundary>> {
+    FontColor transparent
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam package<<system_boundary>>StereotypeFontColor transparent
+skinparam rectangle<<system_boundary>>StereotypeFontColor transparent
+
+
+
+
+
+
+sprite $person [48x48/16] {
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+0000000000000000000049BCCA7200000000000000000000
+0000000000000000006EFFFFFFFFB3000000000000000000
+00000000000000001CFFFFFFFFFFFF700000000000000000
+0000000000000001EFFFFFFFFFFFFFF80000000000000000
+000000000000000CFFFFFFFFFFFFFFFF6000000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+00000000000001FFFFFFFFFFFFFFFFFFF900000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFF00000000000000
+0000000000000BFFFFFFFFFFFFFFFFFFFF40000000000000
+0000000000000EFFFFFFFFFFFFFFFFFFFF70000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000DFFFFFFFFFFFFFFFFFFFF60000000000000
+0000000000000AFFFFFFFFFFFFFFFFFFFF40000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFE00000000000000
+00000000000000EFFFFFFFFFFFFFFFFFF800000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+000000000000000BFFFFFFFFFFFFFFFF5000000000000000
+0000000000000001DFFFFFFFFFFFFFF70000000000000000
+00000000000000000BFFFFFFFFFFFF500000000000000000
+0000000000000000005DFFFFFFFFA1000000000000000000
+0000000000000000000037ABB96100000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000025788300000000005886410000000000000
+000000000007DFFFFFFD9643347BFFFFFFFB400000000000
+0000000004EFFFFFFFFFFFFFFFFFFFFFFFFFFB1000000000
+000000007FFFFFFFFFFFFFFFFFFFFFFFFFFFFFD200000000
+00000006FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE10000000
+0000003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB0000000
+000000BFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF5000000
+000003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD000000
+000009FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF200000
+00000DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF600000
+00000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF800000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA00000
+00000EFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF700000
+000006FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE100000
+0000008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD3000000
+000000014555555555555555555555555555555300000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+}
+
+sprite $person2 [48x48/16] {
+0000000000000000000049BCCA7200000000000000000000
+0000000000000000006EFFFFFFFFB3000000000000000000
+00000000000000001CFFFFFFFFFFFF700000000000000000
+0000000000000001EFFFFFFFFFFFFFF80000000000000000
+000000000000000CFFFFFFFFFFFFFFFF6000000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+00000000000001FFFFFFFFFFFFFFFFFFF900000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFF00000000000000
+0000000000000BFFFFFFFFFFFFFFFFFFFF40000000000000
+0000000000000EFFFFFFFFFFFFFFFFFFFF70000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000DFFFFFFFFFFFFFFFFFFFF60000000000000
+0000000000000AFFFFFFFFFFFFFFFFFFFF40000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFE00000000000000
+00000000000000EFFFFFFFFFFFFFFFFFF800000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+000000000000000BFFFFFFFFFFFFFFFF5000000000000000
+0000000000000001DFFFFFFFFFFFFFF70000000000000000
+00000000000000000BFFFFFFFFFFFF500000000000000000
+0000000000000000005DFFFFFFFFA1000000000000000000
+0000000000000000000037ABB96100000000000000000000
+000000000002578888300000000005888864100000000000
+0000000007DFFFFFFFFD9643347BFFFFFFFFFB4000000000
+00000004EFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB10000000
+0000007FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD2000000
+000006FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE100000
+00003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+0000BFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF50000
+0003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD0000
+0009FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF2000
+000DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF6000
+000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB000
+001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB000
+001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB000
+001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA000
+000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+000DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF6000
+0009FFFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFFF2000
+0003FFFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFFD0000
+0000BFFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFF50000
+00003FFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFB00000
+000006FFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFE100000
+0000007FFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFD2000000
+00000004EFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFB10000000
+0000000007DF8FFFFFFFFFFFFFFFFFFFFFF8FB4000000000
+000000000002578888888888888888888864100000000000
+}
+
+sprite $robot [48x48/16] {
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000005BFFFFFFFFFFFFFFFFFFFFFE9100000000000
+0000000000AFFFFFFFFFFFFFFFFFFFFFFFFFE30000000000
+0000000007FFFFFFFFFFFFFFFFFFFFFFFFFFFE1000000000
+000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000000000
+000000004FFFFFFFFFFFFFFFFFFFFFFFFFFFFFC000000000
+000000005FFFFFFFFFFFFFFFFFFFFFFFFFFFFFD000000000
+000000005FFFFFFFFFFFFFFFFFFFFFFFFFFFFFE000000000
+000000005FFFFFFFFFFFFFFFFFFFFFFFFFFFFFE000000000
+000699405FFFFFFC427FFFFFFFFFC427FFFFFFE009982000
+008FFF705FFFFFE10006FFFFFFFE00007FFFFFE00FFFF100
+00CFFF705FFFFFA00001FFFFFFF900002FFFFFE00FFFF500
+00DFFF705FFFFFB00002FFFFFFFA00003FFFFFE00FFFF500
+00DFFF705FFFFFF4000AFFFFFFFF3000BFFFFFE00FFFF500
+00DFFF705FFFFFFFA8DFFFFFFFFFFA8DFFFFFFE00FFFF500
+00DFFF705FFFFFFFFFFFFFFFFFFFFFFFFFFFFFE00FFFF500
+00DFFF705FFFFFFFFFFFFFFFFFFFFFFFFFFFFFE00FFFF500
+00DFFF705FFFFFFFFFFFFFFFFFFFFFFFFFFFFFE00FFFF500
+00DFFF705FFFFFFFFFFFFFFFFFFFFFFFFFFFFFE00FFFF500
+00DFFF705FFFFFFFFFFFFFFFFFFFFFFFFFFFFFE00FFFF500
+00CFFF705FFFFFF87777777777777777CFFFFFE00FFFF500
+008FFF705FFFFFF100000000000000009FFFFFE00FFFF100
+000699405FFFFFF76666666666666666CFFFFFE009982000
+000000005FFFFFFFFFFFFFFFFFFFFFFFFFFFFFE000000000
+000000005FFFFFFFFFFFFFFFFFFFFFFFFFFFFFE000000000
+000000004FFFFFFFFFFFFFFFFFFFFFFFFFFFFFC000000000
+000000000EFFFFFFFFFFFFFFFFFFFFFFFFFFFF7000000000
+0000000005FFFFFFFFFFFFFFFFFFFFFFFFFFFD0000000000
+00000000004CFFFFFFFFFFFFFFFFFFFFFFFF910000000000
+000000000000011111111111111111111110000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+}
+
+sprite $robot2 [48x48/16] {
+000000000000000088888888888888880000000000000000
+000000000000000AFFFFFFFFFFFFFFFFA000000000000000
+00000000000000CFFFFFFFFFFFFFFFFFFC00000000000000
+00000000000004EFFFFFFFFFFFFFFFFFFE40000000000000
+0000000000000AFFFFFFFFFFFFFFFFFFFFA0000000000000
+00000000000008FFFFFFFFFFFFFFFFFFFF80000000000000
+00000000000008FFFFFFFFFFFFFFFFFFFF80000000000000
+00000000000008FFFFFFFFFFFFFFFFFFFF80000000000000
+00000000000888FFFFFFFFFFFFFFFFFFFF88800000000000
+00000000008FF8FFFFFFFFFFFFFFFFFFFF8FF80000000000
+00000000008FF8FFFFFFFFFFFFFFFFFFFF8FF80000000000
+00000000008FF8FFFFFFFFFFFFFFFFFFFF8FF80000000000
+00000000008FF8FFFFFFFFFFFFFFFFFFFF8FF80000000000
+00000000008FF8FFFFFFFFFFFFFFFFFFFF8FF80000000000
+00000000008FF8FFFFFFFFFFFFFFFFFFFF8FF80000000000
+00000000000888FFFFFFFFFFFFFFFFFFFF88800000000000
+00000000000008FFFFFFFFFFFFFFFFFFFF80000000000000
+00000000000008FFFFFFFFFFFFFFFFFFFF80000000000000
+00000000000008FFFFFFFFFFFFFFFFFFFF80000000000000
+00000000000008FFFFFFFFFFFFFFFFFFFF80000000000000
+00000000000008FFFFFFFFFFFFFFFFFFFF80000000000000
+00000000000004CFFFFFFFFFFFFFFFFFFC40000000000000
+000000488888848CFFFFFFFFFFFFFFFFC848888884000000
+00000CFFFFFFFFC888888888888888888CFFFFFFFFC00000
+00008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF80000
+0000CFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFC0000
+0008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+0008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+0008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+0008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+0008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+0008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+0008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+0008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+0008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+0008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+0008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+0008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+0008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+0008FFFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFFF8000
+0008FFFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFFF8000
+0008FFFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFFF8000
+0008FFFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFFF8000
+0000CFFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFFC0000
+00008FFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFF80000
+00000CFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFC00000
+000000488887578888888888888888888864688884000000
+000000000000000000000000000000000000000000000000
+}
+
+
+
+
+skinparam rectangle<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+skinparam database<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+skinparam queue<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+skinparam person<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+skinparam actor<<person>> {
+    StereotypeFontColor #08427B
+    FontColor #08427B
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+
+
+skinparam rectangle<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam database<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam queue<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam person<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam actor<<external_person>> {
+    StereotypeFontColor #686868
+    FontColor #686868
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam rectangle<<container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+skinparam database<<container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+skinparam queue<<container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+skinparam person<<container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+skinparam actor<<container>> {
+    StereotypeFontColor #438DD5
+    FontColor #438DD5
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+
+skinparam rectangle<<external_container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #B3B3B3
+    BorderColor #A6A6A6
+}
+skinparam database<<external_container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #B3B3B3
+    BorderColor #A6A6A6
+}
+skinparam queue<<external_container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #B3B3B3
+    BorderColor #A6A6A6
+}
+skinparam person<<external_container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #B3B3B3
+    BorderColor #A6A6A6
+}
+skinparam actor<<external_container>> {
+    StereotypeFontColor #B3B3B3
+    FontColor #B3B3B3
+    BackgroundColor #B3B3B3
+    BorderColor #A6A6A6
+}
+
+
+skinparam rectangle<<container_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam database<<container_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam queue<<container_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam person<<container_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam actor<<container_boundary>> {
+    FontColor transparent
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam package<<container_boundary>>StereotypeFontColor transparent
+skinparam rectangle<<container_boundary>>StereotypeFontColor transparent
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam defaultTextAlignment center
+
+skinparam wrapWidth 200
+skinparam maxMessageSize 150
+
+skinparam LegendBorderColor transparent
+skinparam LegendBackgroundColor transparent
+skinparam LegendFontColor #FFFFFF
+
+skinparam shadowing<<legendArea>> false
+skinparam rectangle<<legendArea>> {
+    backgroundcolor #00000000
+    bordercolor #00000000
+}
+
+skinparam rectangle {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam database {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam queue {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam arrow {
+    Color #666666
+    FontColor #666666
+    FontSize 12
+}
+
+skinparam person {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam actor {
+    StereotypeFontSize 12
+    shadowing false
+    style awesome
+}
+
+skinparam rectangle<<boundary>> {
+    Shadowing false
+    StereotypeFontSize 6
+    StereotypeFontColor transparent
+    BorderStyle dashed
+}
+
+skinparam package {
+    StereotypeFontSize 6
+    StereotypeFontColor transparent
+    FontStyle plain
+    BackgroundColor transparent
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam rectangle<<boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam database<<boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam queue<<boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam person<<boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam actor<<boundary>> {
+    FontColor transparent
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam package<<boundary>>StereotypeFontColor transparent
+skinparam rectangle<<boundary>>StereotypeFontColor transparent
+
+skinparam rectangle<<enterprise_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam database<<enterprise_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam queue<<enterprise_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam person<<enterprise_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam actor<<enterprise_boundary>> {
+    FontColor transparent
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam package<<enterprise_boundary>>StereotypeFontColor transparent
+skinparam rectangle<<enterprise_boundary>>StereotypeFontColor transparent
+
+
+skinparam rectangle<<system_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam database<<system_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam queue<<system_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam person<<system_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam actor<<system_boundary>> {
+    FontColor transparent
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam package<<system_boundary>>StereotypeFontColor transparent
+skinparam rectangle<<system_boundary>>StereotypeFontColor transparent
+
+
+skinparam rectangle<<container_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam database<<container_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam queue<<container_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam person<<container_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam actor<<container_boundary>> {
+    FontColor transparent
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam package<<container_boundary>>StereotypeFontColor transparent
+skinparam rectangle<<container_boundary>>StereotypeFontColor transparent
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam rectangle<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+skinparam database<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+skinparam queue<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+skinparam person<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+skinparam actor<<person>> {
+    StereotypeFontColor #08427B
+    FontColor #08427B
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+
+
+skinparam rectangle<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam database<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam queue<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam person<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam actor<<external_person>> {
+    StereotypeFontColor #686868
+    FontColor #686868
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+
+
+skinparam rectangle<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+skinparam database<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+skinparam queue<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+skinparam person<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+skinparam actor<<system>> {
+    StereotypeFontColor #1168BD
+    FontColor #1168BD
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+
+skinparam rectangle<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+skinparam database<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+skinparam queue<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+skinparam person<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+skinparam actor<<external_system>> {
+    StereotypeFontColor #999999
+    FontColor #999999
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+
+
+skinparam rectangle<<enterprise_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam database<<enterprise_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam queue<<enterprise_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam person<<enterprise_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam actor<<enterprise_boundary>> {
+    FontColor transparent
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam package<<enterprise_boundary>>StereotypeFontColor transparent
+skinparam rectangle<<enterprise_boundary>>StereotypeFontColor transparent
+
+
+skinparam rectangle<<system_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam database<<system_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam queue<<system_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam person<<system_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam actor<<system_boundary>> {
+    FontColor transparent
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam package<<system_boundary>>StereotypeFontColor transparent
+skinparam rectangle<<system_boundary>>StereotypeFontColor transparent
+
+
+
+
+
+
+sprite $person [48x48/16] {
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+0000000000000000000049BCCA7200000000000000000000
+0000000000000000006EFFFFFFFFB3000000000000000000
+00000000000000001CFFFFFFFFFFFF700000000000000000
+0000000000000001EFFFFFFFFFFFFFF80000000000000000
+000000000000000CFFFFFFFFFFFFFFFF6000000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+00000000000001FFFFFFFFFFFFFFFFFFF900000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFF00000000000000
+0000000000000BFFFFFFFFFFFFFFFFFFFF40000000000000
+0000000000000EFFFFFFFFFFFFFFFFFFFF70000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000DFFFFFFFFFFFFFFFFFFFF60000000000000
+0000000000000AFFFFFFFFFFFFFFFFFFFF40000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFE00000000000000
+00000000000000EFFFFFFFFFFFFFFFFFF800000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+000000000000000BFFFFFFFFFFFFFFFF5000000000000000
+0000000000000001DFFFFFFFFFFFFFF70000000000000000
+00000000000000000BFFFFFFFFFFFF500000000000000000
+0000000000000000005DFFFFFFFFA1000000000000000000
+0000000000000000000037ABB96100000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000025788300000000005886410000000000000
+000000000007DFFFFFFD9643347BFFFFFFFB400000000000
+0000000004EFFFFFFFFFFFFFFFFFFFFFFFFFFB1000000000
+000000007FFFFFFFFFFFFFFFFFFFFFFFFFFFFFD200000000
+00000006FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE10000000
+0000003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB0000000
+000000BFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF5000000
+000003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD000000
+000009FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF200000
+00000DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF600000
+00000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF800000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA00000
+00000EFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF700000
+000006FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE100000
+0000008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD3000000
+000000014555555555555555555555555555555300000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+}
+
+sprite $person2 [48x48/16] {
+0000000000000000000049BCCA7200000000000000000000
+0000000000000000006EFFFFFFFFB3000000000000000000
+00000000000000001CFFFFFFFFFFFF700000000000000000
+0000000000000001EFFFFFFFFFFFFFF80000000000000000
+000000000000000CFFFFFFFFFFFFFFFF6000000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+00000000000001FFFFFFFFFFFFFFFFFFF900000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFF00000000000000
+0000000000000BFFFFFFFFFFFFFFFFFFFF40000000000000
+0000000000000EFFFFFFFFFFFFFFFFFFFF70000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000DFFFFFFFFFFFFFFFFFFFF60000000000000
+0000000000000AFFFFFFFFFFFFFFFFFFFF40000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFE00000000000000
+00000000000000EFFFFFFFFFFFFFFFFFF800000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+000000000000000BFFFFFFFFFFFFFFFF5000000000000000
+0000000000000001DFFFFFFFFFFFFFF70000000000000000
+00000000000000000BFFFFFFFFFFFF500000000000000000
+0000000000000000005DFFFFFFFFA1000000000000000000
+0000000000000000000037ABB96100000000000000000000
+000000000002578888300000000005888864100000000000
+0000000007DFFFFFFFFD9643347BFFFFFFFFFB4000000000
+00000004EFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB10000000
+0000007FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD2000000
+000006FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE100000
+00003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+0000BFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF50000
+0003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD0000
+0009FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF2000
+000DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF6000
+000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB000
+001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB000
+001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB000
+001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA000
+000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+000DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF6000
+0009FFFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFFF2000
+0003FFFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFFD0000
+0000BFFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFF50000
+00003FFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFB00000
+000006FFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFE100000
+0000007FFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFD2000000
+00000004EFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFB10000000
+0000000007DF8FFFFFFFFFFFFFFFFFFFFFF8FB4000000000
+000000000002578888888888888888888864100000000000
+}
+
+sprite $robot [48x48/16] {
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000005BFFFFFFFFFFFFFFFFFFFFFE9100000000000
+0000000000AFFFFFFFFFFFFFFFFFFFFFFFFFE30000000000
+0000000007FFFFFFFFFFFFFFFFFFFFFFFFFFFE1000000000
+000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000000000
+000000004FFFFFFFFFFFFFFFFFFFFFFFFFFFFFC000000000
+000000005FFFFFFFFFFFFFFFFFFFFFFFFFFFFFD000000000
+000000005FFFFFFFFFFFFFFFFFFFFFFFFFFFFFE000000000
+000000005FFFFFFFFFFFFFFFFFFFFFFFFFFFFFE000000000
+000699405FFFFFFC427FFFFFFFFFC427FFFFFFE009982000
+008FFF705FFFFFE10006FFFFFFFE00007FFFFFE00FFFF100
+00CFFF705FFFFFA00001FFFFFFF900002FFFFFE00FFFF500
+00DFFF705FFFFFB00002FFFFFFFA00003FFFFFE00FFFF500
+00DFFF705FFFFFF4000AFFFFFFFF3000BFFFFFE00FFFF500
+00DFFF705FFFFFFFA8DFFFFFFFFFFA8DFFFFFFE00FFFF500
+00DFFF705FFFFFFFFFFFFFFFFFFFFFFFFFFFFFE00FFFF500
+00DFFF705FFFFFFFFFFFFFFFFFFFFFFFFFFFFFE00FFFF500
+00DFFF705FFFFFFFFFFFFFFFFFFFFFFFFFFFFFE00FFFF500
+00DFFF705FFFFFFFFFFFFFFFFFFFFFFFFFFFFFE00FFFF500
+00DFFF705FFFFFFFFFFFFFFFFFFFFFFFFFFFFFE00FFFF500
+00CFFF705FFFFFF87777777777777777CFFFFFE00FFFF500
+008FFF705FFFFFF100000000000000009FFFFFE00FFFF100
+000699405FFFFFF76666666666666666CFFFFFE009982000
+000000005FFFFFFFFFFFFFFFFFFFFFFFFFFFFFE000000000
+000000005FFFFFFFFFFFFFFFFFFFFFFFFFFFFFE000000000
+000000004FFFFFFFFFFFFFFFFFFFFFFFFFFFFFC000000000
+000000000EFFFFFFFFFFFFFFFFFFFFFFFFFFFF7000000000
+0000000005FFFFFFFFFFFFFFFFFFFFFFFFFFFD0000000000
+00000000004CFFFFFFFFFFFFFFFFFFFFFFFF910000000000
+000000000000011111111111111111111110000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+}
+
+sprite $robot2 [48x48/16] {
+000000000000000088888888888888880000000000000000
+000000000000000AFFFFFFFFFFFFFFFFA000000000000000
+00000000000000CFFFFFFFFFFFFFFFFFFC00000000000000
+00000000000004EFFFFFFFFFFFFFFFFFFE40000000000000
+0000000000000AFFFFFFFFFFFFFFFFFFFFA0000000000000
+00000000000008FFFFFFFFFFFFFFFFFFFF80000000000000
+00000000000008FFFFFFFFFFFFFFFFFFFF80000000000000
+00000000000008FFFFFFFFFFFFFFFFFFFF80000000000000
+00000000000888FFFFFFFFFFFFFFFFFFFF88800000000000
+00000000008FF8FFFFFFFFFFFFFFFFFFFF8FF80000000000
+00000000008FF8FFFFFFFFFFFFFFFFFFFF8FF80000000000
+00000000008FF8FFFFFFFFFFFFFFFFFFFF8FF80000000000
+00000000008FF8FFFFFFFFFFFFFFFFFFFF8FF80000000000
+00000000008FF8FFFFFFFFFFFFFFFFFFFF8FF80000000000
+00000000008FF8FFFFFFFFFFFFFFFFFFFF8FF80000000000
+00000000000888FFFFFFFFFFFFFFFFFFFF88800000000000
+00000000000008FFFFFFFFFFFFFFFFFFFF80000000000000
+00000000000008FFFFFFFFFFFFFFFFFFFF80000000000000
+00000000000008FFFFFFFFFFFFFFFFFFFF80000000000000
+00000000000008FFFFFFFFFFFFFFFFFFFF80000000000000
+00000000000008FFFFFFFFFFFFFFFFFFFF80000000000000
+00000000000004CFFFFFFFFFFFFFFFFFFC40000000000000
+000000488888848CFFFFFFFFFFFFFFFFC848888884000000
+00000CFFFFFFFFC888888888888888888CFFFFFFFFC00000
+00008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF80000
+0000CFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFC0000
+0008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+0008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+0008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+0008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+0008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+0008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+0008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+0008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+0008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+0008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+0008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+0008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+0008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+0008FFFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFFF8000
+0008FFFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFFF8000
+0008FFFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFFF8000
+0008FFFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFFF8000
+0000CFFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFFC0000
+00008FFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFF80000
+00000CFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFC00000
+000000488887578888888888888888888864688884000000
+000000000000000000000000000000000000000000000000
+}
+
+
+
+
+skinparam rectangle<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+skinparam database<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+skinparam queue<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+skinparam person<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+skinparam actor<<person>> {
+    StereotypeFontColor #08427B
+    FontColor #08427B
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+
+
+skinparam rectangle<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam database<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam queue<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam person<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam actor<<external_person>> {
+    StereotypeFontColor #686868
+    FontColor #686868
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+left to right direction
+TITLE Customer Profile Center - Container
+
+skinparam arrow<<async>> {
+    Color ;line.dashed
+}
+
+rectangle "<$person>\n== Cliente\n\nConsumidor final que foi cadastrado no sistema" <<person>> as customer 
+
+rectangle "== Sistemas internos" <<boundary>> as internalProducersBoundary  {
+    rectangle "== Plataforma de Marketing\n//<size:12>[Vue.js]</size>//\n\nPlataforma responsável por capanhas de marketing e landing pages" <<container>> as marketingPlatform 
+    rectangle "== BFF Plataforma De Marketing\n//<size:12>[Node Js]</size>//\n\nResponsável por centralizar as chamadas para as APIs" <<container>> as marketingPlatformBff 
+    rectangle "== PDV\n//<size:12>[Windows Forms C#]</size>//\n\nPlataforma de manipulação de vendas nas lojas físicas" <<container>> as pdvPlatforma 
+    rectangle "== E-Comerce\n//<size:12>[Vue.js]</size>//\n\nPlataforma de e-comerce" <<container>> as ecomerPlatform 
+}
+
+queue "== Serviço de Mensageria\n//<size:12>[RabbitMQ]</size>//\n\nPedido de criação de um cliente" <<container>> as rabbitCustomerReport 
+
+rectangle "== Customer Profile Center" <<boundary>> as customerProfileCenterBoundary  {
+    rectangle "== Customer Profile Center\n//<size:12>[ASP NET 7]</size>//\n\nCentraliza a jornada e os dados do consumidor" <<container>> as customerProfileCenter 
+    database "== Customer Profile Database\n//<size:12>[MongoDB]</size>//\n\nArmazena os dados dos consumidores" <<container>> as customerProfileDb 
+
+    rectangle "== Report System\n//<size:12>[ASP NET 7]</size>//\n\nCentraliza os dados dos clientes para relatórios" <<container>> as reportSystem 
+    database "== Reporting Database\n//<size:12>[SQL Server]</size>//\n\nArmazena dados para geração de relatórios avançados" <<container>> as reportingDb 
+    queue "== Serviço de Mensageria\n//<size:12>[RabbitMQ]</size>//\n\nDados de criação de um cliente" <<container>> as rabbitMqReport 
+
+    rectangle "== Notification Center\n//<size:12>[ASP NET 7]</size>//\n\nResponsável por notificações dos clientes" <<container>> as notificationCenter 
+    queue "== Serviço de Mensageria\n//<size:12>[RabbitMQ]</size>//\n\nDados de Notificação" <<container>> as rabbitMqNotification 
+    rectangle "== Sistema de Email\n\nSitema de controle de template e envio de email" <<external_system>> as emailService 
+    rectangle "<$HTTP/JSON>\n== Sistema de envio \n==  SMS / Whatsapp\n\nSitema de envio de notificações para celulares" <<external_system>> as phoneService 
+
+    rectangle "== ViaCEP\n\nSistema Externo para obter informações sobre CEP" <<external_system>> as viaCep 
+    rectangle "== Cep Service\n//<size:12>[Sistema para obter informações sobre CEP]</size>//" <<container>> as cepService 
+    database "== In-memory data store\n//<size:12>[Redis]</size>//\n\nUsado para armazenar os dados de forma temporária. Cache." <<container>> as platformCache 
+}
+
+marketingPlatform - ->> marketingPlatformBff : **Envia Cadastro De Cliente**\n//<size:12>[HTTP/JSON]</size>//
+marketingPlatformBff - ->> customerProfileCenter : **Envia Pedido de Cadastro De Cliente**\n//<size:12>[HTTP/JSON]</size>//
+marketingPlatformBff - ->> cepService : **Busca dados de CEP para preencher na tela**\n//<size:12>[HTTP/JSON]</size>//
+
+pdvPlatforma - ->> rabbitCustomerReport <<async>> : **Envia Pedido de Cadastro De Cliente**\n//<size:12>[AMQP]</size>//
+ecomerPlatform - ->> rabbitCustomerReport <<async>> : **Envia Pedido de Cadastro De Cliente**\n//<size:12>[AMQP]</size>//
+rabbitCustomerReport - ->> customerProfileCenter <<async>> : **Envia Pedido de Cadastro De Cliente**\n//<size:12>[AMQP]</size>//
+
+customerProfileCenter - ->> customerProfileDb : **Armazena os dados no**
+customerProfileCenter - ->> cepService : **Busca Dados para preencher Endereço**\n//<size:12>[HTTP/JSON]</size>//
+customerProfileCenter - ->> rabbitMqReport <<async>> : **Adiciona dados do Cliente criado no Topico**\n//<size:12>[AMQP]</size>//
+
+reportSystem - ->> reportingDb : **Armazena os dados no**
+rabbitMqReport - ->> reportSystem <<async>> : **Envia dados do cliente para**\n//<size:12>[AMQP]</size>//
+
+cepService - ->> viaCep : **Busca dados no**\n//<size:12>[HTTP/JOSN]</size>//
+cepService - ->> platformCache : **Armazena e faz leitura de Cache No**
+
+customerProfileCenter - ->> rabbitMqNotification <<async>> : **Enfileira Notificação no**\n//<size:12>[AMQP]</size>//
+rabbitMqNotification - ->> notificationCenter <<async>> : **Envia Mensagem para**\n//<size:12>[AMQP]</size>//
+notificationCenter - ->> emailService : **Envia Notificação usando**\n//<size:12>[HTTP/JSON]</size>//
+notificationCenter - ->> phoneService : **Envia Notificação usando**\n//<size:12>[HTTP/JSON]</size>//
+emailService - ->> customer : **Notifica Cliente**
+phoneService - ->> customer : **Notifica Cliente**
+
+hide stereotype
+legend right
+<#00000000,#00000000>|<color:#000000>**Legend**</color> |
+|<#08427B><color:#073B6F> <U+25AF></color> <color:#FFFFFF><$person,scale=0.25>  person <size:10></size></color> |
+|<#999999><color:#8A8A8A> <U+25AF></color> <color:#FFFFFF> external_system <size:10></size></color> |
+|<#transparent><color:#444444> <U+25AF></color> <color:#444444> boundary <size:10>(dashed)</size></color> |
+|<color:#66622E> <U+2500></color> <color:#66622E> async <size:10>(last text color, last line color, dashed)</size></color> |
+endlegend
+@enduml
+
+PlantUML version 1.2022.7(Mon Aug 22 14:01:30 BRT 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: BR
+--></g></svg>
