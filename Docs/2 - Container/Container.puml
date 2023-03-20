@@ -5,13 +5,14 @@
 LAYOUT_LANDSCAPE()
 TITLE Customer Profile Center - Container
 
+AddRelTag("async", $lineStyle= DashedLine())
+
 Person(customer, "Cliente", "Consumidor final que foi cadastrado no sistema")
 
-
 Boundary(internalProducersBoundary, "Sistemas internos") {
-    System(marketingPlatform, "Plataforma de Marketing", "Plataforma responsável por capanhas de marketing e landing pages")
-    System(pdvPlatforma, "PDV", "Plataforma de manipulação de vendas nas lojas físicas")
-    System(ecomerPlatform, "E-Comerce", "Plataforma de e-comerce")
+    Container(marketingPlatform, "Plataforma de Marketing", "Plataforma responsável por capanhas de marketing e landing pages")
+    Container(pdvPlatforma, "PDV", "Plataforma de manipulação de vendas nas lojas físicas")
+    Container(ecomerPlatform, "E-Comerce", "Plataforma de e-comerce")
 }
 
 Boundary(customerProfileCenterBoundary, "Customer Profile Center") {
@@ -40,11 +41,11 @@ Rel(marketingPlatform, customerProfileCenter, "Cadastra Cliente", "")
 'Relacionamentos com o Customer Profile
 Rel(customerProfileCenter, customerProfileDb, "Armazena os dados no", "")
 Rel(customerProfileCenter, cepService, "Busca Dados para preencher Endereço", "HTTP/JSON")
-Rel(customerProfileCenter, rabbitMqReport, "Adiciona dados do Cliente criado no Topico", "")
+Rel(customerProfileCenter, rabbitMqReport, "Adiciona dados do Cliente criado no Topico", "AMQP", $tags = "async")
 
 'Relacionamentos do reportSystem
 Rel(reportSystem, reportingDb, "Armazena os dados no", "")
-Rel(rabbitMqReport, reportSystem, "Envia dados do cliente para", "AMQP")
+Rel(rabbitMqReport, reportSystem, "Envia dados do cliente para", "AMQP", $tags = "async")
 
 
 'Relacionamentos do sistema de Cep
@@ -52,8 +53,8 @@ Rel(cepService, viaCep, "Busca dados no", "HTTP/JOSN")
 Rel(cepService, platformCache, "Armazena e faz leitura de Cache No")
 
 'Relacionamentos com os sistemas de notificação
-Rel(customerProfileCenter, rabbitMqNotification, "Enfileira Notificação no", "AMQP")
-Rel(rabbitMqNotification, notificationCenter, "Envia Mensagem para", "AMQP")
+Rel(customerProfileCenter, rabbitMqNotification, "Enfileira Notificação no", "AMQP", $tags = "async")
+Rel(rabbitMqNotification, notificationCenter, "Envia Mensagem para", "AMQP", $tags = "async")
 Rel(notificationCenter, emailService, "Envia Notificação usando", "HTTP/JSON")
 Rel(notificationCenter, phoneService, "Envia Notificação usando", "HTTP/JSON")
 Rel(emailService, customer, "Notifica Cliente", "")
