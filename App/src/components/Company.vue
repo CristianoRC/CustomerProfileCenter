@@ -1,6 +1,12 @@
 <template>
     <v-card :loading="loading" text="Pessoa Juridica" variant="tonal">
         <v-container>
+            <v-row justify="center">
+                <v-avatar icon="mdi-vuetify" image="https://cdn-icons-png.flaticon.com/512/4205/4205813.png" size="90">
+                </v-avatar>
+            </v-row>
+        </v-container>
+        <v-container>
             <form>
                 <v-text-field v-model="fields.name" label="Nome"></v-text-field>
                 <v-text-field v-model="fields.corporateName" label="Rasão Social" type="string"></v-text-field>

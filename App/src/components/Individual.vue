@@ -1,6 +1,12 @@
 <template>
     <v-card :loading="loading" text="Pessoa Fisica" variant="tonal">
         <v-container>
+            <v-row justify="center">
+                <v-avatar icon="mdi-vuetify" image="https://cdn-icons-png.flaticon.com/512/9970/9970508.png" size="90">
+                </v-avatar>
+            </v-row>
+        </v-container>
+        <v-container>
             <form>
                 <v-text-field v-model="fields.name" label="Nome"></v-text-field>
                 <v-text-field v-model="fields.document.number" label="CPF" type="number"></v-text-field>
