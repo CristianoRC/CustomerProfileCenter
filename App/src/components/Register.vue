@@ -22,7 +22,7 @@
               <v-window-item :key="1" :value="1">
                 <v-container>
                   <v-row justify="center">
-                    <v-col cols="7">
+                    <v-col xl="7" lg="8" md="12">
                       <Individual></Individual>
                     </v-col>
                   </v-row>
@@ -32,7 +32,7 @@
               <v-window-item :key="2" :value="2">
                 <v-container justify="center">
                   <v-row justify="center">
-                    <v-col cols="7">
+                    <v-col xl="7" lg="8" md="12">
                       <Company />
                     </v-col>
                   </v-row>
