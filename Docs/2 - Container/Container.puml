@@ -10,16 +10,18 @@ AddRelTag("async", $lineStyle= DashedLine())
 Person(customer, "Cliente", "Consumidor final que foi cadastrado no sistema")
 
 Boundary(internalProducersBoundary, "Sistemas internos") {
-    Container(marketingPlatform, "Plataforma de Marketing", "Vue.js", "Plataforma responsável por capanhas de marketing e landing pages")
+    Container(marketingPlatform, "Landing Page - Marketing", "Vue.js", "Landing page para obter novos clientes")
     Container(marketingPlatformBff, "BFF Plataforma De Marketing", "Node Js", "Responsável por centralizar as chamadas para as APIs")
     Container(pdvPlatforma, "PDV", "Windows Forms C#", "Plataforma de manipulação de vendas nas lojas físicas")
     Container(ecomerPlatform, "E-Comerce", "Vue.js", "Plataforma de e-comerce")
 }
 
-ContainerQueue(rabbitCustomerReport, "Serviço de Mensageria", "RabbitMQ", "Pedido de criação de um cliente")
 
 Boundary(customerProfileCenterBoundary, "Customer Profile Center") {
-    Container(customerProfileCenter, "Customer Profile Center","ASP NET 7", "Centraliza a jornada e os dados do consumidor")
+    ContainerQueue(rabbitCustomer, "Serviço de Mensageria", "RabbitMQ", "Pedido de criação de um cliente")
+
+    Container(customerProfileCenter, "Customer Profile Center API","ASP NET 7", "Recebe pedidos de criação de clientes via HTTP")
+    Container(customerProfileCenterFunction, "Customer Profile Center Function", "Azure Function 4",  "Responsável por criação de novos clientes")
     ContainerDb(customerProfileDb, "Customer Profile Database", "MongoDB", "Armazena os dados dos consumidores")
 
     Container(reportSystem, "Report System","ASP NET 7", "Centraliza os dados dos clientes para relatórios")
@@ -37,18 +39,20 @@ Boundary(customerProfileCenterBoundary, "Customer Profile Center") {
 }
 
 'Relacionamento dos clientes
-Rel(marketingPlatform, marketingPlatformBff, "Envia Cadastro De Cliente", "HTTP/JSON")
+Rel(marketingPlatform, marketingPlatformBff, "Envia Dados de Cadastro e Busca dados para construção da tela", "HTTP/JSON")
 Rel(marketingPlatformBff, customerProfileCenter, "Envia Pedido de Cadastro De Cliente", "HTTP/JSON")
 Rel(marketingPlatformBff, cepService, "Busca dados de CEP para preencher na tela", "HTTP/JSON")
 
-Rel(pdvPlatforma, rabbitCustomerReport, "Envia Pedido de Cadastro De Cliente", "AMQP", $tags = "async")
-Rel(ecomerPlatform, rabbitCustomerReport, "Envia Pedido de Cadastro De Cliente", "AMQP", $tags = "async")
-Rel(rabbitCustomerReport, customerProfileCenter, "Envia Pedido de Cadastro De Cliente", "AMQP", $tags = "async")
+Rel(pdvPlatforma, rabbitCustomer, "Envia Pedido de Cadastro De Cliente", "AMQP", $tags = "async")
+Rel(ecomerPlatform, rabbitCustomer, "Envia Pedido de Cadastro De Cliente", "AMQP", $tags = "async")
 
 'Relacionamentos com o Customer Profile
-Rel(customerProfileCenter, customerProfileDb, "Armazena os dados no", "")
-Rel(customerProfileCenter, cepService, "Busca Dados para preencher Endereço", "HTTP/JSON")
-Rel(customerProfileCenter, rabbitMqReport, "Adiciona dados do Cliente criado no Topico", "AMQP", $tags = "async")
+Rel(customerProfileCenter, customerProfileDb, "Busca dados para validações no", "HTTP/JSON")
+Rel(customerProfileCenter, rabbitCustomer , "Envia Pedido de Cadastro De Cliente", "AMQP", $tags = "async")
+Rel(rabbitCustomer, customerProfileCenterFunction , "Envia Pedido de Cadastro De Cliente", "AMQP", $tags = "async")
+Rel(customerProfileCenterFunction, customerProfileDb, "Armazena / Busca dados para validação os dados no", "")
+Rel(customerProfileCenterFunction, cepService, "Busca Dados para preencher Endereço", "HTTP/JSON")
+Rel(customerProfileCenterFunction, rabbitMqReport, "Adiciona dados do Cliente criado no Topico", "AMQP", $tags = "async")
 
 'Relacionamentos do reportSystem
 Rel(reportSystem, reportingDb, "Armazena os dados no", "")
@@ -59,7 +63,7 @@ Rel(cepService, viaCep, "Busca dados no", "HTTP/JOSN")
 Rel(cepService, platformCache, "Armazena e faz leitura de Cache No")
 
 'Relacionamentos com os sistemas de notificação
-Rel(customerProfileCenter, rabbitMqNotification, "Enfileira Notificação no", "AMQP", $tags = "async")
+Rel(customerProfileCenterFunction, rabbitMqNotification, "Enfileira Notificação no", "AMQP", $tags = "async")
 Rel(rabbitMqNotification, notificationCenter, "Envia Mensagem para", "AMQP", $tags = "async")
 Rel(notificationCenter, emailService, "Envia Notificação usando", "HTTP/JSON")
 Rel(notificationCenter, phoneService, "Envia Notificação usando", "HTTP/JSON")
