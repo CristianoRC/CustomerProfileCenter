@@ -10,7 +10,8 @@
 
 - [System Context](./Docs/1%20-%20System%20Context/)
 - [Container](./Docs/2%20-%20Container/)
-
+- [Component - Azure Functio](./Docs/3%20-%20Componente/)
+- [Infra](./Docs/Infra/)
 
 ### Como acessar o projeto
 
@@ -20,7 +21,7 @@ Se quiseres acessar o projeto diretamente na Web, na landing page que foi criada
 
 Para executr o projeto basta rodar na raiz do projeto o command: `docker-compose up --build`
 
-Temos apenas um ponto de atenção, se você usa processadores ``arm64`` pode ter problemas por causa da imagem Docker de Azure Functions, usada em uma parte do projeto. Para mais detalhes você pode encontrar aqui [Mac M1 Function Not Implemented Error](https://github.com/docker/for-mac/issues/5328).
+Temos apenas um ponto de atenção, se você usa processadores `arm64` pode ter problemas por causa da imagem Docker de Azure Functions, usada em uma parte do projeto. Para mais detalhes você pode encontrar aqui [Mac M1 Function Not Implemented Error](https://github.com/docker/for-mac/issues/5328).
 Se necessário o uso com Docker em processadores arm64, pode entrar em contato que podemos criar uma imagem base compatível.
 
 #### **Acessar a aplicação WEB do container localmente**
@@ -36,7 +37,7 @@ http://localhost.cristianoprogramador.com/
 {
   "name": "Cristiano Cunha",
   "document": {
-    "number" : "902.522.750-39",
+    "number": "902.522.750-39",
     "documentType": 0
   },
   "address": {
@@ -53,7 +54,6 @@ http://localhost.cristianoprogramador.com/
 
 Obs.:
 
-``"documentType": 0, //0 CPF, 1 CNPJ``
+`"documentType": 0, //0 CPF, 1 CNPJ`
 
-``CEP é apenas de exmeplo gerado aleatoriamente, não usar valores reais``
-
+`CEP é apenas de exmeplo gerado aleatoriamente, não usar valores reais`
