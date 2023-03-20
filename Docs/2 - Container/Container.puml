@@ -20,8 +20,10 @@ Boundary(customerProfileCenterBoundary, "Customer Profile Center") {
 
     Container(reportSystem, "Report System","ASP NET 7", "Centraliza os dados dos clientes para relatórios")
     ContainerDb(reportingDb, "Reporting Database", "SQL Server", "Armazena dados para geração de relatórios avançados")
+    ContainerQueue(rabbitMqReport, "Serviço de Mensageria", "RabbitMQ", "Dados de criação de um cliente")
 
     Container(notificationCenter, "Notification Center", "ASP NET 7",  "Responsável por notificações dos clientes")
+    ContainerQueue(rabbitMqNotification, "Serviço de Mensageria", "RabbitMQ", "Dados de Notificação")
     System_Ext(emailService, "Sistema de Email", "Sitema de controle de template e envio de email")
     System_Ext(phoneService, "Sistema de envio \n SMS / Whatsapp", "Sitema de envio de notificações para celulares", "HTTP/JSON")
 
@@ -37,18 +39,21 @@ Rel(marketingPlatform, customerProfileCenter, "Cadastra Cliente", "")
 
 'Relacionamentos com o Customer Profile
 Rel(customerProfileCenter, customerProfileDb, "Armazena os dados no", "")
-Rel(customerProfileCenter, reportSystem, "Fornece Dados para relatórios", "")
 Rel(customerProfileCenter, cepService, "Busca Dados para preencher Endereço", "HTTP/JSON")
+Rel(customerProfileCenter, rabbitMqReport, "Adiciona dados do Cliente criado no Topico", "")
 
 'Relacionamentos do reportSystem
 Rel(reportSystem, reportingDb, "Armazena os dados no", "")
+Rel(rabbitMqReport, reportSystem, "Envia dados do cliente para", "AMQP")
+
 
 'Relacionamentos do sistema de Cep
 Rel(cepService, viaCep, "Busca dados no", "HTTP/JOSN")
-Rel(cepService, platformCache, "Armazena Cache No")
+Rel(cepService, platformCache, "Armazena e faz leitura de Cache No")
 
 'Relacionamentos com os sistemas de notificação
-Rel(customerProfileCenter, notificationCenter, "Envia Notificação", "")
+Rel(customerProfileCenter, rabbitMqNotification, "Enfileira Notificação no", "AMQP")
+Rel(rabbitMqNotification, notificationCenter, "Envia Mensagem para", "AMQP")
 Rel(notificationCenter, emailService, "Envia Notificação usando", "HTTP/JSON")
 Rel(notificationCenter, phoneService, "Envia Notificação usando", "HTTP/JSON")
 Rel(emailService, customer, "Notifica Cliente", "")
