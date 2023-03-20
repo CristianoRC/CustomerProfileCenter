@@ -1,10 +1,34 @@
 @startuml container
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
 
 LAYOUT_LANDSCAPE()
-TITLE Customer Profile Center - Container
+TITLE Customer Profile Center - Component - Azure Function
 
 AddRelTag("async", $lineStyle= DashedLine())
+
+ComponentQueue(rabbitCustomer, "Serviço de Mensageria", "RabbitMQ", "Pedido de criação de um cliente")
+
+Boundary(customerProfileCenterBoundary, "") {
+    Component(azureFunction, "Customer Profile Center Function", "Azure Function RabbitMQ Trigger", "Recebe mensagens de pedido de criação de clientes")
+    Component(customerService, "CustomerService", "", "Validações se precisa processar e qual a strategy deve ser usada")
+    Component(individualStrategy, "Individual Strategy", "", "Responsável por validação e criação de uma pessoa fisica")
+    Component(companyStrategy, "Customer Strategy", "", "Responsável por validação e criação de uma pessoa juridica")
+    Component(customerReposity, "Customer Repository", "", "Responsável manipular dados dos clientes na base de dados")
+    
+    'Parte de obter CEP
+    'Parte de email
+}
+
+'Relacionamento Da Function
+Rel(rabbitCustomer, azureFunction , "Envia Pedido de Cadastro De Cliente", "AMQP/JSON", $tags = "async")
+Rel(azureFunction, customerService , "Envia Pedido de Cadastro De Cliente", "")
+
+'Relacionamentos CustomerService
+Rel(customerService , individualStrategy, "Usa a estartegia de cadastro", "")
+Rel(customerService , companyStrategy, "Usa a estartegia de cadastro", "")
+Rel(companyStrategy , customerReposity, "Envia dados para", "")
+Rel(individualStrategy , customerReposity, "Envia dados para", "")
 
 @enduml
