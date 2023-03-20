@@ -3,32 +3,57 @@
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
 
-LAYOUT_LANDSCAPE()
 TITLE Customer Profile Center - Component - Azure Function
 
 AddRelTag("async", $lineStyle= DashedLine())
 
-ComponentQueue(rabbitCustomer, "Serviço de Mensageria", "RabbitMQ", "Pedido de criação de um cliente")
+ComponentQueue(rabbitCustomer, "Serviço de Mensageria - Cadastro", "RabbitMQ", "Pedido de criação de um cliente")
+Component_Ext(viaCep, "ViaCEP", "HTTP API", "Sistema Externo para obter informações sobre CEP")
 
 Boundary(customerProfileCenterBoundary, "") {
     Component(azureFunction, "Customer Profile Center Function", "Azure Function RabbitMQ Trigger", "Recebe mensagens de pedido de criação de clientes")
     Component(customerService, "CustomerService", "", "Validações se precisa processar e qual a strategy deve ser usada")
     Component(individualStrategy, "Individual Strategy", "", "Responsável por validação e criação de uma pessoa fisica")
     Component(companyStrategy, "Customer Strategy", "", "Responsável por validação e criação de uma pessoa juridica")
-    Component(customerReposity, "Customer Repository", "", "Responsável manipular dados dos clientes na base de dados")
-    
-    'Parte de obter CEP
-    'Parte de email
+    Component(customerRepository, "Customer Repository", "", "Responsável manipular dados dos clientes na base de dados")
+    Component(documentSecurity, "Document Security Component", "HMAC-256 / AES", "Responsável por anonimizar os documentos dos clientes")
+    ComponentDb(mongoDb, "MongoDB", "", "Armazena os dados de todos os clientes")
+    Component(cepService, "Cep Service", ".NET", "Sistema para obter informações sobre CEP")
+    ComponentDb(redis, "Redis", "In-memory data store", "Armazena dados temporários sobre endereços")
+
 }
 
-'Relacionamento Da Function
+Component(notificationCenter, "Notification Center", "ASP NET 7",  "Responsável por notificações dos clientes")
+Component_Ext(emailService, "Sistema de Email", "HTTP API", "Sitema de controle de template e envio de email")
+Component_Ext(phoneService, "Sistema de envio \n SMS / Whatsapp", "HTTP API", "Sitema de envio de notificações para celulares", "HTTP/JSON")
+ComponentQueue(rabbitMqNotification, "Serviço de Mensageria - Notificações", "RabbitMQ", "Dados de Notificação")
+
+'Relacionamentos Notification Center
+Rel(rabbitMqNotification, notificationCenter , "Envia dados para de notificação para", "AMQP/JSON", $tags = "async")
+Rel(customerService, rabbitMqNotification, "Enfileira notificação para o cliente usando", "AMQP/JSON", $tags = "async")
+Rel(notificationCenter, emailService , "Envia comamndo de notificação para", "HTTP/JSON",)
+Rel(notificationCenter, phoneService , "Envia comamndo de notificação para", "HTTP/JSON")
+
+'Relacionamentos Da Function
 Rel(rabbitCustomer, azureFunction , "Envia Pedido de Cadastro De Cliente", "AMQP/JSON", $tags = "async")
 Rel(azureFunction, customerService , "Envia Pedido de Cadastro De Cliente", "")
 
 'Relacionamentos CustomerService
 Rel(customerService , individualStrategy, "Usa a estartegia de cadastro", "")
 Rel(customerService , companyStrategy, "Usa a estartegia de cadastro", "")
-Rel(companyStrategy , customerReposity, "Envia dados para", "")
-Rel(individualStrategy , customerReposity, "Envia dados para", "")
+
+'Relacionamentos Repository
+Rel(companyStrategy , customerRepository, "Envia dados para", "")
+Rel(individualStrategy , customerRepository, "Envia dados para", "")
+Rel(customerRepository, mongoDb, "Manipula dados")
+Rel(customerRepository, documentSecurity, "Encripta dados qu serão armazenados usando")
+
+'Relacionamento CEP
+Rel(companyStrategy , cepService, "Busca dados de endereço apra hidratar a entidade", "HTTP/JSON")
+Rel(individualStrategy , cepService, "Busca dados de endereço apra hidratar a entidade", "HTTP/JSON")
+Rel(cepService, viaCep, "Busca dados no", "HTTP/JOSN")
+Rel(cepService, redis, "Gerencia cache distribuido usando", "")
+
+SHOW_LEGEND()
 
 @enduml
