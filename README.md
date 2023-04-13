@@ -13,10 +13,6 @@
 - [Component](./Docs/3%20-%20Componente/)
 - [Infra](./Docs/Infra/)
 
-### Como acessar o projeto
-
-Se quiseres acessar o projeto diretamente na Web, na landing page que foi criada, basta acessar [https://customerprofile.cristianoprogramador.com/](https://customerprofile.cristianoprogramador.com/). Os serviços estão hospedados em um ambiente no Azure.
-
 ### Executar projeto localmente
 
 Para executr o projeto basta rodar na raiz do projeto o command: `docker-compose up --build`
@@ -27,6 +23,12 @@ Se necessário o uso com Docker em processadores arm64, pode entrar em contato q
 #### **Acessar a aplicação WEB do container localmente**
 
 http://localhost.cristianoprogramador.com/
+
+
+### Como acessar o projeto no Azure
+
+<strike>Se quiseres acessar o projeto diretamente na Web, na landing page que foi criada, basta acessar [https://customerprofile.cristianoprogramador.com/](https://customerprofile.cristianoprogramador.com/). Os serviços estão hospedados em um ambiente no Azure.</strike> Ambiente de back-end desativado temporariamente por causa dos gastos, se necessário pode entrar em contato que ativo novamente.
+
 
 #### **Requisições que podem ser feritas**
 
@@ -41,9 +43,9 @@ http://localhost.cristianoprogramador.com/
     "documentType": 0
   },
   "address": {
-    "cep": "96085000",
-    "number": "2886",
-    "complement": "AP 501"
+    "cep": "01025020",
+    "number": "123",
+    "complement": "N/A"
   },
   "birthday": "1998-07-28T13:07:56.816Z",
   "corporateName": "",
