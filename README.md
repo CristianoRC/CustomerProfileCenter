@@ -24,12 +24,6 @@ Se necessário o uso com Docker em processadores arm64, pode entrar em contato q
 
 http://localhost.cristianoprogramador.com/
 
-
-### Como acessar o projeto no Azure
-
-<strike>Se quiseres acessar o projeto diretamente na Web, na landing page que foi criada, basta acessar [https://customerprofile.cristianoprogramador.com/](https://customerprofile.cristianoprogramador.com/). Os serviços estão hospedados em um ambiente no Azure.</strike> Ambiente de back-end desativado temporariamente por causa dos gastos, se necessário pode entrar em contato que ativo novamente.
-
-
 #### **Requisições que podem ser feritas**
 
 - Obter informações do CEP: HTTP GET - http://localhost:5021/Address/{cep}
@@ -59,3 +53,8 @@ Obs.:
 `"documentType": 0, //0 CPF, 1 CNPJ`
 
 `CEP é apenas de exmeplo gerado aleatoriamente, não usar valores reais`
+
+### Como acessar o projeto no Azure
+
+<strike>Se quiseres acessar o projeto diretamente na Web, na landing page que foi criada, basta acessar [https://customerprofile.cristianoprogramador.com/](https://customerprofile.cristianoprogramador.com/). Os serviços estão hospedados em um ambiente no Azure.</strike>. Projeto hospedado no Azure está desativado.
+
