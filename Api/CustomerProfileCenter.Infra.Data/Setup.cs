@@ -34,7 +34,9 @@ public static class Setup
     {
         var client = new MongoClient(configuration["MongoDbConnectionString"]);
         services.AddSingleton<IMongoClient>(client);
-        BsonSerializer.RegisterSerializer(new GuidSerializer(GuidRepresentation.Standard));
+        var objectDiscriminatorConvention = BsonSerializer.LookupDiscriminatorConvention(typeof(object));
+        var objectSerializer = new ObjectSerializer(objectDiscriminatorConvention, GuidRepresentation.Standard);
+        BsonSerializer.RegisterSerializer(objectSerializer);
     }
 
     private static void ConfigureDistributedCache(IServiceCollection services, IConfiguration config,
